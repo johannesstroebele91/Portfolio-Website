@@ -1,0 +1,868 @@
+/* 
+Structure
+    OVERALL
+    MOBILE
+    DESKTOP
+
+Substructure
+    General
+    Header
+    Footer
+    Picture
+    Button
+    Form
+    Tabelle
+    Text
+
+Color
+        #111111 black
+        #4F4F4F dark grey
+        #878787 medium grey
+        #C5C5C5 medium-light grey
+        #F9F9F9 light grey
+
+        #E73C4A light red
+        #D7303E dark red
+
+Font
+    Logo: Futura
+    h1: Lato
+    h2: Lato
+    h3: Lato
+    h4: Lato
+    p: Open Sans
+*/
+
+/* OVERALL */
+/* General */
+*{
+    margin: 0; /* everywhere no border */
+    padding: 0; /* everywhere no border */
+}
+html{
+    font-size: 1em;
+    line-height: 2em;
+}
+body, article{
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;  /* multiple fonts if user do not have the font */
+    color: #111111;
+    font-size: 1em;
+    line-height: 2em;
+}
+#introduction{
+    background-color: #D7303E;
+    }
+#introduction a{
+    display: inline-block;
+    font-size: 1em;
+    line-height: 2em;
+}
+.gridtextcenter{
+        display: block;
+        max-width: 400px;
+        padding: 0 3%;
+        text-align: center;
+}
+.headingcenter{
+    text-align:center;
+}
+
+
+/* Vertical center items */
+.category{
+    margin: 0 auto;
+    max-height: 240px;
+    max-width: 240px;
+    padding: 6%;
+    background-color: #FFA3AA;
+    border: 3px solid #E1E1E1;
+}
+.categoryitem{
+    background-color: #E73C4A;
+    padding: 24% 9%;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+}
+.category:hover{
+     opacity: 0.95;
+}
+
+/* Header */
+header{
+    background-color: #F9F9F9;
+}
+nav a{
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;
+    font-weight: 400;
+    color: #232323;
+}
+.active{
+    color: #D7303E;
+}
+nav a:hover{
+    color: #E73C4A;
+}
+
+/* Footer */
+footer{
+    padding-top: 42px;
+    padding-bottom:42px;
+    background-color: #F9F9F9;
+    border-top: 3px solid #C5C5C5;
+}
+footer li{
+    display: inline-block;
+    list-style-type: none;
+}
+#legal a{
+    display: block;
+    color: #c91827;
+}
+footer #social a:hover{
+    opacity: 0.95;
+}
+footer #legal a:hover{
+    color: #111111;
+}
+footer img:hover{
+    opacity: 0.95;
+}
+
+/* Picture */
+#introductionimg{
+    max-width: 225px;
+}
+.sectionicons{
+    display:block;
+    max-width: 180px;
+    margin: 0 auto;
+    height:auto;
+    padding: 24px;
+}
+.sectionimg:hover{
+     opacity: 0.95;
+}
+
+/* Buttons */
+#introductionbutton{
+    margin-top: 36px;
+        border: none;
+}
+#introductionbutton a{
+    display: inline-block;
+    padding: 12px 24px;
+    font-weight: 500;
+    border-radius: 2px;
+    background: white;
+    color: #D7303E;
+}
+#introductionbutton:hover{
+    color: #4F4F4F;
+    opacity: 0.95;
+}
+.sectionbutton{
+    margin-left: 3%;
+        border: none;
+}
+.sectionbutton a{
+    display: inline-block;
+    padding: 24px 36px;
+    border-radius: 2px;
+    color: white;
+    background-color: #D7303E;
+}
+.sectionbutton:hover{
+    opacity: 0.95;
+}
+#backtop{
+    float: right;
+    padding: 18px;
+}
+#backtop:hover{
+    opacity: 0.95;
+}
+.anchorjump:before{
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 7em;
+    margin-top: -7em
+}
+#buttonsubmit{
+    /* because display: none or visibility: hidden doesn't work */
+	width: 0.1px; /* setting the property values to zero ends up throwing the element out of tab party in some browsers */
+	height: 0.1px;
+	opacity: 0;
+    margin: 0;
+    padding: 0;
+	overflow: hidden; 
+	position: absolute; /* guarantees the element does not interfere with the sibling elements */
+	z-index: -1;
+}
+#buttonsubmit + #labelsubmit{
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 36px 24px 18px 0;
+    border-radius: 2px;
+    background-color: #D7303E;
+    color: white;
+    font-size: 1em;
+    line-height: 2em;   
+    font-weight: 500;
+}
+#buttonsubmit:focus + #labelsubmit,
+#buttonsubmit + #labelsubmit:hover{
+    opacity: 0.95;
+}
+#buttonsubmit + #labelsubmit{
+	cursor: pointer; /* "hand" cursor */
+}
+#buttonreset{
+    /* because display: none or visibility: hidden doesn't work */
+	width: 0.1px; /* setting the property values to zero ends up throwing the element out of tab party in some browsers */
+	height: 0.1px;
+	opacity: 0;
+    margin: 0;
+    padding: 0;
+	overflow: hidden; 
+	position: absolute; /* guarantees the element does not interfere with the sibling elements */
+	z-index: -1;
+}
+#buttonreset + #labelreset{
+    display: inline-block;
+    padding: 12px 30px;
+    margin: 36px 24px 18px 0;
+    border-radius: 2px;
+    background-color: #D7303E;
+    color: white;
+    font-size: 1em;
+    line-height: 2em;   
+    font-weight: 500;
+}
+#buttonreset:focus + #labelreset,
+#buttonreset + #labelreset:hover{
+    opacity: 0.95;
+}
+#buttonreset + #labelreset{
+	cursor: pointer; /* "hand" cursor */
+}
+/* ajsdaosd*/
+.divscore{
+    display: block;
+    border: 3px solid #E1E1E1;
+    width: 24px;
+    padding: 12px;
+    margin: 0 auto;
+    text-align: center;
+    color: #D7303E;
+    font-weight: 900;
+}
+
+/* Form */
+form fieldset{
+    margin: 0;
+    border: 3px solid #F9F9F9;
+    padding: 12px;
+    margin-bottom: 24px;
+}
+form label{
+    display:block;
+    margin-bottom: 12px;
+    color: #4F4F4F;
+}
+form input{
+    font-size: 1em;
+    line-height: 2em;
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;
+    color: #4F4F4F;
+    margin: 0;
+}
+form span input{
+    margin-left: 6px;
+}
+form textarea{
+    font-size: 1em;
+    line-height: 2em;
+    color: #111;
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;
+}
+input[type=text], input[type=email], textarea{
+    border: 0;
+    background-color: #F9F9F9;
+    padding: 12px 0 12px 12px ;
+    width: 100%;
+    margin-bottom: 12px;
+}
+form select{
+    display: block;
+    font-size: 1em;
+    line-height: 2em;
+    color: #111;
+    border: 0;
+    background-color: #F9F9F9;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+form option{
+    display: block;
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: 100;
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;
+    color: #4F4F4F;
+    padding: 12px 24px;
+}
+form span{
+    margin-bottom: 12px;
+}
+#fieldsetfeedback label{
+    display: inline-block;
+    padding-right: 2%;
+}
+#fieldsetfeedback label:nth-child(n+4){
+    margin-left: 6%;
+}
+
+/* Table */
+table{
+    width: 100%;
+}
+tr{
+    margin-bottom: 24px;
+}
+td{
+    margin-bottom: 18px;
+}
+.tdfirst{
+    color: #4F4F4F;
+}
+
+/* Text  */
+#logo{
+    font-weight: 600;
+}
+#logo a{
+    font-family: 'Futura', 'Ubuntu', 'Lato', 'Open Sans', sans-serif;  /* multiple fonts if user do not have the font */
+    display: block;
+    color: #E73C4A;
+}
+#logo a:hover{
+    color: #4F4F4F;
+}
+h1{
+    font-family: 'Lato', 'Ubuntu', 'Open Sans', sans-serif;  /* multiple fonts if user do not have the font */
+    font-weight: 600;
+    
+    color:white;
+}
+h2{
+    font-family: 'Lato', 'Ubuntu', 'Open Sans', sans-serif;  /* multiple fonts if user do not have the font */
+    font-weight: 500;
+    color: #4F4F4F;
+}
+h3{
+    font-family: 'Lato', 'Ubuntu', 'Open Sans', sans-serif;  /* multiple fonts if user do not have the font */
+    font-weight: 400;
+    color: #4F4F4F;
+}
+section h3{
+    color: #6f6f6f;
+}
+h4{
+    font-family: 'Lato', 'Ubuntu', 'Open Sans', sans-serif;  /* multiple fonts if user do not have the font */
+    color: #4F4F4F;
+
+}
+
+a{
+    font-size: 1em;
+    line-height: 2em;
+}
+p, ul, ol, pre, table, blockquote{
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;  /* multiple fonts if user do not have the font */
+    margin-top: 0px;
+    margin-bottom: 24px;
+}
+#introduction p{
+    text-align: none;
+    text-decoration: none;
+    font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;  /* multiple fonts if user do not have the font */
+    font-size: 1em;
+    line-height: 2em;
+    text-align: left;
+}
+#introduction p, #introduction h2, #introduction{
+    color: white;
+    text-align: left;
+}
+#introduction li a{
+    font-size: 1em;
+    line-height: 2em;
+    color: white;
+}
+a, b, i, strong{
+  line-height: 0; /* for vertical rythm */
+}
+section a{
+    color: #D7303E;
+}
+section a .anchor{
+    display: block;
+    position: relative;
+    top: -250px;
+    visibility: hidden;
+}
+ul ul, ol ol, ul ol, ol ul{
+    margin:0;
+    padding:0;
+}
+ul li{
+    list-style: square outside none;
+}
+ol a{
+    padding-left: 12px;
+    color: #D7303E;
+    line-height: 24px;
+}
+section ol, section ul{
+    padding-left: 24px;
+
+}
+ a{
+    text-decoration: none;
+}
+#introduction i{
+    font-size: 15px;
+}
+i{
+    text-justify: none;
+}
+
+
+/* MOBILE */
+@media screen and (max-width: 639px){
+
+    /* General */   
+    section{
+        display:block;
+        padding-bottom: 30px;
+    }
+    #introduction{
+        padding: 72px 0 30px 0;
+        margin-bottom: 60px;
+    }
+    /* Grid */
+    .container{
+        margin: 0 auto;
+        max-width: 500px;
+        padding: 0 6%;
+    }
+    .sectionbacktop{
+        height: 90px;
+        margin: 0;
+        padding: 0;
+    }
+    .griditem{
+        margin: 0 auto;
+        margin-bottom: 24px;
+    }
+    .gridtext{
+        display: block;
+        text-align: justify;
+        max-width: 400px;
+        padding: 0 6%;
+        margin: 0 auto;
+        margin: 18px 0;
+    }
+
+    /* Center full-width Text  in Sections */
+    .textwidth{
+        max-width: 600px;
+        margin-bottom:36px;
+    }
+
+    /* Header */
+    header{
+        background: #F9F9F9;
+        height: 82px;
+    }
+    #logo{
+        display: inline-block;
+    }
+    #logo a{
+        font-size: 1.3em;
+        line-height: 2.4em;
+        display: block;
+        padding: 18px 0 12px 0;
+        background-color: #F9F9F9;
+    }
+    nav{ 
+        display: inline-block;
+        float: right;
+        text-align: right;
+        height: 72px;
+        line-height: 72px;
+    }
+    nav li{
+        border-bottom: 3px solid #E1E1E1;
+    }
+    nav li:last-child{
+        border-bottom: none;
+    }
+    .menu{
+        position: absolute;
+        top: 82px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+    .menu a{
+        background: #F9F9F9;
+        clear: right;
+        display:block;
+        line-height: 72px;
+        margin: 0;
+    }
+    nav label{
+        font-size: 1.6em;
+        line-height: 72px;
+        display: block;
+        cursor: pointer;
+        padding: 4px 18px ;
+        float: right;
+    }
+    #toggle{
+      display: none;
+    }
+    #toggle:checked + .menu{
+        display: block;
+    }
+
+    /* Footer */
+    footer ul{
+        display: block;
+        text-align: center;
+        width:100%;
+            margin-bottom: 6px;
+    }
+    #legal a{
+        display: block;
+        padding:18px 12px;
+    }
+    footer #social li:first-child{
+        margin-left: 0;
+    }
+    footer #rights li{
+        display: block;        
+    }
+    footer a{
+        display: block;
+        padding: 18px;
+    }
+    
+    /* Pictures */
+    #introductionimg{
+        display:block;
+        width:90%;
+        margin: 0 auto;
+        height:auto;
+        padding: 12px;
+    }
+    .sectionimg{
+        display:block;
+        width:80%;
+        margin:auto;
+        height:auto;
+        padding: 12px;
+        border: 3px solid #E1E1E1;
+    }
+    #signature{
+        display: block;
+        width: 120px;
+        margin-bottom: 18px;
+    }
+    .gridtextcenter{
+        text-align: center;
+    }
+
+    /* Button */
+    #backtopbutton{
+        margin: 0 auto;
+    }
+    .sectionbutton{
+        text-align: center;
+    }
+    
+    /* Form */
+    #divjob span{
+        display: block;
+    }
+    
+    /* Table */
+    td{
+        display: block;
+    }
+    
+    /* Vertical RhythmText  */ 
+    h1{
+        font-size: 3.6em;
+        line-height: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.3em;
+    }
+    h2{
+        font-size: 2.6em;
+        line-height: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.3em;
+    }
+    #introduction h2{
+        font-size: 1.3em;
+        line-height: 1.5em;
+        margin-top: 0em;
+        margin-bottom: 0.8em;
+    }
+    h3{
+        font-size: 1.3em;
+        line-height: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.8em;
+    }
+    h4{
+        font-size: 1em;
+        line-height: 2em;
+        margin-top: 0em;
+        margin-bottom: 0.8em;
+    }
+} 
+/* END MOBILE */
+
+
+
+/* DESKTOP */
+@media only screen and (min-width: 640px){
+
+    /* General */
+    section{
+        padding: 0 0 72px 0;
+    }
+    #introduction{
+        padding: 180px 0 78px 0;
+        margin-bottom: 60px;
+    }
+    .container{
+        min-width: 580px;
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 36px;
+    }
+    .restricted{
+        margin: 0 auto;
+    }
+    .contactalign{
+        padding: 0 3%;
+    }
+    .griditem{
+        display: inline-block;
+        vertical-align: middle;
+        text-align: justify;
+        max-width: 450px;
+        margin-bottom: 12px;
+    }
+    .griditemtop{
+        display: inline-block;
+        text-align: center;
+        vertical-align: top;
+        text-align: justify;
+        max-width: 450px;
+        margin-bottom: 12px;
+    }
+    .first{
+        width: 47%; /* left side */
+        padding-right: 2%;
+        margin-bottom: 0;
+    }
+    .second{
+        text-align: justify;
+        width: 47%; /* left side */
+        padding-left: 3%;
+        margin-bottom: 0;
+    }
+    nav label{
+        display: none;
+    }
+    #toggle{
+      display: none;
+    }
+    /* Center full-width Text  in Sections */
+    .textwidth{
+        max-width: 600px;
+    }
+    .gridtext{
+        display: block;
+        max-width: 400px;
+        padding: 0 3%;
+        margin: 0 auto;
+        margin-top: 18px;
+        margin-bottom: 18px;
+    }
+    
+
+    /* Pictures */
+    .sectionimg{
+        display:block;
+        width:90%;
+        margin:auto;
+        height:auto;
+        padding: 12px;
+    border: 3px solid #E1E1E1;
+    }    
+    .square{
+        width:80%;
+    }    
+    #introductionimg{
+        display:block;
+        width:100%;
+        margin:auto;
+        height:auto;
+        padding: 12px;
+    }
+
+    /* Header */
+    header{
+        position: fixed;
+        height: 84px;
+        width: 100%;
+        z-index: 1;
+        background-color: #F9F9F9;
+        }
+    #logo{
+        display: inline-block;
+        }
+    nav{
+        display: inline-block;
+        float: right;
+    }
+    nav li{
+        display: inline-block;
+    }
+    nav a{
+        float:left;
+        text-align: center;
+        padding: 0 18px;
+        line-height: 82px;
+    }
+    
+    /* Footer */
+    footer ul{
+        display: block;
+        text-align: center;
+        width:100%;
+        margin-bottom: 6px;
+    }
+    footer #legal li{
+        margin-left: 72px;
+    }
+    footer #legal li:first-child{
+        margin-left: 0;
+    }
+    footer #social li{
+        margin-left: 72px;
+    }
+    footer #social li:first-child{
+        margin-left: 0;
+    }
+    footer #rights li{
+        display: block;
+        margin: 0 auto;
+    }
+    footer a{
+        display: block;
+        padding: 18px 18px;
+    }
+    
+    /* Picture */
+    #signature{
+        display: block;
+        width: 180px;
+        margin-bottom: 18px;
+    }
+    
+    /* Form */
+    form{
+        padding: 0 6%;
+    }
+    #divjob span{
+        margin-left: 36px;
+    }
+        #divjob span:first-child{
+        margin-left: 0;
+    }
+    
+    /* Table */
+    td{
+        display: inline-block;
+        vertical-align: top;
+    }
+    
+    .tdfirst{
+        width: 30%
+    }
+    .tdsecond{
+        width: 70%
+    }
+
+    /* Vertical RhythmText  */ 
+    #logo a{
+        font-size: 1.4em;
+        line-height: 1.2em;
+        padding: 30px 0 24px 0;  
+    }
+    h1{
+        font-size: 4.2em;
+        line-height: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.3em;
+    }
+    h2{
+        font-size: 2.6em;
+        line-height: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.3em;
+    }
+    #introduction h2{
+        font-size: 1.6em;
+        line-height: 1.5em;
+        margin-top: 0em;
+        margin-bottom: 0.8em;
+    }
+    h3{
+        font-size: 1.6em;
+        line-height: 1.2em;
+        margin-top: 0em;
+        margin-bottom: 0.8em;
+    }
+    h4{
+        font-size: 1em;
+        line-height: 2em;
+        margin-top: 0em;
+        margin-bottom: 0.8em;
+    }
+    #introduction p{
+        font-size: 1em;
+        line-height: 2em;
+        margin-top: 0px;
+        margin-bottom: 24px;
+    }
+    #introduction li{
+        font-size: 1em;
+    }
+    .headingcenterdesktop{
+        text-align:center;
+    }
+} 
+/* END DESKTOP */

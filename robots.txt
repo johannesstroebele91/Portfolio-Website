@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /cgi-bin/
+
+SITEMAP: http://www.johannesstroebele.com/sitemap.xml
