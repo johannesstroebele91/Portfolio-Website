@@ -66,20 +66,22 @@ body, article{
 .headingcenter{
     text-align:center;
 }
+.ulbullets {
+    margin-bottom: 0;
+}
 
 
 /* Vertical center items */
 .category{
     margin: 0 auto;
-    max-height: 240px;
-    max-width: 240px;
+    height: 240px;
+    width: 240px;
     padding: 6%;
-    background-color: #FFA3AA;
+    background-color: #E73C4A;
     border: 3px solid #E1E1E1;
 }
 .categoryitem{
-    background-color: #E73C4A;
-    padding: 24% 9%;
+    padding: 36% 9%;
     text-align: center;
     color: white;
     font-weight: 900;
@@ -146,6 +148,7 @@ footer img:hover{
 
 /* Buttons */
 #introductionbutton{
+    text-align: center;
     margin-top: 36px;
         border: none;
 }
@@ -162,8 +165,9 @@ footer img:hover{
     opacity: 0.95;
 }
 .sectionbutton{
+    text-align: center;
     margin-left: 3%;
-        border: none;
+    border: none;
 }
 .sectionbutton a{
     display: inline-block;
@@ -383,16 +387,14 @@ a{
 }
 p, ul, ol, pre, table, blockquote{
     font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;  /* multiple fonts if user do not have the font */
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 24px;
 }
 #introduction p{
-    text-align: none;
     text-decoration: none;
     font-family: 'Open Sans', 'Ubuntu', 'Lato', sans-serif;  /* multiple fonts if user do not have the font */
     font-size: 1em;
     line-height: 2em;
-    text-align: left;
 }
 #introduction p, #introduction h2, #introduction{
     color: white;
@@ -474,8 +476,6 @@ i{
         text-align: justify;
         max-width: 400px;
         padding: 0 6%;
-        margin: 0 auto;
-        margin: 18px 0;
     }
 
     /* Center full-width Text  in Sections */
@@ -611,31 +611,31 @@ i{
     h1{
         font-size: 3.6em;
         line-height: 1.2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.3em;
     }
     h2{
         font-size: 2.6em;
         line-height: 1.2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.3em;
     }
     #introduction h2{
         font-size: 1.3em;
         line-height: 1.5em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.8em;
     }
     h3{
         font-size: 1.3em;
         line-height: 1.2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.8em;
     }
     h4{
         font-size: 1em;
         line-height: 2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.8em;
     }
 } 
@@ -675,9 +675,8 @@ i{
     }
     .griditemtop{
         display: inline-block;
-        text-align: center;
-        vertical-align: top;
         text-align: justify;
+        vertical-align: top;
         max-width: 450px;
         margin-bottom: 12px;
     }
@@ -825,37 +824,37 @@ i{
     h1{
         font-size: 4.2em;
         line-height: 1.2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.3em;
     }
     h2{
         font-size: 2.6em;
         line-height: 1.2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.3em;
     }
     #introduction h2{
         font-size: 1.6em;
         line-height: 1.5em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.8em;
     }
     h3{
         font-size: 1.6em;
         line-height: 1.2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.8em;
     }
     h4{
         font-size: 1em;
         line-height: 2em;
-        margin-top: 0em;
+        margin-top: 0;
         margin-bottom: 0.8em;
     }
     #introduction p{
         font-size: 1em;
         line-height: 2em;
-        margin-top: 0px;
+        margin-top: 0;
         margin-bottom: 24px;
     }
     #introduction li{
