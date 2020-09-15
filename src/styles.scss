@@ -1,0 +1,51 @@
+@import '~@angular/material/prebuilt-themes/purple-green.css';
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$custom-primary: mat-palette($mat-deep-purple, 600);
+$custom-accent: mat-palette($mat-pink, 100);
+$custom-warn: mat-palette($mat-red);
+
+$custom-theme: mat-dark-theme((
+        color: (
+                primary: $custom-primary,
+                accent: $custom-accent,
+                warn: $custom-warn,
+        )
+));
+
+@include angular-material-theme($custom-theme);
+
+html, body, app-root, .app-frame {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+  color: #e0e0e0;
+}
+
+.router-container {
+  padding: 18px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 768px;
+  margin: 0 auto;
+}
+
+@media (max-width: 767.98px) {
+  .router-container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 768px) {
+  .router-container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+}
+

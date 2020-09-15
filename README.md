@@ -1,14 +1,33 @@
-# Portfolio Website of Johannes Ströbele
+# Usage Instructions
+_This are instructions how to setup and deploy such a web application_
+1. Fork the GitHub repository
+2. Create a new [Heroku](https://heroku.com/) app
+3. Click on app in Heroku and choose "Deploy" in tab bar
+4. Connect Heroku with your forked GitHub repository
+5. Choose deploy from master oder branch GitHub
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/10f11bc1-871d-4973-a286-6b60c23911f6/deploy-status)](https://app.netlify.com/sites/johannesstroebele/deploys) 
+# Technology Stack
 
-This is the portfolio website of Johannes Ströbele - designer, researcher, developer.
-I worked at Europe’s fastest-growing tech unicorn Celonis.
-My goal is to create software that enables users to make better decisions.
+This project was generated with this technology stack:
+* Node.js: open-source, cross-platform, JavaScript runtime environment
+* Express.js: web application framework for Node
+* [Angular CLI](https://github.com/angular/angular-cli) version 10.0.1.
+* Heroku: cloud platform as a service for deployment
+* GitHub: web hosting
 
-## What I learned:
+# Useful Commands
+## Development server
 
-* Creating a Flat UI web design that shows my passion for software development 
-* Developing a responsive, mobile-first project
-* Using only HTML and CSS to maximize the accessibility based on the (https://www.w3.org/TR/WCAG20/ "WCAG 2.0 Standard")
-* Repository on GitHub, domain from Namecheap, and deployment with Netlify
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).

@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="nav-bg" style="z-index: -1;"></mat-toolbar>
+<mat-toolbar color="primary" class="container" style="margin: 0 auto;">
+  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+
+    <span routerLink="/home">Johannes Ströbele</span>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
+      <span routerLink="/about" routerLinkActive="active">About</span>
+      <span routerLink="/projects">Projects</span>
+      <span routerLink="/skills">Skills</span>
+      <span routerLink="/contact">Contact</span>
+    </div>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center" class="view-mobile">
+      <button (click)="showMenuMobile()" mat-icon-button aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar color="primary" *ngIf="showMobileMenu" class="view-mobile">
+  <span routerLink="/about">About</span>
+  <span routerLink="/projects">Projects</span>
+  <span routerLink="/skills">Skills</span>
+  <span routerLink="/contact">Contact</span>
+</mat-toolbar>
