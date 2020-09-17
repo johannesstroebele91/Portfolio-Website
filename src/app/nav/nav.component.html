@@ -1,8 +1,7 @@
-<mat-toolbar color="primary" class="nav-bg" style="z-index: -1;"></mat-toolbar>
-<mat-toolbar color="primary" class="container" style="margin: 0 auto;">
+<mat-toolbar class="nav">
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-    <span routerLink="/home">Johannes Ströbele</span>
+    <div class="logo" routerLink="/">Johannes Ströbele</div>
 
     <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
       <span routerLink="/about" routerLinkActive="active">About</span>
@@ -18,9 +17,10 @@
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
+<!-- TODO fix height of mobile menu -->
 <mat-toolbar color="primary" *ngIf="showMobileMenu" class="view-mobile">
-  <span routerLink="/about">About</span>
-  <span routerLink="/projects">Projects</span>
-  <span routerLink="/skills">Skills</span>
-  <span routerLink="/contact">Contact</span>
+  <mat-toolbar-row routerLink="/about">About</mat-toolbar-row>
+  <mat-toolbar-row routerLink="/projects">Projects</mat-toolbar-row>
+  <mat-toolbar-row routerLink="/skills">Skills</mat-toolbar-row>
+  <mat-toolbar-row routerLink="/contact">Contact</mat-toolbar-row>
 </mat-toolbar>

@@ -1,29 +1,35 @@
-@import '~@angular/material/prebuilt-themes/purple-green.css';
-@import '~@angular/material/theming';
-
+@import '~@angular/material/theming.scss';
+@import 'variables.scss';
 @include mat-core();
 
-$custom-primary: mat-palette($mat-deep-purple, 600);
-$custom-accent: mat-palette($mat-pink, 100);
-$custom-warn: mat-palette($mat-red);
+$dark-primary: mat-palette($custom-palette, primary);
+$dark-accent: mat-palette($custom-palette, accent);
+$background-color: map_get($custom-palette, background-dark);
 
-$custom-theme: mat-dark-theme((
-        color: (
-                primary: $custom-primary,
-                accent: $custom-accent,
-                warn: $custom-warn,
-        )
-));
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent);
 
-@include angular-material-theme($custom-theme);
+// Insert custom background color
+$background: map-get($dark-theme, background);
+$background: map_merge($background, (background: $background-color));
+$dark-theme: map_merge($dark-theme, (background: $background));
 
-html, body, app-root, .app-frame {
+@include angular-material-theme($dark-theme);
+
+/* STRUCTURE
+  1. General
+  2. Interactive Elements
+  3. Text
+ */
+
+// General
+html, body, app-root {
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  overflow: hidden;
   margin: 0;
-  height: 100%;
   box-sizing: border-box;
-  color: #e0e0e0;
+}
+
+a {
+  color: map-get($custom-palette, primary);
 }
 
 .router-container {
@@ -49,3 +55,90 @@ html, body, app-root, .app-frame {
   }
 }
 
+// Text
+h1, .h1 {
+  font-size: 3em !important;
+  line-height: 1.2em !important;
+  margin-top: 0.6em !important;
+  margin-bottom: 0.45em !important;
+  font-weight: bold !important;
+  color: #e1e1e1 !important;
+}
+
+h2, .h2 {
+  font-size: 2.61111111em !important;
+  line-height: 1.46808511em !important;
+  margin-top: 0.45em !important;
+  margin-bottom: 0.3em !important;
+  font-weight: bold !important;
+  color: #e1e1e1 !important;
+}
+
+h3, .h3 {
+  font-size: 1.61111111em !important;
+  line-height: 1.5862069em !important;
+  font-weight: bold !important;
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+  color: #e1e1e1 !important;
+}
+
+h4, .h4, h5, .h5 {
+  font-size: 1.1em !important;
+  line-height: 1.27777778em !important;
+  font-weight: 500 !important;
+  margin-top: 0.3em !important;
+  margin-bottom: 0.3em !important;
+  color: #e1e1e1 !important;
+}
+
+p, ul, ol, pre, table, blockquote, label, span {
+  line-height: 1.6em !important;
+  font-size: 1.1em !important;
+  margin-top: 0;
+  margin-bottom: 0.9em;
+  font-weight: 400;
+  color: #f6f6f6 !important;
+}
+
+input {
+  font-size: 1.1em !important;
+  font-weight: 400;
+}
+
+b {
+  font-size: 1em !important;
+  line-height: 0;
+  font-weight: 500;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  line-height: 1.6em !important;
+  font-size: 1.1em !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+a, i, strong, em, small, code {
+  font-size: 1.1em !important;
+  line-height: 0;
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}

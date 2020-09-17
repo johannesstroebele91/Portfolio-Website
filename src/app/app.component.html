@@ -1,7 +1,8 @@
-<app-nav></app-nav>
-<div class="mat-typography app-frame mat-app-background">
-  <div class="router-container">
-    <router-outlet></router-outlet>
-  </div>
+<!-- mat-typography: will style all descendant native elements with Angular material typography -->
+<div class="mat-app-background">
+    <div class="container">
+        <app-nav></app-nav>
+        <router-outlet></router-outlet>
+        <app-footer></app-footer>
+    </div>
 </div>
-<app-footer></app-footer>

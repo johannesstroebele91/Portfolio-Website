@@ -1,48 +1,62 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
-
+import {NgModule, NO_ERRORS_SCHEMA} from '@angular/core';
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {HttpClientModule} from '@angular/common/http';
+import {UsersService} from '../services/users.service';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MDBBootstrapModule} from 'angular-bootstrap-md';
+import {MatIconModule} from '@angular/material/icon';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatCardModule} from '@angular/material/card';
+import {ChartsModule} from 'ng2-charts';
+
+// Components
 import {HomeComponent} from './home/home.component';
 import {NavComponent} from './nav/nav.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {MatMenuModule} from '@angular/material/menu';
+import {FooterComponent} from './footer/footer.component';
 import {AboutComponent} from "./about/about.component";
-import {ContactComponent} from "./contact/contact.component";
-import {SkillsComponent} from "./skills/skills.component";
 import {ProjectsComponent} from "./projects/projects.component";
+import {SkillsComponent} from "./skills/skills.component";
+import {ContactComponent} from "./contact/contact.component";
 import {DataProtectionDeclarationComponent} from "./data-protection-declaration/data-protection-declaration.component";
 import {LegalDisclosureComponent} from "./legal-disclosure/legal-disclosure.component";
-import { FooterComponent } from './footer/footer.component';
+import {MatToolbarModule} from "@angular/material/toolbar";
+import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
   declarations: [
     AppComponent,
+    ProjectsComponent,
     HomeComponent,
     NavComponent,
     AboutComponent,
     ContactComponent,
     SkillsComponent,
-    ProjectsComponent,
     DataProtectionDeclarationComponent,
     LegalDisclosureComponent,
     FooterComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FlexLayoutModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ChartsModule,
     MatIconModule,
+    MatTabsModule,
+    MatCardModule,
     MatToolbarModule,
     MatButtonModule,
-    FlexLayoutModule,
-    MatMenuModule
+    MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [UsersService],
+  schemas: [NO_ERRORS_SCHEMA],
   bootstrap: [AppComponent]
 })
 export class AppModule {

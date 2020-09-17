@@ -1,0 +1,14 @@
+// Import material theming functions
+@import '~@angular/material/theming';
+
+$custom-palette: (
+        primary : #64FFDB,
+        accent: #ff8364,
+        background-dark: #0A1A30,
+        background-light: #172A45,
+        contrast: (
+                primary : #082928,
+                accent: #2a0703,
+                background: #4f99f5
+        )
+);
