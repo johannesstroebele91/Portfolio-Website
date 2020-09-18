@@ -1,7 +1,10 @@
 <mat-toolbar class="nav">
   <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-    <div class="logo" routerLink="/">Johannes Ströbele</div>
+    <div class="logo" routerLink="/">
+      <img src="../../assets/logo.png" height="36" alt="Logo">
+      <span>Johannes Ströbele</span>
+    </div>
 
     <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
       <span routerLink="/about" routerLinkActive="active">About</span>
@@ -11,14 +14,14 @@
     </div>
 
     <div fxLayout="row" fxLayoutAlign="space-between center" class="view-mobile">
-      <button (click)="showMenuMobile()" mat-icon-button aria-label="Example icon-button with menu icon">
+      <button (click)="showMenuMobile()" mat-icon-button color="primary" aria-label="Hamburger menu">
         <mat-icon>menu</mat-icon>
       </button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
 <!-- TODO fix height of mobile menu -->
-<mat-toolbar color="primary" *ngIf="showMobileMenu" class="view-mobile">
+<mat-toolbar *ngIf="showMobileMenu" class="view-mobile">
   <mat-toolbar-row routerLink="/about">About</mat-toolbar-row>
   <mat-toolbar-row routerLink="/projects">Projects</mat-toolbar-row>
   <mat-toolbar-row routerLink="/skills">Skills</mat-toolbar-row>

@@ -3,38 +3,50 @@
 .logo {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: bolder;
+  cursor: pointer;
+  padding-top: 3px;
+}
+
+.logo img {
+  position: relative;
+  top: -3px;
+  padding-right: 6px;
 }
 
 .nav {
   margin: 0 auto;
-  background: map-get($custom-palette, background-dark);
-}
-.view-desktop > span {
-  padding: 0 18px;
-  font-weight: 400 !important;
-  font-size: 16px !important;
+  background: map-get($custom-palette, background);
 }
 
-.view-mobile > mat-toolbar-row {
-  font-size: 18px;
-  font-weight: normal;
-  padding-left: 36px !important;
-}
-
+// MOBILE
 @media (max-width: 575.98px) {
   .view-mobile {
+    background: map-get($custom-palette, background) !important;
     display: block !important;
+    cursor: pointer;
+  }
+  .view-mobile > mat-toolbar-row {
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 36px !important;
   }
   .view-desktop {
     display: none !important;
   }
 }
 
+// DESKTOP
 @media (min-width: 576px) {
-  .view-mobile {
-    display: none !important;
-  }
   .view-desktop {
     display: block !important;
+    cursor: pointer;
+  }
+  .view-desktop > span {
+    padding: 0 15px;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+  }
+  .view-mobile {
+    display: none !important;
   }
 }

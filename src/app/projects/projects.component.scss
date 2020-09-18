@@ -1,0 +1,253 @@
+@import '../../variables.scss';
+
+.user-name-display {
+  font-size: 1.1em !important;
+  font-weight: 400;
+  margin-right: 12px;
+}
+
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+
+.username-and-githublink {
+  display: block;
+}
+
+.username-and-githublink > * {
+  white-space: nowrap;
+}
+
+.user-infos > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  margin: 6px 0;
+}
+
+.user-infos > div > span {
+  padding-left: 6px !important;
+  margin: 0 !important;
+}
+
+.user-infos a {
+  text-decoration: underline;
+}
+
+.userinfo-and-avatar > div:nth-child(1) {
+  text-align: center;
+}
+
+.userinfo-and-avatar > div {
+  background: #f9f9f9;
+  padding: 30px 18px;
+  border-radius: 6px;
+}
+
+.userinfo-and-avatar img {
+  margin: 0 auto 12px auto;
+  border: 4px solid map-get($custom-palette, primary) !important;
+  border-radius: 3px;
+}
+
+.container-columns > div:first-child {
+  margin-right: 24px;
+}
+
+.container-columns > div > div > * {
+  display: inline-block;
+}
+
+.container-columns > div > div > .mat-icon {
+  position: relative;
+  top: 6px;
+  margin-right: 6px;
+}
+
+.button-clear-searched-username {
+  line-height: 2em !important;
+  font-size: 1.2em !important;
+  background: white !important;
+  font-weight: 400 !important;
+  color: #6e6e6e !important;
+  margin: 0 !important;
+  padding: 0 12px !important;
+}
+
+.mat-card {
+  background: #fafafa;
+}
+
+.mat-icon {
+  color: #595959 !important;
+}
+
+.search-icon {
+  color: white !important;
+}
+.repo-languages {
+  white-space: nowrap;
+}
+
+// 3. RESPONSIVE
+@media (max-width: 575.98px) {
+  .userinfo-and-avatar {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .avatar-and-bio {
+    margin-bottom: 18px;
+  }
+  .container-columns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+}
+
+@media (min-width: 576px) {
+  .username-and-githublink {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: baseline;
+    align-content: stretch;
+  }
+  .username-and-githublink :first-child {
+    padding-right: 12px;
+  }
+  .userinfo-and-avatar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .userinfo-and-avatar > div:nth-child(1) {
+    width: 42%;
+    padding-right: 36px;
+  }
+  .userinfo-and-avatar > div:nth-child(2) {
+    width: 56%;
+  }
+
+  .container-columns {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .container-columns > div {
+    width: 100%;
+  }
+  .container-columns > div:nth-child(2) {
+    padding-left: 30px !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+
+  // Nav
+  .search-bar {
+    width: 100% !important;
+  }
+  .user-name-display {
+    display: none;
+  }
+  .logo-mobile {
+    display: inline-block;
+  }
+  .logo-desktop {
+    display: none;
+  }
+  // General
+  .content {
+    padding: 72px 3%;
+  }
+  .link-github-portfolio {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+
+  // Nav
+  .search-bar {
+    min-width: 60% !important;
+  }
+  .logo-mobile {
+    display: none;
+  }
+  .logo-desktop {
+    display: inline-block;
+  }
+
+  // General
+  .content {
+    padding: 72px 3%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .content {
+    margin: 0 auto
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    margin: 0 auto
+  }
+}
+
+@media (max-width: 1999.89px) {
+  .container-graphs {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .container-graphs > div {
+    margin-bottom: 24px !important;
+  }
+  .chart {
+    min-height: 270px
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-graphs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+  }
+  .container-graphs > div {
+    width: 100%;
+  }
+  .container-graphs > div:first-child {
+    margin-right: 24px !important;
+  }
+  .chart {
+    position: relative;
+    width: 510px;
+  }
+}

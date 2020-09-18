@@ -2,11 +2,11 @@
 @import 'variables.scss';
 @include mat-core();
 
-$dark-primary: mat-palette($custom-palette, primary);
-$dark-accent: mat-palette($custom-palette, accent);
-$background-color: map_get($custom-palette, background-dark);
+$primary: mat-palette($custom-palette, primary);
+$accent: mat-palette($custom-palette, accent);
+$background-color: map_get($custom-palette, background);
 
-$dark-theme: mat-dark-theme($dark-primary, $dark-accent);
+$dark-theme: mat-dark-theme($primary, $accent);
 
 // Insert custom background color
 $background: map-get($dark-theme, background);
@@ -42,6 +42,10 @@ a {
   margin: 0 auto;
 }
 
+.mat-card {
+    background: #233045 !important;
+}
+
 @media (max-width: 767.98px) {
   .router-container {
     max-width: 768px;
@@ -61,8 +65,9 @@ h1, .h1 {
   line-height: 1.2em !important;
   margin-top: 0.6em !important;
   margin-bottom: 0.45em !important;
-  font-weight: bold !important;
+  font-weight: bolder !important;
   color: #e1e1e1 !important;
+
 }
 
 h2, .h2 {
@@ -70,7 +75,7 @@ h2, .h2 {
   line-height: 1.46808511em !important;
   margin-top: 0.45em !important;
   margin-bottom: 0.3em !important;
-  font-weight: bold !important;
+  font-weight: bolder !important;
   color: #e1e1e1 !important;
 }
 
@@ -98,12 +103,20 @@ p, ul, ol, pre, table, blockquote, label, span {
   margin-top: 0;
   margin-bottom: 0.9em;
   font-weight: 400;
-  color: #f6f6f6 !important;
 }
 
 input {
   font-size: 1.1em !important;
   font-weight: 400;
+}
+
+button {
+  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
+  padding: 12px 30px !important;
+}
+
+.mat-stroked-button {
+  border: 1px solid map-get($custom-palette, primary) !important;
 }
 
 b {
@@ -117,6 +130,14 @@ ul ul, ol ol, ul ol, ol ul {
   font-size: 1.1em !important;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  margin-bottom: 6px;
 }
 
 hr, .hr {

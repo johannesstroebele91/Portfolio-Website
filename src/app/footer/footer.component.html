@@ -1,31 +1,34 @@
 <footer>
-    <mat-card>
-        <p class="mat-h1 my-3">Start a project</p>
-        <p>Interested in working together? We should queue up a chat.
+    <mat-card class="">
+        <sub class="mat-display-1">Get In Touch</sub>
+        <p class="my-4">Interested in working together? We should queue up a chat.
             I’ll buy the coffee.</p>
-        <button mat-raised-button color="primary" class="my-3">Let's do this</button>
+        <button routerLink="/contact" mat-stroked-button color="primary" class="my-3">Let's do this</button>
     </mat-card>
-    <ul fxLayout="row" fxLayoutAlign="space-between center">
-        <li><a tabindex="0" href="../sites/contact.html">Contact</a></li>
-        <li><a tabindex="0" href="../sites/legaldisclosure.html">Legal disclosure</a></li>
-        <li><a tabindex="0" href="../sites/dataprotectiondeclaration.html">Data protection declaration</a></li>
+    <ul fxLayout="row" fxLayoutAlign="space-around center" style="text-align: center;">
+        <li><a tabindex="0" routerLink="/legal">Legal disclosure</a></li>
+        <li><a tabindex="0" routerLink="/data">Data protection declaration</a></li>
     </ul>
-    <ul fxLayout="row" fxLayoutAlign="space-between center">
+    <ul fxLayout="row" fxLayoutAlign="center center">
         <li><a target="_blank" tabindex="0" href="https://www.linkedin.com/in/johannes-stroebele/"><img
-                src="../images/linkedin.png" width="40" height="40" title="Back to top"
-                alt="This brings you to my LinkedIn page"></a></li>
-        <li><a target="_blank" tabindex="0" href="https://www.xing.com/profile/Johannes_Stroebele"><img
-                src="../images/xing.png" width="40" height="40" title="Back to top"
-                alt="This brings you to my LinkedIn page"></a></li>
-        <li><a target="_blank" tabindex="0" href="https://www.behance.net/johannesstroebele"><img
-                src="../images/behance.png" width="40" height="40" title="Back to top"
-                alt="This brings you to my LinkedIn page"></a></li>
+                src="../../assets/GitHub.png" width="24" alt="Link to my GitHub page"></a></li>
+        <li class="mx-2"><a target="_blank" tabindex="0" href="https://angel.co/u/johannes-stroebele"><img
+                src="../../assets/Angel.png" width="24" alt="Link to my Angel page"></a></li>
+        <li class="mx-2"><a target="_blank" tabindex="0" href="https://www.instagram.com/travelwithjoe/"><img
+                src="../../assets/Insta.png" width="24" alt="Link to my Instagram page"></a></li>
+        <li class="mx-2"><a target="_blank" tabindex="0" href="https://www.xing.com/profile/Johannes_Stroebele"><img
+                src="../../assets/Xing.png" width="24" alt="Link to my Xing page"></a></li>
+        <li><a target="_blank" tabindex="0" href="https://www.linkedin.com/in/johannes-stroebele/"><img
+                src="../../assets/LinkedIn.png" width="24" alt="Link to my LinkedIn page"></a></li>
     </ul>
-    <ul>
-        <li>© 2019 Johannes Ströbele, all rights reserved.</li>
+    <ul style="text-align: center;">
+        <li>© 2019 Johannes Ströbele, all rights reserved</li>
         <li>Made with love in Stuttgart, Germany</li>
-        <li><a tabindex="-1"><img src="../../assets/stuttgart.png" width="80" height="80"
-                                              title="Made in Stuttgart"
-                                              alt="This website was made with love in Stuttgart"></a></li>
+        <li>
+            <a tabindex="-1">
+                <img src="../../assets/stuttgart.png" width="80" height="80"
+                     alt="This website was made with love in Stuttgart">
+            </a>
+        </li>
     </ul>
 </footer>
