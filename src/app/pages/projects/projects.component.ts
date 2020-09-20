@@ -1,9 +1,9 @@
 import {Component} from '@angular/core';
-import {UsersService} from '../../services/users.service';
-import {User} from '../../models/user';
+import {UsersService} from '../../../services/users.service';
+import {User} from '../../../models/user';
 import {ChartType, ChartOptions} from 'chart.js';
 import {Label} from 'ng2-charts';
-import {Repo} from '../../models/repo';
+import {Repo} from '../../../models/repo';
 
 /* STRUCTURE
   1. Variables

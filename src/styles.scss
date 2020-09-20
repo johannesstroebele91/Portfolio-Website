@@ -1,5 +1,6 @@
 @import '~@angular/material/theming.scss';
 @import 'variables.scss';
+
 @include mat-core();
 
 $primary: mat-palette($custom-palette, primary);
@@ -43,12 +44,26 @@ a {
 }
 
 .mat-card {
-    background: #233045 !important;
+  background: #233045 !important;
+}
+
+// TODO: Responsive img https://www.w3schools.com/howto/howto_css_image_responsive.asp
+.img-project {
+  max-width: 100%;
+  height: auto;
+}
+
+.running-text-width {
+  max-width: 600px;
+  margin-bottom:36px;
 }
 
 @media (max-width: 767.98px) {
   .router-container {
     max-width: 768px;
+  }
+  .button-back-to-top {
+    display: none;
   }
 }
 
@@ -56,6 +71,13 @@ a {
   .router-container {
     max-width: 720px;
     margin: 0 auto;
+  }
+  .button-back-to-top {
+    position: relative;
+    top: 0;
+    right: -60px;
+    float: right;
+    padding: 18px;
   }
 }
 

@@ -14,15 +14,15 @@ import {MatCardModule} from '@angular/material/card';
 import {ChartsModule} from 'ng2-charts';
 
 // Components
-import {HomeComponent} from './home/home.component';
-import {NavComponent} from './nav/nav.component';
-import {FooterComponent} from './footer/footer.component';
-import {AboutComponent} from "./about/about.component";
-import {ProjectsComponent} from "./projects/projects.component";
-import {SkillsComponent} from "./skills/skills.component";
-import {ContactComponent} from "./contact/contact.component";
-import {DataProtectionDeclarationComponent} from "./data-protection-declaration/data-protection-declaration.component";
-import {LegalDisclosureComponent} from "./legal-disclosure/legal-disclosure.component";
+import {HomeComponent} from './pages/home/home.component';
+import {NavComponent} from './components/nav/nav.component';
+import {FooterComponent} from './components/footer/footer.component';
+import {AboutComponent} from "./pages/about/about.component";
+import {ProjectsComponent} from "./pages/projects/projects.component";
+import {SkillsComponent} from "./pages/skills/skills.component";
+import {ContactComponent} from "./pages/contact/contact.component";
+import {DataProtectionDeclarationComponent} from "./pages/data-protection-declaration/data-protection-declaration.component";
+import {LegalDisclosureComponent} from "./pages/legal-disclosure/legal-disclosure.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 

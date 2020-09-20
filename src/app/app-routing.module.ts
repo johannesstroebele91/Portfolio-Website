@@ -1,12 +1,12 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
-import {HomeComponent} from "./home/home.component";
-import {AboutComponent} from "./about/about.component";
-import {ProjectsComponent} from './projects/projects.component';
-import {SkillsComponent} from "./skills/skills.component";
-import {ContactComponent} from "./contact/contact.component";
-import {LegalDisclosureComponent} from "./legal-disclosure/legal-disclosure.component";
-import {DataProtectionDeclarationComponent} from "./data-protection-declaration/data-protection-declaration.component";
+import {HomeComponent} from "./pages/home/home.component";
+import {AboutComponent} from "./pages/about/about.component";
+import {ProjectsComponent} from './pages/projects/projects.component';
+import {SkillsComponent} from "./pages/skills/skills.component";
+import {ContactComponent} from "./pages/contact/contact.component";
+import {LegalDisclosureComponent} from "./pages/legal-disclosure/legal-disclosure.component";
+import {DataProtectionDeclarationComponent} from "./pages/data-protection-declaration/data-protection-declaration.component";
 
 export const routes: Routes = [
     {path: '', component: HomeComponent},
