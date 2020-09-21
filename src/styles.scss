@@ -55,15 +55,12 @@ a {
 
 .running-text-width {
   max-width: 600px;
-  margin-bottom:36px;
+  margin-bottom: 36px;
 }
 
 @media (max-width: 767.98px) {
   .router-container {
     max-width: 768px;
-  }
-  .button-back-to-top {
-    display: none;
   }
 }
 
@@ -71,13 +68,6 @@ a {
   .router-container {
     max-width: 720px;
     margin: 0 auto;
-  }
-  .button-back-to-top {
-    position: relative;
-    top: 0;
-    right: -60px;
-    float: right;
-    padding: 18px;
   }
 }
 
@@ -127,6 +117,11 @@ p, ul, ol, pre, table, blockquote, label, span {
   font-weight: 400;
 }
 
+ul {
+  list-style-type: none !important;
+  padding: 0;
+}
+
 input {
   font-size: 1.1em !important;
   font-weight: 400;
@@ -152,10 +147,6 @@ ul ul, ol ol, ul ol, ol ul {
   font-size: 1.1em !important;
   margin-top: 0;
   margin-bottom: 0;
-}
-
-ul {
-  list-style-type: none;
 }
 
 li {

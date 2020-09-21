@@ -1,21 +1,14 @@
-<!-- TODO: fix button go to top -> also link is not found-->
-<a tabindex="0" class="button-back-to-top" href="#top">
-    <img src="../../../assets/arrow-upward.png" width="30" height="30"
-         title="Back to top" alt="This Button brings you back to the top">
-</a>
-
 <footer>
     <mat-card class="">
         <sub class="mat-display-1">Get In Touch</sub>
-        <p class="my-4">Interested in working together? We should queue up a chat.
-            I’ll buy the coffee.</p>
+        <p class="my-4">Interested in working together? Let us get together. I’ll buy the coffee.</p>
         <button routerLink="/contact" mat-stroked-button color="primary" class="my-3">Let's do this</button>
     </mat-card>
     <ul fxLayout="row" fxLayoutAlign="space-around center" style="text-align: center;">
         <li><a tabindex="0" routerLink="/legal">Legal disclosure</a></li>
         <li><a tabindex="0" routerLink="/data">Data protection declaration</a></li>
     </ul>
-    <ul fxLayout="row" fxLayoutAlign="center center">
+    <ul class="social-links">
         <li><a target="_blank" tabindex="0" href="https://www.linkedin.com/in/johannes-stroebele/"><img
                 src="../../../assets/GitHub.png" width="24" alt="Link to my GitHub page"></a></li>
         <li class="mx-2"><a target="_blank" tabindex="0" href="https://angel.co/u/johannes-stroebele"><img
@@ -27,14 +20,13 @@
         <li><a target="_blank" tabindex="0" href="https://www.linkedin.com/in/johannes-stroebele/"><img
                 src="../../../assets/LinkedIn.png" width="24" alt="Link to my LinkedIn page"></a></li>
     </ul>
+    <a class="email-link" href="mailto:stroebele.j@gmail.com">stroebele.j@gmail.com </a>
     <ul style="text-align: center;">
-        <li>© 2019 Johannes Ströbele, all rights reserved</li>
-        <li>Made with love in Stuttgart, Germany</li>
+        <li>© 2019 Johannes Ströbele, <span style="white-space: nowrap;">all rights reserved</span></li>
+        <li>Made with love in <span style="white-space: nowrap;">Stuttgart, Germany</span></li>
         <li>
-            <a tabindex="-1">
-                <img src="../../../assets/stuttgart.png" width="80" height="80"
-                     alt="This website was made with love in Stuttgart">
-            </a>
+            <img tabindex="-1" src="../../../assets/stuttgart.png" width="66"
+                 alt="This website was made with love in Stuttgart">
         </li>
     </ul>
 </footer>
