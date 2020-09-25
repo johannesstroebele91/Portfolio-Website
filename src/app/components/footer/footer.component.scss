@@ -1,64 +1,72 @@
 @import "../../../variables";
 
 footer {
-  padding: 42px 0;
+  margin-top: 60px;
+  padding: 0 3% 30px 3%;
 }
 
 .mat-card {
   text-align: center;
   position: relative;
-  border-radius: 12px;
+  border-radius: 6px;
   max-width: 660px;
   margin: 24px auto;
 }
 
-.social-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
+.links-legal-data {
+  margin: 24px auto !important;
+  max-width: 600px;
+}
+.links-legal-data li {
+  white-space: nowrap;
 }
 
-.email-link {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: stretch;
-  align-content: stretch;
-  padding: 12px;
+.is-active-legal-data {
+  text-decoration: underline;
 }
 
+@media (max-width: 1139.89px) {
+  .social-links, .email-link {
+    text-align: center;
+    margin: 12px 24px;
+  }
+  .social-links > a {
+    padding: 6px 6px;
+    margin: 0 6px;
+  }
+  .social-links > hr, .email-link > hr {
+    display: none;
+  }
+}
 
-@media (min-width: 960px) {
+@media (min-width: 1140px) {
+  .social-links, .email-link {
+    position: fixed;
+    bottom: 0;
+  }
+  .email-link {
+    left:50%;
+    margin-left: 540px;
+  }
   .social-links {
+    left:50%;
+    margin-left: -540px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
     align-content: stretch;
-    position: fixed;
-    bottom: 0;
-    left: 6%;
   }
-  .email-link {
-    display: block;
+  .social-links > a {
+    padding: 3px;
+  }
+  .email-link > a {
     writing-mode: vertical-rl;
-    position: fixed;
-    bottom: 0;
-    padding-bottom: 18px !important;
-    right: 6%;
   }
-}
-
-@media (min-width: 1200px) {
-  .social-links {
-    left: 9%;
-  }
-  .email-link {
-    right: 9%;
+  .email-link > div {
+    margin: 0;
+    padding: 0;
+    line-height: 0.6em;
   }
 }

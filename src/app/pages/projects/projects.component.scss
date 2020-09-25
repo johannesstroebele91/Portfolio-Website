@@ -93,7 +93,7 @@
 }
 
 // 3. RESPONSIVE
-@media (max-width: 575.98px) {
+@media (max-width: 479.98px) {
   .userinfo-and-avatar {
     display: flex;
     flex-direction: column;
@@ -115,7 +115,7 @@
   }
 }
 
-@media (min-width: 576px) {
+@media (min-width: 480px) {
   .username-and-githublink {
     display: flex !important;
     flex-direction: row;

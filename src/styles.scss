@@ -29,91 +29,86 @@ html, body, app-root {
   box-sizing: border-box;
 }
 
-a {
-  color: map-get($custom-palette, primary);
-}
-
-.router-container {
-  padding: 18px;
-  margin: 0 auto;
-}
-
-.container {
-  max-width: 768px;
-  margin: 0 auto;
+section {
+  max-width: 959.89px !important;
+  margin: 0 auto !important;;
+  padding-top: 42px;
+  padding-bottom: 66px;
 }
 
 .mat-card {
   background: #233045 !important;
 }
 
-// TODO: Responsive img https://www.w3schools.com/howto/howto_css_image_responsive.asp
+.hero-section {
+  background: map-get($custom-palette, background-light) !important
+}
+
 .img-project {
-  max-width: 100%;
   height: auto;
+  max-width: 100%;
+  vertical-align: middle;
 }
 
-.running-text-width {
+.running-text-width-centered {
+  line-height: 1.6em !important;
+  font-size: 1.1em !important;
+  margin: 0 auto !important;
   max-width: 600px;
-  margin-bottom: 36px;
-}
-
-@media (max-width: 767.98px) {
-  .router-container {
-    max-width: 768px;
-  }
-}
-
-@media (min-width: 768px) {
-  .router-container {
-    max-width: 720px;
-    margin: 0 auto;
-  }
+  text-align: center;
 }
 
 // Text
-h1, .h1 {
+h1 {
   font-size: 3em !important;
   line-height: 1.2em !important;
-  margin-top: 0.6em !important;
-  margin-bottom: 0.45em !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.9em !important;
   font-weight: bolder !important;
   color: #e1e1e1 !important;
 
 }
 
-h2, .h2 {
-  font-size: 2.61111111em !important;
+h2 {
+  font-size: 2.4em !important;
   line-height: 1.46808511em !important;
-  margin-top: 0.45em !important;
-  margin-bottom: 0.3em !important;
-  font-weight: bolder !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.75em !important;
+  font-weight: 500 !important;
   color: #e1e1e1 !important;
 }
 
-h3, .h3 {
-  font-size: 1.61111111em !important;
+h3 {
+  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
+  font-size: 1.6em !important;
   line-height: 1.5862069em !important;
-  font-weight: bold !important;
-  margin-top: 0.3em !important;
-  margin-bottom: 0.3em !important;
-  color: #e1e1e1 !important;
-}
-
-h4, .h4, h5, .h5 {
-  font-size: 1.1em !important;
-  line-height: 1.27777778em !important;
   font-weight: 500 !important;
   margin-top: 0.3em !important;
+  margin-bottom: 0.6em !important;
+  color: #e1e1e1 !important;
+}
+
+h4, h5 {
+  font-size: 1.2em !important;
+  line-height: 1.27777778em !important;
+  font-weight: 400 !important;
+  margin-top: 0.3em !important;
   margin-bottom: 0.3em !important;
   color: #e1e1e1 !important;
 }
 
-p, ul, ol, pre, table, blockquote, label, span {
+p, ul, ol, pre, table, blockquote, label {
   line-height: 1.6em !important;
   font-size: 1.1em !important;
   margin-top: 0;
   margin-bottom: 0.9em;
+  font-weight: 400;
+}
+
+span {
+  line-height: 1.6em !important;
+  font-size: 1.1em !important;
+  margin-top: 0;
   font-weight: 400;
 }
 
@@ -130,10 +125,20 @@ input {
 button {
   font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
   padding: 12px 30px !important;
+  display: block!important;
 }
 
 .mat-stroked-button {
   border: 1px solid map-get($custom-palette, primary) !important;
+}
+
+
+.anchor-links li {
+  color: map-get($custom-palette, primary) !important;
+}
+
+.anchor-links li:hover {
+  color: map-get($custom-palette, primary-light) !important;
 }
 
 b {
@@ -159,8 +164,19 @@ hr, .hr {
 }
 
 a, i, strong, em, small, code {
-  font-size: 1.1em !important;
+  font-size: 1em !important;
   line-height: 0;
+}
+
+a {
+  color: map-get($custom-palette, primary);
+}
+
+a:hover {
+  color: map-get($custom-palette, primary-light);
+}
+a:active {
+  color: white;
 }
 
 sub, sup {
@@ -175,4 +191,73 @@ sup {
 
 sub {
   bottom: -0.25em;
+}
+.container-with-elements > * > h4 {
+  color: map-get($custom-palette, primary) !important;
+}
+
+
+// RESPONSIVE
+@media (max-width: 767.98px) {
+  .container-with-elements > * {
+    display: block;
+    margin: 0 auto 12px auto;
+    padding: 12px 24px;
+    border-radius: 6px;
+    background: map-get($custom-palette, background-light);
+  }
+  .container-with-elements > * > img {
+    display: block;
+    margin: 0 auto;
+  }
+  .container-with-elements > * > h4, p {
+    text-align: center;
+  }
+    .container-with-images > * {
+    display: block;
+    margin: 18px auto !important;
+  }
+  .button-hero-mobile {
+    display: block;
+    margin: 18px 0;
+    width: 100%;
+  }
+  .button-hero-desktop {
+    display: none !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-with-elements {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
+  }
+  .container-with-elements > * {
+    margin: 12px !important;
+  }
+  .container-with-images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+  }
+  .button-hero-mobile {
+    display: none !important;;
+  }
+  .button-hero-desktop {
+    display: block;
+  }
+}
+
+@media (max-width: 960px) {
+  section {
+    padding-right: 3%;
+    padding-left: 3%;
+  }
 }

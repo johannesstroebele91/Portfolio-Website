@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-legal-disclosure',
   templateUrl: './legal-disclosure.component.html',
   styleUrls: ['./legal-disclosure.component.scss']
 })
-export class LegalDisclosureComponent implements OnInit {
+export class LegalDisclosureComponent {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) {}
 
-  ngOnInit(): void {
+  public onClick(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
-
 }

@@ -1,55 +1,121 @@
 <!-- introduction -->
-<div fxLayout="row" fxLayoutAlign="space-around center" id="#top">
-    <div>
-        <h1>Hi!</h1>
-        <h2>I'm Johannes</h2>
-        <h3>Developer for Business Applications.</h3>
-        <p><i>My goal is to develop software that enables users to solve complex challenges.</i></p>
-        <button mat-raised-button color="primary" routerLink="contact">WORK WITH ME</button>
-    </div>
-
-    <div>
-        <img id="introductionimg" src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
-             height="180" width="180">
-    </div>
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div>
+                <h1>Welcome!</h1>
+                <h2>I'm Johannes</h2>
+                <h3>Full Stack Cloud Developer</h3>
+                <i class="running-text-width-centered my-3"><i>My goal is to optimize the user experience and business
+                    value
+                    of your enterprise cloud application by leveraging Big Data</i></i>
+                <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">Work
+                    with me
+                </button>
+            </div>
+            <img id="img-project" src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
+                 height="300">
+        </div>
+        <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
+            Work with me
+        </button>
+    </section>
 </div>
 
-<!-- Coding Projects: Retro Calculator -->
-<div style="text-align: center;">
-    <h2>Coding Projects</h2>
-    <h3>Example: Retro Calculator</h3>
-</div>
-<div fxLayout="row" fxLayoutAlign="space-around center">
-    <div style="padding: 12px;">
-        <img mat-card-image routerLink="projects" class="img-project"
-             src="../../../assets/sample-project.png"
+<!-- Project -->
+<section>
+    <h2 style="text-align: center;">What I develop</h2>
+    <h3 style="text-align: center;">Example: Retro Calculator</h3>
+    <div class="container-with-elements">
+        <div>
+            <img routerLink="projects" class="img-project"
+                 src="../../../assets/sample-project.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+        </div>
+        <div>
+            <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
+                more familiar with programming basics like functions and operators in Angular.</p>
+            <div class="d-flex justify-content-between">
+                <button mat-stroked-button color="primary" routerLink="projects">Source Code</button>
+                <button mat-stroked-button color="primary" routerLink="projects">Website</button>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="mt-5" style="text-align: center;">Example: Retro Calculator</h3>
+    <div class="container-with-elements">
+        <div>
+            <img routerLink="projects" class="img-project"
+                 src="../../../assets/sample-project.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+        </div>
+        <div>
+            <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
+                more familiar with programming basics like functions and operators in Angular.</p>
+            <div class="d-flex justify-content-between">
+                <button mat-stroked-button color="primary" routerLink="projects">Source Code</button>
+                <button mat-stroked-button color="primary" routerLink="projects">Website</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Experience -->
+<section>
+    <h2 style="text-align: center;">Which companies I worked for</h2>
+    <p class="running-text-width-centered">During the last years, I gained hands-on experience in developing enterprise applications
+        at such innovative and international companies as
+        <a routerLink="https://www.celonis.com/">Celonis</a>, <a
+                routerLink="https://www.btelligent.com/">b.telligent</a>, and <a
+                routerLink="https://www.daimler-tss.com/en/">DaimlerTSS</a>.
+        Details about my work can be seen in my <a routerLink="about">about page</a>.
+    </p>
+    <div class="container-with-images companies-images my-5">
+        <img routerLink="https://www.btelligent.com/"
+             src="../../../assets/logo-btelligent.png"
+             alt="Header design for the Sketch Meetup Stuttgart">
+        <img routerLink="https://www.celonis.com/"
+             src="../../../assets/logo-celonis.png"
+             alt="Header design for the Sketch Meetup Stuttgart">
+        <img routerLink="https://www.daimler-tss.com/en/"
+             src="../../../assets/logo-daimlertss.png"
              alt="Header design for the Sketch Meetup Stuttgart">
     </div>
-    <div>
-        <p>I programmed a simple retro-styled calculator build with Angular. The goal was to get
-            more familiar with programming basics like functions and operators in Angular.</p>
-        <button mat-raised-button color="primary" routerLink="projects">View Coding Projects</button>
-    </div>
-</div>
+</section>
 
-<!-- Software Designs StagePirate -->
-<div>
-    <h2>Software Designs</h2>
-    <h3>Example: StagePirate</h3>
-</div>
-<div fxLayout="row" fxLayoutAlign="space-around center">
-    <div style="padding: 12px;">
-        <img mat-card-image routerLink="projects" class="img-project"
-             src="../../../assets/sample-project.png"
-             alt="Application software design for the presentation improvement startup StagePirate"
-             height="384" width="512">
+<!-- Recommendations -->
+<section class="section-spacing">
+    <h2 style="text-align: center;">What others say about me</h2>
+    <div class="container-with-elements">
+        <div>
+            <h3>Max Mustermann</h3>
+            <h4>Position at a certain company</h4>
+            <img routerLink="https://www.celonis.com/"
+                 src="../../../assets/testimonial-sample.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+            <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
+                He is very dependable and it was a pleasure to work with him.
+                Johannes has certainly great entrepreneurial spirit.</p>
+        </div>
+        <div>
+            <h3>Max Mustermann</h3>
+            <h4>Position at a certain company</h4>
+            <img routerLink="https://www.celonis.com/"
+                 src="../../../assets/testimonial-sample.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+            <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
+                He is very dependable and it was a pleasure to work with him.
+                Johannes has certainly great entrepreneurial spirit.</p>
+        </div>
+        <div>
+            <h3>Max Mustermann</h3>
+            <h4>Position at a certain company</h4>
+            <img routerLink="https://www.celonis.com/"
+                 src="../../../assets/testimonial-sample.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+            <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
+                He is very dependable and it was a pleasure to work with him.
+                Johannes has certainly great entrepreneurial spirit.</p>
+        </div>
     </div>
-    <div>
-        <p class="gridtext">For the startup StagePirate, I created an application software design. The
-            application
-            analyses speeches and gives suggestions for improvement. I focused on a minimalstic, light blue
-            design
-            that makes the software easy to understand for users.</p>
-        <button mat-raised-button color="primary" routerLink="projects">View Coding Projects</button>
-    </div>
-</div>
+</section>

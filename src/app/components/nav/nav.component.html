@@ -1,29 +1,30 @@
 <mat-toolbar class="nav">
-  <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-    <div class="logo" routerLink="/">
-      <img src="../../../assets/logo.png" height="36" alt="Logo">
-      <span>Johannes Ströbele</span>
-    </div>
+        <a class="logo" routerLink="/">
+            <img src="../../../assets/logo.png" height="36" alt="Logo">
+            <span routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Johannes Ströbele</span>
+        </a>
 
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
-      <span routerLink="/about" routerLinkActive="active">About</span>
-      <span routerLink="/projects">Projects</span>
-      <span routerLink="/skills">Skills</span>
-      <span routerLink="/contact">Contact</span>
-    </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
+            <span routerLink="/about" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">About</span>
+            <span routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</span>
+            <span routerLink="/skills" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Skills</span>
+            <span routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</span>
+            <button mat-stroked-button color="primary" (click)="openCV()" class="button-cv">Resume</button>
+        </div>
 
-    <div fxLayout="row" fxLayoutAlign="space-between center" class="view-mobile">
-      <button (click)="showMenuMobile()" mat-icon-button color="primary" aria-label="Hamburger menu">
-        <mat-icon>menu</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar-row>
+        <div class="view-mobile">
+            <button (click)="showMenuMobile()" mat-icon-button color="primary" aria-label="Hamburger menu">
+                <mat-icon>menu</mat-icon>
+            </button>
+        </div>
+    </mat-toolbar-row>
 </mat-toolbar>
 <!-- TODO fix height of mobile menu -->
 <mat-toolbar *ngIf="showMobileMenu" class="view-mobile">
-  <mat-toolbar-row routerLink="/about">About</mat-toolbar-row>
-  <mat-toolbar-row routerLink="/projects">Projects</mat-toolbar-row>
-  <mat-toolbar-row routerLink="/skills">Skills</mat-toolbar-row>
-  <mat-toolbar-row routerLink="/contact">Contact</mat-toolbar-row>
+    <mat-toolbar-row routerLink="/about" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">About</mat-toolbar-row>
+    <mat-toolbar-row routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</mat-toolbar-row>
+    <mat-toolbar-row routerLink="/skills" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Skills</mat-toolbar-row>
+    <mat-toolbar-row routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</mat-toolbar-row>
 </mat-toolbar>

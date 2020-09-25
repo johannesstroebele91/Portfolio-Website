@@ -13,22 +13,58 @@
   padding-right: 6px;
 }
 
+.logo > span {
+  color: white;
+}
+
+.logo > span:hover, .view-desktop > span:hover {
+  color: map-get($custom-palette, primary-light);
+}
+
 .nav {
+  max-width: 959.89px !important;
   margin: 0 auto;
+  padding: 0 12px;
   background: map-get($custom-palette, background);
 }
 
+.mat-toolbar-row {
+  padding: 0 !important;
+}
+
+.is-active {
+  color: map-get($custom-palette, primary) !important;
+}
+
+.button-cv {
+  display: inline-block !important;
+  padding: 3px 12px !important;
+}
+
 // MOBILE
-@media (max-width: 575.98px) {
+@media (max-width: 767.98px) {
+  .nav {
+    height: 56px;
+  }
   .view-mobile {
     background: map-get($custom-palette, background) !important;
     display: block !important;
     cursor: pointer;
   }
-  .view-mobile > mat-toolbar-row {
-    font-size: 18px;
+  .view-mobile > .mat-toolbar-row {
     font-weight: normal;
     padding-left: 36px !important;
+  }
+  .view-mobile > .mat-toolbar-row:hover {
+    color: map-get($custom-palette, primary-light);
+  }
+  .view-mobile > button {
+    display: flex !important;
+    justify-content: center;
+  }
+  .mat-icon-button {
+    height: auto !important;
+    width: 42px;
   }
   .view-desktop {
     display: none !important;
@@ -36,7 +72,10 @@
 }
 
 // DESKTOP
-@media (min-width: 576px) {
+@media (min-width: 768px) {
+  .nav {
+    height: 64px;
+  }
   .view-desktop {
     display: block !important;
     cursor: pointer;

@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
   selector: 'app-data-protection-declaration',
   templateUrl: './data-protection-declaration.component.html',
   styleUrls: ['./data-protection-declaration.component.scss']
 })
-export class DataProtectionDeclarationComponent implements OnInit {
+export class DataProtectionDeclarationComponent {
 
-  constructor() { }
+  constructor(private viewportScroller: ViewportScroller) {}
 
-  ngOnInit(): void {
+  public onClick(elementId: string): void {
+    this.viewportScroller.scrollToAnchor(elementId);
   }
-
 }

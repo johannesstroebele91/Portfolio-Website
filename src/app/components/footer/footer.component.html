@@ -1,32 +1,45 @@
 <footer>
-    <mat-card class="">
+    <mat-card>
         <sub class="mat-display-1">Get In Touch</sub>
-        <p class="my-4">Interested in working together? Let us get together. I’ll buy the coffee.</p>
-        <button routerLink="/contact" mat-stroked-button color="primary" class="my-3">Let's do this</button>
+        <p class="my-4">Interested in working together? Let us meet. I’ll buy the coffee.</p>
+        <button routerLink="/contact" mat-raised-button color="primary" class="my-3">Contact me</button>
     </mat-card>
-    <ul fxLayout="row" fxLayoutAlign="space-around center" style="text-align: center;">
-        <li><a tabindex="0" routerLink="/legal">Legal disclosure</a></li>
-        <li><a tabindex="0" routerLink="/data">Data protection declaration</a></li>
-    </ul>
-    <ul class="social-links">
-        <li><a target="_blank" tabindex="0" href="https://www.linkedin.com/in/johannes-stroebele/"><img
-                src="../../../assets/GitHub.png" width="24" alt="Link to my GitHub page"></a></li>
-        <li class="mx-2"><a target="_blank" tabindex="0" href="https://angel.co/u/johannes-stroebele"><img
-                src="../../../assets/Angel.png" width="24" alt="Link to my Angel page"></a></li>
-        <li class="mx-2"><a target="_blank" tabindex="0" href="https://www.instagram.com/travelwithjoe/"><img
-                src="../../../assets/Insta.png" width="24" alt="Link to my Instagram page"></a></li>
-        <li class="mx-2"><a target="_blank" tabindex="0" href="https://www.xing.com/profile/Johannes_Stroebele"><img
-                src="../../../assets/Xing.png" width="24" alt="Link to my Xing page"></a></li>
-        <li><a target="_blank" tabindex="0" href="https://www.linkedin.com/in/johannes-stroebele/"><img
-                src="../../../assets/LinkedIn.png" width="24" alt="Link to my LinkedIn page"></a></li>
-    </ul>
-    <a class="email-link" href="mailto:stroebele.j@gmail.com">stroebele.j@gmail.com </a>
-    <ul style="text-align: center;">
-        <li>© 2019 Johannes Ströbele, <span style="white-space: nowrap;">all rights reserved</span></li>
-        <li>Made with love in <span style="white-space: nowrap;">Stuttgart, Germany</span></li>
-        <li>
-            <img tabindex="-1" src="../../../assets/stuttgart.png" width="66"
-                 alt="This website was made with love in Stuttgart">
-        </li>
-    </ul>
+    <div class="social-links">
+        <a href="https://www.linkedin.com/in/johannes-stroebele/">
+            <img src="../../../assets/logo-social-github.png"
+                 width="24" alt="Link to my GitHub page"></a>
+        <a href="https://angel.co/u/johannes-stroebele">
+            <img src="../../../assets/logo-social-angel.png" width="24"
+                 alt="Link to my Angel page"></a>
+        <a href="https://www.instagram.com/travelwithjoe">
+            <img src="../../../assets/logo-social-insta.png"
+                 width="24" alt="Link to my Instagram page"></a>
+        <a href="https://www.xing.com/profile/Johannes_Stroebele">
+            <img src="../../../assets/logo-social-xing.png"
+                 width="24" alt="Link to my Xing page"></a>
+        <a href="https://www.linkedin.com/in/johannes-stroebele/" class="mb-3">
+            <img src="../../../assets/logo-social-linkedin.png"
+                 width="24" alt="Link to my LinkedIn page"></a>
+        <hr style="width: 1px; height: 120px; background: white; border: none;"/>
+    </div>
+    <div class="email-link">
+        <a href="mailto:stroebele.j@gmail.com" class="mb-3">stroebele.j@gmail.com</a>
+        <hr style="width: 1px; height: 60px; background: white; border: none;"/>
+    </div>
+    <div>
+        <ul fxLayout="row" fxLayoutAlign="space-evenly center" class="links-legal-data">
+            <li><a tabindex="0" routerLink="/legal" routerLinkActive="is-active-legal-data"
+                   [routerLinkActiveOptions]="{exact: true}">Legal disclosure</a></li>
+            <li><a tabindex="0" routerLink="/data" routerLinkActive="is-active-legal-data"
+                   [routerLinkActiveOptions]="{exact: true}">Data protection declaration</a></li>
+        </ul>
+        <ul style="text-align: center;">
+            <li>© 2020 Johannes Ströbele, <span style="white-space: nowrap;">all rights reserved</span></li>
+            <li>Made with love in <span style="white-space: nowrap;">Stuttgart, Germany</span></li>
+            <li class="mt-4">
+                <img tabindex="-1" src="../../../assets/stuttgart.png" width="66"
+                     alt="This website was made with love in Stuttgart">
+            </li>
+        </ul>
+    </div>
 </footer>

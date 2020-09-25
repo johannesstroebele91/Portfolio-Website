@@ -1,0 +1,20 @@
+.social-profiles > li > a {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: stretch;
+  line-height: 1.6em !important;
+}
+
+.social-profiles > li > a > img {
+  position: relative;
+  top: -3px;
+  margin-right: 9px;
+  margin-left: 6px
+}
+
+.social-profiles > li > a > span {
+  font-size: 0.9em !important;
+}

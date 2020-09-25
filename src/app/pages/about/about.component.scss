@@ -1,0 +1,19 @@
+@import '../../../variables.scss';
+
+.tdfirst {
+  line-height: 1.6em !important;
+  font-size: 1.1em !important;
+  vertical-align: top;
+  white-space: nowrap;
+  font-weight: 400;
+  color: map-get($custom-palette, primary);
+}
+
+.tdsecond {
+  padding-left: 12px;
+}
+
+.ulbullets {
+  list-style-type: square !important;
+  padding-left: 24px;
+}
