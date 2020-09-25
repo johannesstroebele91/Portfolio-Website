@@ -26,7 +26,10 @@ footer {
 }
 
 @media (max-width: 1139.89px) {
-  .social-links, .email-link {
+  .email-link {
+    display: none;
+  }
+    .social-links, .email-link {
     text-align: center;
     margin: 12px 24px;
   }
@@ -43,14 +46,7 @@ footer {
   .social-links, .email-link {
     position: fixed;
     bottom: 0;
-  }
-  .email-link {
     left:50%;
-    margin-left: 540px;
-  }
-  .social-links {
-    left:50%;
-    margin-left: -540px;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -58,15 +54,10 @@ footer {
     align-items: center;
     align-content: stretch;
   }
-  .social-links > a {
-    padding: 3px;
+  .email-link {
+    margin-left: 540px;
   }
-  .email-link > a {
-    writing-mode: vertical-rl;
-  }
-  .email-link > div {
-    margin: 0;
-    padding: 0;
-    line-height: 0.6em;
+  .social-links {
+    margin-left: -540px;
   }
 }

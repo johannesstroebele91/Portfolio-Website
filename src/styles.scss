@@ -125,7 +125,7 @@ input {
 button {
   font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
   padding: 12px 30px !important;
-  display: block!important;
+  display: inline-block !important;
 }
 
 .mat-stroked-button {
@@ -175,6 +175,7 @@ a {
 a:hover {
   color: map-get($custom-palette, primary-light);
 }
+
 a:active {
   color: white;
 }
@@ -192,6 +193,7 @@ sup {
 sub {
   bottom: -0.25em;
 }
+
 .container-with-elements > * > h4 {
   color: map-get($custom-palette, primary) !important;
 }
@@ -204,26 +206,10 @@ sub {
     margin: 0 auto 12px auto;
     padding: 12px 24px;
     border-radius: 6px;
-    background: map-get($custom-palette, background-light);
   }
-  .container-with-elements > * > img {
-    display: block;
-    margin: 0 auto;
-  }
-  .container-with-elements > * > h4, p {
-    text-align: center;
-  }
-    .container-with-images > * {
+  .container-with-images > * {
     display: block;
     margin: 18px auto !important;
-  }
-  .button-hero-mobile {
-    display: block;
-    margin: 18px 0;
-    width: 100%;
-  }
-  .button-hero-desktop {
-    display: none !important;
   }
 }
 
@@ -246,12 +232,6 @@ sub {
     justify-content: space-between;
     align-items: center;
     align-content: stretch;
-  }
-  .button-hero-mobile {
-    display: none !important;;
-  }
-  .button-hero-desktop {
-    display: block;
   }
 }
 

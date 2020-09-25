@@ -1,4 +1,33 @@
+@import '../../../variables.scss';
+
+@media (max-width: 767.98px) {
+  .button-hero-mobile {
+    display: block !important;
+    margin: 18px 0;
+    width: 100%;
+  }
+  .button-hero-desktop {
+    display: none !important;
+  }
+  .container-with-elements > * > img {
+    display: block;
+    margin: 0 auto;
+  }
+  .container-with-elements > * > h4, p {
+    text-align: center;
+  }
+  .section-recommendations .container-with-elements > * {
+    background: map-get($custom-palette, background-light);
+  }
+}
+
 @media (min-width: 768px) {
+  .button-hero-mobile {
+    display: none !important;;
+  }
+  .button-hero-desktop {
+    display: block !important;
+  }
   .companies-images > img {
     max-width: 240px !important;
   }

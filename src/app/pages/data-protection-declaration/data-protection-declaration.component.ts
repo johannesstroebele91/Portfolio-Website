@@ -8,7 +8,8 @@ import {ViewportScroller} from "@angular/common";
 })
 export class DataProtectionDeclarationComponent {
 
-  constructor(private viewportScroller: ViewportScroller) {}
+  constructor(private viewportScroller: ViewportScroller) {
+  }
 
   public onClick(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);

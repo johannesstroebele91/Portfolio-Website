@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UsersService} from '../../../services/users.service';
 import {User} from '../../../models/user';
 import {ChartType, ChartOptions} from 'chart.js';
@@ -18,10 +18,9 @@ import {Repo} from '../../../models/repo';
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent {
+export class ProjectsComponent implements OnInit {
 
     // GENERAL VARIABLES
-    username: string;
     user: User;
     repos: Repo[];
     reposAmount = 0;
@@ -80,15 +79,9 @@ export class ProjectsComponent {
     }
 
     // API REQUEST METHODS
-    searchUsername(username?: string) {
-
-        // Search for string from last searched user names
-        if (username) {
-            this.username = username;
-        }
-
+    ngOnInit(): void {
         // Update GitHub username with input from user
-        this.usersService.updateUsername(this.username);
+        this.usersService.updateUsername('johannesstroebele91');
 
         // Gets respective searched user data from service
         // Subscription to function necessary, because it returns an observable

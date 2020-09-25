@@ -13,7 +13,6 @@ app.get('/env', (req, res) => {
   });
 });
 
-
 // Using proxy for rewriting the path for GitHub API
 // e.g. localhost:8080/githubapi/users/octocat -> https://api.github.com/users/octocat
 const proxyOptions = {
@@ -31,9 +30,9 @@ const apiProxy = createProxyMiddleware(proxyOptions);
 app.use('/githubapi/*', apiProxy);
 
 // Serving static files
-app.use(express.static('./dist/githubuser-dashboard'));
+app.use(express.static('./dist/portfolio-website'));
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/githubuser-dashboard/index.html'));
+  res.sendFile(path.join(__dirname + '/dist/portfolio-website/index.html'));
 });
 
 // Using process.env.PORT, so Heroku can set the port

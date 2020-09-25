@@ -1,4 +1,4 @@
-<mat-toolbar class="nav">
+<mat-toolbar class="nav" id="top">
     <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
         <a class="logo" routerLink="/">
@@ -11,7 +11,7 @@
             <span routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</span>
             <span routerLink="/skills" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Skills</span>
             <span routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</span>
-            <button mat-stroked-button color="primary" (click)="openCV()" class="button-cv">Resume</button>
+            <button mat-stroked-button color="primary" (click)="openCV()" class="button-cv">CV</button>
         </div>
 
         <div class="view-mobile">
