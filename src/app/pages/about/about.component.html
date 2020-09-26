@@ -1,59 +1,62 @@
 <!-- Introduction -->
-<section class="hero-section">
-    <div class="container-with-elements">
-        <div fxLayout="row" fxLayoutAlign="space-between center">
-            <div>
-                <p>My name is Johannes Ströbele. I was born on July 11, 1991 and live in Stuttgart, Germany. I am a full
-                    stack cloud developer for enterprise applications. </p>
-                <p>In my free time, I like to cook with friends, do sports, draw paper sketches, and read detective
-                    novels. For more information you can jump to a section of my curriculum vitae:</p>
-                <ol>
-                    <li><a tabindex="0" href="#work">Work experience</a></li>
-                    <li><a tabindex="0" href="#academic">Academic experience</a></li>
-                    <li><a tabindex="0" href="#qualification">Other qualification</a></li>
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div class="container-text-img">
+                <h1>Who am I</h1>
+                <p style="text-align: justify;">I am Johannes Ströbele and live in Stuttgart, Germany. I am a full stack cloud developer
+                    for enterprise applications. In my free time, I like to cook with friends,
+                    do fitness workouts, draw skecthes, and read detective novels.</p>
+                <ol class="anchor-links my-3">
+                    <li><a tabindex="0" (click)="onClick('company')">Company experience</a></li>
+                    <li><a tabindex="0" (click)="onClick('academic')">Academic experience</a></li>
+                    <li><a tabindex="0" (click)="onClick('languages')">Other qualification</a></li>
                 </ol>
+                <button (click)="openCV()" class="button-hero-desktop my-3" mat-raised-button color="primary">
+                    Open Curriculum Vitae
+                </button>
             </div>
-            <div class="col-sm-12 col-md-6" style="text-align: center;">
-                <img id="introductionimg" src="../../../assets/profile-picture.png"
-                     alt="Profile picture of Johannes Ströbele"
-                     height="210">
-            </div>
+            <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
+                 height="300">
         </div>
-    </div>
-</section>
+        <button (click)="openCV()" class="button-hero-mobile my-3" mat-raised-button color="primary">
+            Open Curriculum Vitae
+        </button>
+    </section>
+</div>
 
 <!-- 1. Work experience-->
-<section>
-    <h2>Work experience</h2>
+<section id="company">
+    <h2>Company experiences</h2>
     <table>
         <tr>
-            <td class="tdfirst">07/2010 – 09/2019</td>
-            <td class="tdsecond"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
-                                                                             href="https://www.btelligent.com/">b.telligent
+            <td class="td-first">07/2010 – 09/2019</td>
+            <td class="td-second"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
+                                                                              href="https://www.btelligent.com/">b.telligent
                 GmbH</a>, Munich</b>
-                <ul class="ulbullets">
+                <ul class="ul-bullets">
                     <li>Developing the management user interface of a time tracking tool</li>
                     <li>Using HTML/CSS, JavaScript, TypeScript, Angular Material UI components, and Angular</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td class="tdfirst">03/2018 – 09/2018</td>
-            <td class="tdsecond"><b>UX Research assistant for the <a tabindex="0" target="_blank"
-                                                                     href="https://www.hdm-stuttgart.de/hochschule/forschung/forschungsschwerpunkte/information_experience">IXD
+            <td class="td-first">03/2018 – 09/2018</td>
+            <td class="td-second"><b>UX Research assistant for the <a tabindex="0" target="_blank"
+                                                                      href="https://www.hdm-stuttgart.de/hochschule/forschung/forschungsschwerpunkte/information_experience">IXD
                 Research Group</a>, Stuttgart</b>
-                <ul class="ulbullets">
+                <ul class="ul-bullets">
                     <li>Support the creation of a guideline for 3D software</li>
                     <li>Conducting usability tests to optimize a VR app</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td class="tdfirst">02/2018 – 3/2018</td>
-            <td class="tdsecond"><b>Internship in UX Research at <a tabindex="0" target="_blank"
-                                                                    href="https://www.celonis.com/">Celonis</a>,
+            <td class="td-first">02/2018 – 3/2018</td>
+            <td class="td-second"><b>Internship in UX Research at <a tabindex="0" target="_blank"
+                                                                     href="https://www.celonis.com/">Celonis</a>,
                 Munich</b>
-                <ul class="ulbullets">
+                <ul class="ul-bullets">
                     <li>Development of a model to improve the UX</li>
                     <li>Setting up a web analytics solution to track the experience via 25 user metrics and
                         -dimensions
@@ -62,11 +65,11 @@
             </td>
         </tr>
         <tr>
-            <td class="tdfirst">08/2017 – 10/2017</td>
-            <td class="tdsecond"><b>Internship in UX Design at <a tabindex="0" target="_blank"
-                                                                  href="https://www.celonis.com/">Celonis</a>,
+            <td class="td-first">08/2017 – 10/2017</td>
+            <td class="td-second"><b>Internship in UX Design at <a tabindex="0" target="_blank"
+                                                                   href="https://www.celonis.com/">Celonis</a>,
                 Munich</b>
-                <ul class="ulbullets">
+                <ul class="ul-bullets">
                     <li>Development of a model to improve the UX</li>
                     <li>Setting up a web analytics solution to track the experience via 25 user metrics and
                         -dimensions
@@ -78,32 +81,32 @@
 </section>
 
 <!-- 2. Academic experience -->
-<section>
-    <h2>Academic experience</h2>
+<section id="academic">
+    <h2>Academic experiences</h2>
     <table>
         <tr>
-            <td class="tdfirst">10/2017 – present</td>
-            <td class="tdsecond"><b><a tabindex="0" target="_blank"
-                                       href="https://informationsdesign.hdm-stuttgart.de/">Information Design</a>,
+            <td class="td-first">10/2017 – present</td>
+            <td class="td-second"><b><a tabindex="0" target="_blank"
+                                        href="https://informationsdesign.hdm-stuttgart.de/">Information Design</a>,
                 Stuttgart Media University</b>
-                <ul class="ulbullets">
+                <ul class="ul-bullets">
                     <li>Desired degree: Bachelor of Arts</li>
                     <li>Semester representative (voluntary)</li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td class="tdfirst">03/2019 – 06/2019</td>
-            <td class="tdsecond"><b><a tabindex="0" target="_blank" href="https://www.dongguk.edu/mbs/en/">Semester
+            <td class="td-first">03/2019 – 06/2019</td>
+            <td class="td-second"><b><a tabindex="0" target="_blank" href="https://www.dongguk.edu/mbs/en/">Semester
                 abroad</a> during studies at the Stuttgart Media University, Dongguk University, Seoul</b>
             </td>
         </tr>
         <tr>
-            <td class="tdfirst">08/2011 – 09/2016</td>
-            <td class="tdsecond"><b><a tabindex="0" target="_blank"
-                                       href="https://www.wiwi.uni-augsburg.de/de/studium/studiengaenge/bac_bwl/">Business
+            <td class="td-first">08/2011 – 09/2016</td>
+            <td class="td-second"><b><a tabindex="0" target="_blank"
+                                        href="https://www.wiwi.uni-augsburg.de/de/studium/studiengaenge/bac_bwl/">Business
                 Administration</a>, University of Augsburg</b>
-                <ul class="ulbullets">
+                <ul class="ul-bullets">
                     <li>Academic degree: Bachelor of Science</li>
                     <li>Study focus: Marketing</li>
                     <li>Bachelor thesis: determinants of consumer behaviour in mobile channels</li>
@@ -111,65 +114,29 @@
             </td>
         </tr>
         <tr>
-            <td class="tdfirst">08/2015 – 12/2015</td>
-            <td class="tdsecond"><b><a tabindex="0" target="_blank"
-                                       href="http://bizeng.hufs.ac.kr/undergraduate_introduction">Semester
+            <td class="td-first">08/2015 – 12/2015</td>
+            <td class="td-second"><b><a tabindex="0" target="_blank"
+                                        href="http://bizeng.hufs.ac.kr/undergraduate_introduction">Semester
                 abroad</a> during studies at the University of Augsburg, Hankuk University of Foreign Studies, Seoul</b>
             </td>
         </tr>
     </table>
 </section>
 
-<!-- 3. Other qualification -->
-<section>
-    <h2>Other qualification</h2>
+<!-- 3. Language qualification -->
+<section id="languages">
+    <h2>Other qualifications</h2>
     <table>
         <tr>
-            <td class="tdfirst">Coding languages</td>
-            <td class="tdsecond">
-                <ul class="ulbullets">
-                    <li>Java</li>
-                    <li>Java Spring Framework</li>
-                    <li>JavaScript / TypeScript</li>
-                    <li>Angular Framework</li>
-                    <li>SQL</li>
-                    <li>HTML/CSS</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td class="tdfirst">Design Tools</td>
-            <td class="tdsecond">
-                <ul class="ulbullets">
-                    <li><a target="_blank" href="https://www.sketchapp.com/">Sketch - vector graphic editor</a></li>
-                    <li>Adobe Photoshop, Illustrator, Indesign - Creative Cloud</li>
-                    <li><a tabindex="0" target="_blank" href="https://www.invisionapp.com/">InVision -
-                        Prototyping</a></li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td class="tdfirst">Language Skills</td>
-            <td class="tdsecond">
-                <ul class="ulbullets">
+            <td class="td-first">Language Skills</td>
+            <td class="td-second">
+                <ul class="ul-bullets">
                     <li>German - native speaker</li>
                     <li>English - <a tabindex="0" target="_blank" href="https://www.ets.org/toefl/ibt/about">TOEFL
                         iBT score</a>: 102 / 120
                     </li>
                     <li>Japanese - basic communication skills</li>
                     <li>Korean - basic communication skills</li>
-                </ul>
-            </td>
-        </tr>
-        <tr>
-            <td class="tdfirst">Hobbies</td>
-            <td class="tdsecond">
-                <ul class="ulbullets">
-                    <li>Cooking</li>
-                    <li>Detective novels</li>
-                    <li>Piano</li>
-                    <li>Jogging</li>
-                    <li>Drawing</li>
                 </ul>
             </td>
         </tr>

@@ -1,19 +1,37 @@
 @import '../../../variables.scss';
 
-.tdfirst {
+.td-first {
   line-height: 1.6em !important;
   font-size: 1.1em !important;
   vertical-align: top;
   white-space: nowrap;
-  font-weight: 400;
-  color: map-get($custom-palette, primary);
+  font-weight: bolder;
+  color: map-get($custom-palette, background-lightest);
 }
 
-.tdsecond {
+.td-second {
   padding-left: 12px;
 }
 
-.ulbullets {
+.ul-bullets {
   list-style-type: square !important;
   padding-left: 24px;
+}
+
+@media (max-width: 767.98px) {
+  .td-first {
+    margin-bottom: 24px;
+  }
+  td {
+    display: block;
+    margin-bottom: 18px;
+  }
+  .td-second {
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  td {
+  }
 }

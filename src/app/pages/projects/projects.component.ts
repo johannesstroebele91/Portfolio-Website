@@ -58,6 +58,9 @@ export class ProjectsComponent implements OnInit {
         maintainAspectRatio: false,
         legend: {
             position: 'top',
+            labels: {
+                fontColor: 'white', // legend color (can be hexadecimal too)
+            },
         }
     };
     // 8 repositories

@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {ViewportScroller} from "@angular/common";
 
 @Component({
-  selector: 'app-about',
-  templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+    selector: 'app-about',
+    templateUrl: './about.component.html',
+    styleUrls: ['./about.component.scss']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor() { }
+    constructor(private viewportScroller: ViewportScroller) {
+    }
 
-  ngOnInit(): void {
-  }
+    public onClick(elementId: string): void {
+        this.viewportScroller.scrollToAnchor(elementId);
+    }
 
+    openCV() {
+        window.open('../../assets/Stroebele_CV.pdf');
+    }
 }

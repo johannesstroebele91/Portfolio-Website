@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .social-profiles > li > a {
   display: flex;
   flex-direction: row;
@@ -17,4 +19,11 @@
 
 .social-profiles > li > a > span {
   font-size: 0.9em !important;
+}
+
+@media (min-width: 768px) {
+  .contact-information .container-with-elements {
+    justify-content: space-around !important;
+
+  }
 }

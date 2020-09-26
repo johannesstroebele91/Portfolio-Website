@@ -1,20 +1,18 @@
 @import '../../../variables.scss';
 
+// TODO needs rework!!!!
 @media (max-width: 767.98px) {
-  .button-hero-mobile {
-    display: block !important;
-    margin: 18px 0;
-    width: 100%;
-  }
-  .button-hero-desktop {
-    display: none !important;
-  }
-  .container-with-elements > * > img {
+  .section-recommendations .container-with-elements > * > img {
+    height: auto;
     display: block;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .container-with-elements > * > h4, p {
+  .section-recommendations .container-with-elements > * > h4 {
     text-align: center;
+  }
+  .section-recommendations .container-with-elements > * > p {
+    text-align: justify
   }
   .section-recommendations .container-with-elements > * {
     background: map-get($custom-palette, background-light);
@@ -22,13 +20,27 @@
 }
 
 @media (min-width: 768px) {
-  .button-hero-mobile {
-    display: none !important;;
+  .section-recommendations .container-with-elements > * > img {
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .button-hero-desktop {
-    display: block !important;
-  }
-  .companies-images > img {
-    max-width: 240px !important;
-  }
+}
+
+.section-recommendations .container-with-elements {
+  align-items: flex-start !important;
+}
+
+.section-company .running-text-width-centered {
+  text-align: center !important;
+}
+
+.section-recommendations .container-with-elements h3 {
+  text-align: center;
+}
+
+.section-recommendations .container-with-elements div {
+  width: 82%;
+  padding-bottom: 36px;
 }

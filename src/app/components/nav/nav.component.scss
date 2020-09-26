@@ -15,6 +15,7 @@
 
 .logo > span {
   color: white;
+  padding: 0 18px;
 }
 
 .logo > span:hover, .view-desktop > span:hover {
@@ -37,6 +38,8 @@
 }
 
 .button-cv {
+  font-family: Roboto, "Helvetica Neue", sans-serif !important;
+  letter-spacing: 2px;
   padding: 3px 12px !important;
 }
 
@@ -80,7 +83,7 @@
     cursor: pointer;
   }
   .view-desktop > span {
-    padding: 0 15px;
+    padding: 18px;
     font-weight: 400 !important;
     font-size: 16px !important;
   }

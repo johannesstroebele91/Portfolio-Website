@@ -1,24 +1,26 @@
-<section class="hero-section">
-    <div class="container-with-elements">
-        <div>
-            <h1>Say hi!</h1>
-            <p>Contact me via <a href="mailto:stroebele.j@gmail.com">stroebele.j@gmail.com</a>
-                or the other options below, if you want support for creating enterprise applications:</p>
-            <ul style="list-style-type: square !important; padding-left: 24px">
-                <li>Full Stack Development</li>
-                <li>Backend development</li>
-                <li>Frontend development</li>
-            </ul>
+<!-- Introduction -->
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div class="container-text-img">
+                <h1>Say hi!</h1>
+                <p class="running-text-width-centered my-3">If you need support developing your enterprise application,
+                    contact me via the options below or...</p>
+                <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">
+                    Email Me
+                </button>
+            </div>
+            <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
+                 height="300">
         </div>
-        <div>
-            <img id="img-project" src="../../../assets/profile-picture.png"
-                 alt="Profile picture of Johannes Ströbele" height="300">
-        </div>
-    </div>
-</section>
+        <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
+            Email Me
+        </button>
+    </section>
+</div>
 
-<section>
-    <h2>Contact Information</h2>
+<section class="contact-information">
+    <h2>How you can contact me</h2>
     <div class="container-with-elements">
         <div>
             <p>Address</p>

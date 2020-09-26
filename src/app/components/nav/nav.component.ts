@@ -14,29 +14,6 @@ export class NavComponent {
         return this.showMobileMenu = !this.showMobileMenu;
     }
 
-    /* TODO: fix fold out menu after resize
-    //  https://www.digitalocean.com/community/tutorials/angular-breakpoints-angular-cdk
-    matcher: MediaQueryList;
-
-    constructor(public mediaMatcher: MediaMatcher) {
-    }
-
-    ngOnInit() {
-        this.matcher = this.mediaMatcher.matchMedia('(min-width: 576px)');
-
-        this.matcher.addEventListener('change', this.myListener);
-
-    }
-
-    ngOnDestroy() {
-        this.matcher.removeEventListener('change', this.myListener);
-    }
-
-    myListener(event) {
-        this.showMobileMenu = false;
-        console.log(event.matches ? 'match' : 'no match');
-    }
-     */
     openCV() {
         window.open('../../assets/Stroebele_CV.pdf');
     }

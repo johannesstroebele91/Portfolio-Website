@@ -1,65 +1,64 @@
-<!-- introduction -->
-<section class="hero-section">
-    <div class="container-with-elements">
-        <div>
-            <h1>Welcome!</h1>
-            <h2>I'm Johannes</h2>
-            <h3>Full Stack Cloud Developer</h3>
-            <i class="running-text-width-centered my-3"><i>My goal is to optimize the user experience and business
-                value
-                of your enterprise cloud application by leveraging Big Data</i></i>
-            <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">Work
-                with me
-            </button>
+<!-- Introduction -->
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div class="container-text-img">
+                <h1>Welcome!</h1>
+                <h2>I'm Johannes</h2>
+                <h3>Full Stack Cloud Developer</h3>
+                <p class="running-text-width-centered my-3">My goal is to optimize the user experience and business
+                    value of enterprise cloud applications by leveraging Big Data</p>
+                <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">
+                    Work with me
+                </button>
+            </div>
+            <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
+                 height="300">
         </div>
-        <img id="img-project" src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
-             height="300">
-    </div>
-    <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
-        Work with me
-    </button>
-</section>
+        <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
+            Work with me
+        </button>
+    </section>
+</div>
 
 <!-- Projects -->
 <section class="projects-section">
     <h2 style="text-align: center;">What I develop</h2>
-    <h3 style="text-align: center;">Example: Retro Calculator</h3>
-    <div class="container-with-elements">
-        <div>
-            <img routerLink="projects" class="img-project"
-                 src="../../../assets/sample-project.png"
+    <div class="container-with-elements my-5">
+        <div class="img-projects">
+            <img routerLink="projects" src="../../../assets/sample-project.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
         </div>
         <div>
+            <h3>Example: Retro Calculator</h3>
             <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
                 more familiar with programming basics like functions and operators in Angular.</p>
             <div class="d-flex justify-content-between">
-                <button mat-stroked-button color="primary" routerLink="projects">Source Code</button>
+                <button mat-stroked-button color="primary" routerLink="projects" class="mr-2">Source Code</button>
                 <button mat-stroked-button color="primary" routerLink="projects">Website</button>
             </div>
         </div>
     </div>
 
-    <h3 class="mt-5" style="text-align: center;">Example: Retro Calculator</h3>
-    <div class="container-with-elements">
+    <div class="container-with-elements my-5">
         <div>
-            <img routerLink="projects" class="img-project"
-                 src="../../../assets/sample-project.png"
-                 alt="Header design for the Sketch Meetup Stuttgart">
-        </div>
-        <div>
+            <h3>Example: Retro Calculator</h3>
             <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
                 more familiar with programming basics like functions and operators in Angular.</p>
             <div class="d-flex justify-content-between">
-                <button mat-stroked-button color="primary" routerLink="projects">Source Code</button>
+                <button mat-stroked-button color="primary" routerLink="projects" class="mr-2">Source Code</button>
                 <button mat-stroked-button color="primary" routerLink="projects">Website</button>
             </div>
+        </div>
+        <div class="img-projects">
+            <img routerLink="projects" src="../../../assets/sample-project.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
         </div>
     </div>
 </section>
 
 <!-- Company Experiences -->
-<section class="company-experiences">
+<section class="section-company">
     <h2 style="text-align: center;">Which companies I worked for</h2>
     <p class="running-text-width-centered">During the last years, I gained hands-on experience in developing enterprise
         applications
@@ -69,7 +68,7 @@
                 routerLink="https://www.daimler-tss.com/en/">DaimlerTSS</a>.
         Details about my work can be seen in my <a routerLink="about">about page</a>.
     </p>
-    <div class="container-with-images companies-images my-5">
+    <div class="container-with-images companies-images mt-5">
         <img routerLink="https://www.btelligent.com/"
              src="../../../assets/logo-btelligent.png"
              alt="Header design for the Sketch Meetup Stuttgart">
@@ -87,34 +86,38 @@
     <h2 style="text-align: center;">What others say about me</h2>
     <div class="container-with-elements">
         <div>
-            <h3>Max Mustermann</h3>
-            <h4>Position at a certain company</h4>
-            <img routerLink="https://www.celonis.com/"
-                 src="../../../assets/testimonial-sample.png"
+            <h3>Raphael Fleckenstein</h3>
+            <h4>UI/UX Product Designer</h4>
+            <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
+                 src="../../../assets/recommender-raphaelfleckenstein.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+            <p>I had the pleasure of working with Johannes at START Munich,
+                a startup student club at the TU Munich. He has optimized the web appearance,
+                build up the online marketing, and organized several successful events.
+                Johannes impressed me with his great motivation and project management skills
+        </div>
+        <div>
+            <h3>Faruk Toy</h3>
+            <h4>Data Science Working Student </h4>
+            <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
+                 src="../../../assets/recommender-faruktoy.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
             <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
                 He is very dependable and it was a pleasure to work with him.
                 Johannes has certainly great entrepreneurial spirit.</p>
         </div>
         <div>
-            <h3>Max Mustermann</h3>
-            <h4>Position at a certain company</h4>
-            <img routerLink="https://www.celonis.com/"
-                 src="../../../assets/testimonial-sample.png"
+            <h3>Tim Stefany</h3>
+            <h4>Cloud Mobility Working Student</h4>
+            <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
+                 src="../../../assets/recommender-timstefany.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
-                He is very dependable and it was a pleasure to work with him.
-                Johannes has certainly great entrepreneurial spirit.</p>
-        </div>
-        <div>
-            <h3>Max Mustermann</h3>
-            <h4>Position at a certain company</h4>
-            <img routerLink="https://www.celonis.com/"
-                 src="../../../assets/testimonial-sample.png"
-                 alt="Header design for the Sketch Meetup Stuttgart">
-            <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
-                He is very dependable and it was a pleasure to work with him.
-                Johannes has certainly great entrepreneurial spirit.</p>
+            <p>Having Johannes as a full stack developer in our data science project was great!
+                Whether it was the deployment of our dashboard via Google Cloud,
+                issues with the Python Flask backend, setting up the frontend,
+                or our PostgreSQL database, Johannes was always up to the task.
+                In my opinion, Johannes's skill set as a developer and project manager makes
+                him a versatile employee and a great asset to any team.</p>
         </div>
     </div>
 </section>
