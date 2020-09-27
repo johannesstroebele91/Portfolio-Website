@@ -37,11 +37,11 @@ section {
 }
 
 .mat-card {
-  background: #233045 !important;
+  background: map-get($custom-palette, background-hero);
 }
 
 .hero-section {
-  background: #0c1d34 !important;
+  background: map-get($custom-palette, background-hero);
 }
 
 .img-project {
