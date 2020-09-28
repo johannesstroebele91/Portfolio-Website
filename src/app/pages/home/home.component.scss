@@ -1,6 +1,5 @@
 @import '../../../variables.scss';
 
-// TODO needs rework!!!!
 @media (max-width: 767.98px) {
   .section-recommendations .container-with-elements > * > img {
     height: auto;
@@ -15,7 +14,13 @@
     text-align: justify;
   }
   .section-recommendations .container-with-elements > * {
-    background: map-get($custom-palette, background-light);
+    background: map-get($custom-palette, background);
+  }
+  .view-mobile {
+    display: block;
+  }
+  .view-desktop {
+    display: none;
   }
 }
 
@@ -26,13 +31,24 @@
     margin-left: auto;
     margin-right: auto;
   }
+  .view-mobile {
+    display: none;
+  }
+  .view-desktop {
+    display: block;
+  }
+}
+
+.projects-section h3 {
+  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
+  color: map-get($custom-palette, primary) !important;
 }
 
 .section-recommendations .container-with-elements {
   align-items: flex-start !important;
 }
 
-.section-company .running-text-width-centered {
+.section-company .runningtext-maxwidth-centered {
   text-align: center !important;
 }
 

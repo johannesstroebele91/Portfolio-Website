@@ -4,9 +4,8 @@
         <div class="container-with-elements">
             <div class="container-text-img">
                 <h1>Welcome!</h1>
-                <h2>I'm Johannes</h2>
-                <h3>Full Stack Cloud Developer</h3>
-                <p class="running-text-width-centered my-3">My goal is to optimize the user experience and business
+                <h2>I'm a full stack cloud developer</h2>
+                <p class="runningtext-maxwidth my-3">My goal is to optimize the user experience and business
                     value of enterprise cloud applications by leveraging Big Data</p>
                 <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">
                     Work with me
@@ -23,36 +22,53 @@
 
 <!-- Projects -->
 <section class="projects-section">
-    <h2 style="text-align: center;">What I develop</h2>
+    <h2 class="mt-5" style="text-align: center;">What I develop</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">This are two of the projects I developed recently.
+        You can see all of them in the <a routerLink="projects">projects section</a> or on my <a
+                href="https://github.com/johannesstroebele91/">GitHub profile</a>.</p>
+
+    <h3 class="view-mobile mt-5" style="text-align: center;">GitHub HR</h3>
     <div class="container-with-elements my-5">
         <div class="img-projects">
-            <img routerLink="projects" src="../../../assets/sample-project.png"
+            <img routerLink="projects" src="../../../assets/project-githubhr.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
         </div>
         <div>
-            <h3>Example: Retro Calculator</h3>
+            <h3 class="view-desktop">GitHub HR</h3>
             <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
                 more familiar with programming basics like functions and operators in Angular.</p>
-            <div class="d-flex justify-content-between">
-                <button mat-stroked-button color="primary" routerLink="projects" class="mr-2">Source Code</button>
-                <button mat-stroked-button color="primary" routerLink="projects">Website</button>
+            <div class="d-flex justify-content-between mb-3">
+                <button mat-stroked-button color="primary"
+                        (click)="openWebsite('https://github.com/johannesstroebele91/GitHub-HR');" class="mr-2">
+                    Source Code
+                </button>
+                <button mat-stroked-button color="primary"
+                        (click)="openWebsite('https://github-hr.herokuapp.com/home');">
+                    Website
+                </button>
             </div>
         </div>
     </div>
 
+    <h3 class="view-mobile mt-5" style="text-align: center;">Study Administration Portal</h3>
     <div class="container-with-elements my-5">
+        <div class="img-projects">
+            <img routerLink="projects" src="../../../assets/project-studyadministrationportal.png"
+                 alt="Header design for the Sketch Meetup Stuttgart">
+        </div>
         <div>
-            <h3>Example: Retro Calculator</h3>
+            <h3 class="view-desktop">Study Administration Portal</h3>
             <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
                 more familiar with programming basics like functions and operators in Angular.</p>
-            <div class="d-flex justify-content-between">
-                <button mat-stroked-button color="primary" routerLink="projects" class="mr-2">Source Code</button>
-                <button mat-stroked-button color="primary" routerLink="projects">Website</button>
+            <div class="d-flex justify-content-between  mb-3">
+                <button mat-stroked-button color="primary"
+                        (click)="openWebsite('https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration');"
+                        class="mr-2">Source Code
+                </button>
+                <button mat-stroked-button color="primary"
+                        (click)="openWebsite('https://hdm-study-administration.herokuapp.com/exams');">Website
+                </button>
             </div>
-        </div>
-        <div class="img-projects">
-            <img routerLink="projects" src="../../../assets/sample-project.png"
-                 alt="Header design for the Sketch Meetup Stuttgart">
         </div>
     </div>
 </section>
@@ -60,7 +76,7 @@
 <!-- Company Experiences -->
 <section class="section-company">
     <h2 style="text-align: center;">Which companies I worked for</h2>
-    <p class="running-text-width-centered">During the last years, I gained hands-on experience in developing enterprise
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">During the last years, I gained hands-on experience in developing enterprise
         applications
         at such innovative and international companies as
         <a routerLink="https://www.celonis.com/">Celonis</a>, <a
@@ -84,14 +100,16 @@
 <!-- Recommendations -->
 <section class="section-recommendations">
     <h2 style="text-align: center;">What others say about me</h2>
-    <div class="container-with-elements">
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">The following recommendations were taken from my <a
+            href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a></p>
+    <div class="container-with-elements mt-4">
         <div>
             <h3>Raphael Fleckenstein</h3>
             <h4>UI/UX Product Designer</h4>
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
                  src="../../../assets/recommender-raphaelfleckenstein.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p>I had the pleasure of working with Johannes at START Munich,
+            <p class="runningtext-maxwidth">I had the pleasure of working with Johannes at START Munich,
                 a startup student club at the TU Munich. He has optimized the web appearance,
                 build up the online marketing, and organized several successful events.
                 Johannes impressed me with his great motivation and project management skills
@@ -102,7 +120,8 @@
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
                  src="../../../assets/recommender-faruktoy.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p>Johannes is very talented and skilled. He has great ideas and he is able to make them work.
+            <p class="runningtext-maxwidth">Johannes is very talented and skilled. He has great ideas and he is able to
+                make them work.
                 He is very dependable and it was a pleasure to work with him.
                 Johannes has certainly great entrepreneurial spirit.</p>
         </div>
@@ -112,12 +131,10 @@
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
                  src="../../../assets/recommender-timstefany.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p>Having Johannes as a full stack developer in our data science project was great!
-                Whether it was the deployment of our dashboard via Google Cloud,
-                issues with the Python Flask backend, setting up the frontend,
-                or our PostgreSQL database, Johannes was always up to the task.
-                In my opinion, Johannes's skill set as a developer and project manager makes
-                him a versatile employee and a great asset to any team.</p>
+            <p class="runningtext-maxwidth">Having Johannes as a full stack developer in our
+                data science project was great! Whether it was the deployment of our dashboard via Google Cloud,
+                issues with the Python Flask backend, setting up the frontend, or our managing our PostgreSQL database,
+                Johannes was always up to the task.</p>
         </div>
     </div>
 </section>

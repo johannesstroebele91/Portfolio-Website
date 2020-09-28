@@ -2,14 +2,12 @@
 @import '~@angular/material/theming';
 
 $custom-palette: (
-        primary : #ff7d91,
-        primary-light : #ffc4ce,
-        accent: #ff8364,
+        primary : #62ecc8, // alt. ff6e86
+        primary-light : #adfcd8, //alt. ffc4ce
+        // accent: #171f3e,
         background: #171f3e,
-        background-hero: #273c75,
-        background-light: #38669e,
-        background-lighter: #7184ac,
-        background-lightest: #abb6d6,
+        background-light: #273c75, // 273c75
+        background-lightest: #d3e6f9,
         contrast: (
                 primary : #082928,
                 accent: #2a0703,

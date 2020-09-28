@@ -7,4 +7,7 @@ import {Component} from '@angular/core';
 })
 export class HomeComponent {
 
+    openWebsite(url: string) {
+        window.location.href = url;
+    }
 }

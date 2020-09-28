@@ -15,11 +15,11 @@
 
 .logo > span {
   color: white;
-  padding: 0 18px;
+  padding: 0 12px;
 }
 
 .logo > span:hover, .view-desktop > span:hover {
-  color: map-get($custom-palette, primary-light);
+  color: map-get($custom-palette, primary-light) !important;
 }
 
 .nav {

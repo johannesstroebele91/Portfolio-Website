@@ -2,7 +2,8 @@
     <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
         <a class="logo" routerLink="/">
-            <img src="../../../assets/logo.png" height="42" alt="Logo">
+            <img src="../../../assets/logo.png" onmouseover="this.src='../../../assets/logo-hovered.png'"
+                 onmouseout="this.src='../../../assets/logo.png'" height="42" alt="Logo">
             <span routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Johannes Ströbele</span>
         </a>
 
@@ -10,6 +11,7 @@
             <span routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</span>
             <span routerLink="/about" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">About</span>
             <span routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</span>
+            <span routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</span>
         </div>
 
         <div class="view-mobile">

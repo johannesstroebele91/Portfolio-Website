@@ -37,11 +37,11 @@ section {
 }
 
 .mat-card {
-  background: map-get($custom-palette, background-hero);
+  background: map-get($custom-palette, background-light) !important;
 }
 
 .hero-section {
-  background: map-get($custom-palette, background-hero);
+  background: map-get($custom-palette, background-light);
 }
 
 .img-project {
@@ -50,12 +50,16 @@ section {
   vertical-align: middle;
 }
 
-.running-text-width-centered {
+.runningtext-maxwidth, .runningtext-maxwidth-centered {
   line-height: 1.6em !important;
   font-size: 1.1em !important;
-  margin: 0 auto !important;
   max-width: 600px;
-  text-align: left !important;
+  text-align: justify;
+  margin: 0 auto !important;
+}
+
+.runningtext-maxwidth-centered {
+  margin: 0 auto !important;
 }
 
 // Text
@@ -63,7 +67,7 @@ h1 {
   font-size: 3em !important;
   line-height: 1.2em !important;
   margin-top: 1.2em !important;
-  margin-bottom: 0.9em !important;
+  margin-bottom: 1.2em !important;
   font-weight: bolder !important;
   color: #e1e1e1 !important;
 
@@ -73,18 +77,17 @@ h2 {
   font-size: 2.4em !important;
   line-height: 1.46808511em !important;
   margin-top: 1.2em !important;
-  margin-bottom: 0.75em !important;
+  margin-bottom: 0.9em !important;
   font-weight: 500 !important;
   color: #e1e1e1 !important;
 }
 
 h3 {
-  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
   font-size: 1.6em !important;
   line-height: 1.5862069em !important;
   font-weight: 500 !important;
   margin-top: 0.3em !important;
-  margin-bottom: 0.6em !important;
+  margin-bottom: 0.75em !important;
   color: #e1e1e1 !important;
 }
 
@@ -93,7 +96,7 @@ h4, h5 {
   line-height: 1.27777778em !important;
   font-weight: 400 !important;
   margin-top: 0.3em !important;
-  margin-bottom: 0.3em !important;
+  margin-bottom: 0.6em !important;
   color: #e1e1e1 !important;
 }
 
@@ -132,20 +135,15 @@ button {
   border: 1px solid map-get($custom-palette, primary) !important;
 }
 
-.mat-raised-button {
-  background: #e8747d !important; //  02DCAD
-  color: white !important;
-}
-
 .mat-raised-button:hover {
-  background: map-get($custom-palette, primary) !important;
+  background: #7cfcd7 !important;
 }
 
-.mat-icon {
+section .mat-icon {
   position: relative;
   top: 6px;
   margin-right: 9px;
-  color: map-get($custom-palette, background-lighter) !important;
+  color: map-get($custom-palette, background-lightest) !important;
 }
 
 .anchor-links li {

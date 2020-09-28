@@ -6,12 +6,12 @@ footer {
 }
 
 .mat-card {
-
   text-align: center;
   position: relative;
   border-radius: 6px;
   max-width: 660px;
   margin: 24px auto;
+  background: map-get($custom-palette, √) !important;
 }
 
 .links-legal-data {
@@ -25,26 +25,17 @@ footer {
 .is-active-legal-data {
   text-decoration: underline;
 }
-
+.social-links-middle > a {
+  padding: 15px;
+}
 @media (max-width: 1139.89px) {
-  .arrow-upward {
-    display: none;
-  }
-    .social-links, .arrow-upward {
-    text-align: center;
-    margin: 12px 24px;
-  }
-  .social-links > a {
-    padding: 6px 6px;
-    margin: 0 6px;
-  }
-  .social-links > hr, .arrow-upward > hr {
+  .arrow-upward, .social-links-left {
     display: none;
   }
 }
 
 @media (min-width: 1140px) {
-  .social-links, .arrow-upward {
+  .social-links-left, .arrow-upward {
     position: fixed;
     bottom: 0;
     left:50%;
@@ -56,9 +47,9 @@ footer {
     align-content: stretch;
   }
   .arrow-upward {
-    margin-left: 528px;
+    margin-left: 509px;
   }
-  .social-links {
+  .social-links-left {
     margin-left: -540px;
   }
 }
