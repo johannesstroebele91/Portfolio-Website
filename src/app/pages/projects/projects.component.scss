@@ -12,8 +12,16 @@
   display: inline-block;
 }
 
-.container-repositories .mat-icon {
+.container-columns .mat-icon {
   color: map-get($custom-palette, background-lightest) !important;
+}
+
+h3 {
+  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.repo-link > .mat-icon {
+  color: map-get($custom-palette, primary) !important;
 }
 
 @media (max-width: 575.98px) {
@@ -22,8 +30,14 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: stretch;
+    align-items: baseline;
     align-content: stretch;
+  }
+  .mat-card {
+    padding: 42px 18px 30px 18px;
+  }
+  .container-columns > div {
+    margin-bottom: 12px;
   }
 }
 
@@ -51,6 +65,9 @@
   }
   .container-columns > div:nth-child(2) {
     padding-left: 30px !important;
+  }
+  .mat-card {
+    padding: 60px 24px 42px 24px;
   }
 }
 

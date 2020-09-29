@@ -7,7 +7,7 @@
                 <p class="runningtext-maxwidth my-3">I concepted, designed and developed the these projects. They
                     are fetched
                     from the GitHub API, so everything is up to date.</p>
-                <div>
+                <div class="my-4">
                     <div *ngIf="user.public_repos">
                         <mat-icon aria-hidden="false" aria-label="Repos icon">dns</mat-icon>
                         <span>Repos: {{user.public_repos}}</span>
@@ -48,8 +48,13 @@
 <section>
     <h2>{{reposAmount}} Repositories</h2>
     <div style="max-width: 768px; margin: 0 auto;">
-        <mat-card *ngFor="let repo of repos" class="container-repositories my-5">
-            <h3><a href="{{repo.html_url}}">{{repo.name}}</a></h3>
+        <mat-card *ngFor="let repo of repos" class="my-5">
+            <div  fxLayout="row" fxLayoutAlign="space-between start" >
+                <h3>{{repo.name}}</h3>
+                <a class="repo-link mb-3" href="{{repo.html_url}}">
+                    <mat-icon aria-hidden="false" aria-label="Repos icon" color="primary">launch</mat-icon>
+                </a>
+            </div>
             <p>{{repo.description}}</p>
             <div class="container-columns my-3">
                 <div>

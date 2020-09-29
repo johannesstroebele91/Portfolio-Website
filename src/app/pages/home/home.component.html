@@ -5,17 +5,18 @@
             <div class="container-text-img">
                 <h1>Welcome!</h1>
                 <h2>I'm a full stack cloud developer</h2>
-                <p class="runningtext-maxwidth my-3">My goal is to optimize the user experience and business
+                <p class="runningtext-maxwidth my-3" style="text-align: left;">My goal is to optimize the user
+                    experience and business
                     value of enterprise cloud applications by leveraging Big Data</p>
                 <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">
-                    Work with me
+                    Let's catch up
                 </button>
             </div>
             <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
                  height="300">
         </div>
         <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
-            Work with me
+            Let's catch up
         </button>
     </section>
 </div>
@@ -23,7 +24,8 @@
 <!-- Projects -->
 <section class="projects-section">
     <h2 class="mt-5" style="text-align: center;">What I develop</h2>
-    <p class="runningtext-maxwidth-centered" style="text-align: center;">This are two of the projects I developed recently.
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">This are two of the projects I developed
+        recently.
         You can see all of them in the <a routerLink="projects">projects section</a> or on my <a
                 href="https://github.com/johannesstroebele91/">GitHub profile</a>.</p>
 
@@ -35,9 +37,10 @@
         </div>
         <div>
             <h3 class="view-desktop">GitHub HR</h3>
-            <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
-                more familiar with programming basics like functions and operators in Angular.</p>
-            <div class="d-flex justify-content-between mb-3">
+            <p class="mb-3">This dashboard supports human resources during the technical screening process of the GitHub
+                portfolio of software development job applicants. The reason for this is that more and more software development
+                job applicants use GitHub to show their coding projects. I used Angular, Node.js (Express), and Heroku among other technologies.</p>
+            <div class="project-buttons-position">
                 <button mat-stroked-button color="primary"
                         (click)="openWebsite('https://github.com/johannesstroebele91/GitHub-HR');" class="mr-2">
                     Source Code
@@ -58,9 +61,10 @@
         </div>
         <div>
             <h3 class="view-desktop">Study Administration Portal</h3>
-            <p class="mb-3">I programmed a simple retro-styled calculator build with Angular. The goal was to get
-                more familiar with programming basics like functions and operators in Angular.</p>
-            <div class="d-flex justify-content-between  mb-3">
+            <p class="mb-3">This responsive web application enables students of the Stuttgart Media University to manage
+                their exams faster and easier. In the frontend Bootstrap and Vanilla JavaScript is used. In the backend
+                Node.js (Express). The application was deployed via Heroku.</p>
+            <div class="project-buttons-position">
                 <button mat-stroked-button color="primary"
                         (click)="openWebsite('https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration');"
                         class="mr-2">Source Code
@@ -76,7 +80,8 @@
 <!-- Company Experiences -->
 <section class="section-company">
     <h2 style="text-align: center;">Which companies I worked for</h2>
-    <p class="runningtext-maxwidth-centered" style="text-align: center;">During the last years, I gained hands-on experience in developing enterprise
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">During the last years, I gained hands-on
+        experience in developing enterprise
         applications
         at such innovative and international companies as
         <a routerLink="https://www.celonis.com/">Celonis</a>, <a
@@ -100,10 +105,11 @@
 <!-- Recommendations -->
 <section class="section-recommendations">
     <h2 style="text-align: center;">What others say about me</h2>
-    <p class="runningtext-maxwidth-centered" style="text-align: center;">The following recommendations were taken from my <a
-            href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a></p>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">The following recommendations were taken from
+        my <a
+                href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a></p>
     <div class="container-with-elements mt-4">
-        <div>
+        <mat-card>
             <h3>Raphael Fleckenstein</h3>
             <h4>UI/UX Product Designer</h4>
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
@@ -113,8 +119,8 @@
                 a startup student club at the TU Munich. He has optimized the web appearance,
                 build up the online marketing, and organized several successful events.
                 Johannes impressed me with his great motivation and project management skills
-        </div>
-        <div>
+        </mat-card>
+        <mat-card>
             <h3>Faruk Toy</h3>
             <h4>Data Science Working Student </h4>
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
@@ -124,8 +130,8 @@
                 make them work.
                 He is very dependable and it was a pleasure to work with him.
                 Johannes has certainly great entrepreneurial spirit.</p>
-        </div>
-        <div>
+        </mat-card>
+        <mat-card>
             <h3>Tim Stefany</h3>
             <h4>Cloud Mobility Working Student</h4>
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
@@ -135,6 +141,6 @@
                 data science project was great! Whether it was the deployment of our dashboard via Google Cloud,
                 issues with the Python Flask backend, setting up the frontend, or our managing our PostgreSQL database,
                 Johannes was always up to the task.</p>
-        </div>
+        </mat-card>
     </div>
 </section>

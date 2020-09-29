@@ -8,14 +8,14 @@ import {ViewportScroller} from "@angular/common";
 })
 export class AboutComponent {
 
-    constructor(private viewportScroller: ViewportScroller) {
-    }
+    constructor(private viewportScroller: ViewportScroller) {}
 
     public onClick(elementId: string): void {
         this.viewportScroller.scrollToAnchor(elementId);
     }
 
-    openCV() {
-        window.open('../../assets/Stroebele_CV.pdf');
+    openFile(filename: string) {
+        window.open('../../assets/' + filename);
     }
+
 }

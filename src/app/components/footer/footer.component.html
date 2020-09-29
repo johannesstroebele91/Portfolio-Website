@@ -17,7 +17,7 @@
                  width="24" alt="Link to my LinkedIn page"></a>
         <hr style="width: 1px; height: 120px; background: white; border: none;"/>
     </div>
-    <mat-card class="pb-5 mb-5">
+    <mat-card *ngIf="router.url!='/contact'" class="pb-5 mb-5">
         <h2>Get In Touch</h2>
         <p class="my-3">Interested in working together? Let's catch up.</p>
         <div class="social-links-middle my-4">
@@ -54,7 +54,7 @@
         <ul style="text-align: center;">
             <li>© 2020 Johannes Ströbele, <span style="white-space: nowrap;">all rights reserved</span></li>
             <li>Made with love in <span style="white-space: nowrap;">Stuttgart, Germany</span></li>
-            <li class="mt-4">
+            <li class="mt-4" (click)="onClick('top')">
                 <img tabindex="-1" src="../../../assets/stuttgart.png" width="66"
                      alt="This website was made with love in Stuttgart">
             </li>

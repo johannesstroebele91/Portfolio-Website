@@ -1,5 +1,35 @@
 @import "../../../variables";
 
+.nav, .nav-bg {
+  height: 64px;
+}
+
+.nav {
+  max-width: 959.89px !important;
+  margin: 0 auto;
+  padding: 0 12px;
+  background: map-get($custom-palette, background);
+}
+
+.nav-sticky {
+  position: sticky;
+  position: -webkit-sticky; /* For macOS/iOS Safari */
+  top: 0; /* Sets the sticky toolbar to be on top */
+  z-index: 1; /* Ensure that your app's content doesn't overlap the toolbar */
+}
+
+.nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  background: map-get($custom-palette, background);
+}
+
+.mat-toolbar-row {
+  padding: 0 !important;
+}
 .logo {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: bolder;
@@ -14,6 +44,7 @@
 }
 
 .logo > span {
+  font-size: 18px !important;
   color: white;
   padding: 0 12px;
 }
@@ -22,19 +53,13 @@
   color: map-get($custom-palette, primary-light) !important;
 }
 
-.nav {
-  max-width: 959.89px !important;
-  margin: 0 auto;
-  padding: 0 12px;
-  background: map-get($custom-palette, background);
-}
-
-.mat-toolbar-row {
-  padding: 0 !important;
-}
-
 .is-active {
   color: map-get($custom-palette, primary) !important;
+}
+
+.hamburger {
+  top: 6px;
+  position: relative;
 }
 
 .button-cv {
@@ -43,11 +68,9 @@
   padding: 3px 12px !important;
 }
 
+
 // MOBILE
 @media (max-width: 767.98px) {
-  .nav {
-    height: 56px;
-  }
   .view-mobile {
     background: map-get($custom-palette, background) !important;
     display: block !important;
@@ -75,9 +98,6 @@
 
 // DESKTOP
 @media (min-width: 768px) {
-  .nav {
-    height: 64px;
-  }
   .view-desktop {
     display: block !important;
     cursor: pointer;

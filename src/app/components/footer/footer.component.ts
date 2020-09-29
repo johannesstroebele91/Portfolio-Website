@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ViewportScroller} from "@angular/common";
+import {Router} from "@angular/router";
 
 @Component({
     selector: 'app-footer',
@@ -8,7 +9,7 @@ import {ViewportScroller} from "@angular/common";
 })
 export class FooterComponent {
 
-    constructor(private viewportScroller: ViewportScroller) {
+    constructor(private viewportScroller: ViewportScroller, public router: Router) {
     }
 
     public onClick(elementId: string): void {

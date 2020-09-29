@@ -4,39 +4,63 @@
         <div class="container-with-elements">
             <div class="container-text-img">
                 <h1>Who am I</h1>
-                <p style="text-align: justify;">I am Johannes Ströbele and live in Stuttgart, Germany. I am a full stack cloud developer
+                <p style="text-align: justify;">I am Johannes Ströbele and live in Stuttgart, Germany. I am a full stack
+                    cloud developer
                     for enterprise applications. In my free time, I like to cook with friends,
                     do fitness workouts, draw skecthes, and read detective novels.</p>
                 <ol class="anchor-links my-3">
                     <li><a tabindex="0" (click)="onClick('company')">Company experience</a></li>
                     <li><a tabindex="0" (click)="onClick('academic')">Academic experience</a></li>
-                    <li><a tabindex="0" (click)="onClick('languages')">Other qualification</a></li>
+                    <li><a tabindex="0" (click)="onClick('others')">Other qualification</a></li>
                 </ol>
-                <button (click)="openCV()" class="button-hero-desktop my-3" mat-raised-button color="primary">
+                <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-desktop my-3" mat-raised-button
+                        color="primary">
                     Open Curriculum Vitae
                 </button>
             </div>
             <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
                  height="300">
         </div>
-        <button (click)="openCV()" class="button-hero-mobile my-3" mat-raised-button color="primary">
+        <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-mobile my-3" mat-raised-button color="primary">
             Open Curriculum Vitae
         </button>
     </section>
 </div>
 
-<!-- 1. Work experience-->
+<!-- 1. Company experiences -->
 <section id="company">
     <h2>Company experiences</h2>
     <table>
+        <tr id="daimlertss">
+            <td class="td-first">07/2010 – 09/2019</td>
+            <td class="td-second"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
+                                                                              href="https://www.btelligent.com/">Daimler
+                TSS
+                GmbH</a>, Munich</b>
+                <ul class="ul-bullets">
+                    <li>Development of a web application for recalculating vehicle contracts in a SCRUM team using Jira
+                        from Atlassian
+                    </li>
+                    <li>Implementing Angular components with methods such as data binding, dependency injection,
+                        routing, services, and observables
+                    </li>
+                    <li>Angular (Material UI), TypeScript, SCSS, HTML, Kotlin, Spring Framework</li>
+                </ul>
+            </td>
+        </tr>
         <tr>
             <td class="td-first">07/2010 – 09/2019</td>
             <td class="td-second"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
                                                                               href="https://www.btelligent.com/">b.telligent
                 GmbH</a>, Munich</b>
                 <ul class="ul-bullets">
-                    <li>Developing the management user interface of a time tracking tool</li>
-                    <li>Using HTML/CSS, JavaScript, TypeScript, Angular Material UI components, and Angular</li>
+                    <li>Development of a web application for recalculating vehicle contracts in a SCRUM team using Jira
+                        from Atlassian
+                    </li>
+                    <li>Implementing Angular components with methods such as data binding, dependency injection,
+                        routing, services, and observables
+                    </li>
+                    <li>Angular (Material UI), TypeScript, SCSS, HTML, Kotlin, Spring Framework</li>
                 </ul>
             </td>
         </tr>
@@ -52,7 +76,7 @@
             </td>
         </tr>
         <tr>
-            <td class="td-first">02/2018 – 3/2018</td>
+            <td id="celonis-ux-research" class="td-first">02/2018 – 3/2018</td>
             <td class="td-second"><b>Internship in UX Research at <a tabindex="0" target="_blank"
                                                                      href="https://www.celonis.com/">Celonis</a>,
                 Munich</b>
@@ -65,7 +89,7 @@
             </td>
         </tr>
         <tr>
-            <td class="td-first">08/2017 – 10/2017</td>
+            <td id="celonis-ux-design" class="td-first">08/2017 – 10/2017</td>
             <td class="td-second"><b>Internship in UX Design at <a tabindex="0" target="_blank"
                                                                    href="https://www.celonis.com/">Celonis</a>,
                 Munich</b>
@@ -123,8 +147,8 @@
     </table>
 </section>
 
-<!-- 3. Language qualification -->
-<section id="languages">
+<!-- 3. Other qualifications -->
+<section id="others">
     <h2>Other qualifications</h2>
     <table>
         <tr>
@@ -137,6 +161,17 @@
                     </li>
                     <li>Japanese - basic communication skills</li>
                     <li>Korean - basic communication skills</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="td-first">Hobbies</td>
+            <td class="td-second">
+                <ul class="ul-bullets">
+                    <li>Cooking</li>
+                    <li>Fitness training</li>
+                    <li>Drawing</li>
+                    <li>Detective novels</li>
                 </ul>
             </td>
         </tr>

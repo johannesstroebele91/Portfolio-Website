@@ -1,30 +1,45 @@
-<mat-toolbar class="nav" id="top">
-    <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+<div class="nav-sticky">
+    <div class="nav-bg"></div>
+    <mat-toolbar class="nav">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
 
-        <a class="logo" routerLink="/">
-            <img src="../../../assets/logo.png" onmouseover="this.src='../../../assets/logo-hovered.png'"
-                 onmouseout="this.src='../../../assets/logo.png'" height="42" alt="Logo">
-            <span routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Johannes Ströbele</span>
-        </a>
+            <a class="logo" routerLink="/">
+                <img src="../../../assets/logo.png" onmouseover="this.src='../../../assets/logo-hovered.png'"
+                     onmouseout="this.src='../../../assets/logo.png'" height="42" alt="Logo">
+                <span routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Johannes Ströbele</span>
+            </a>
 
-        <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
-            <span routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</span>
-            <span routerLink="/about" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">About</span>
-            <span routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</span>
-            <span routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</span>
-        </div>
-
-        <div class="view-mobile">
-            <button (click)="showMenuMobile()" mat-icon-button color="primary" aria-label="Hamburger menu">
-                <mat-icon>menu</mat-icon>
-            </button>
-        </div>
-    </mat-toolbar-row>
-</mat-toolbar>
-<!-- TODO fix height of mobile menu -->
-<mat-toolbar *ngIf="showMobileMenu" class="view-mobile">
-    <mat-toolbar-row routerLink="/about" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">About</mat-toolbar-row>
-    <mat-toolbar-row routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</mat-toolbar-row>
-    <mat-toolbar-row routerLink="/skills" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Skills</mat-toolbar-row>
-    <mat-toolbar-row routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</mat-toolbar-row>
-</mat-toolbar>
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="view-desktop">
+                <span routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Home</span>
+                <span routerLink="/about" routerLinkActive="is-active"
+                      [routerLinkActiveOptions]="{exact: true}">About</span>
+                <span routerLink="/skills" routerLinkActive="is-active"
+                      [routerLinkActiveOptions]="{exact: true}">Skills</span>
+                <span routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Projects</span>
+                <span routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">Contact</span>
+            </div>
+            <div class="view-mobile">
+                <button (click)="showMenuMobile()" mat-icon-button color="primary" aria-label="Hamburger menu">
+                    <mat-icon class="hamburger">menu</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar *ngIf="showMobileMenu" class="view-mobile">
+        <mat-toolbar-row routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+            Home
+        </mat-toolbar-row>
+        <mat-toolbar-row routerLink="/about" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+            About
+        </mat-toolbar-row>
+        <mat-toolbar-row routerLink="/skills" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+            Skills
+        </mat-toolbar-row>
+        <mat-toolbar-row routerLink="/projects" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+            Projects
+        </mat-toolbar-row>
+        <mat-toolbar-row routerLink="/contact" routerLinkActive="is-active" [routerLinkActiveOptions]="{exact: true}">
+            Contact
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>

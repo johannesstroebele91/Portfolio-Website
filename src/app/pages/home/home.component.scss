@@ -1,5 +1,10 @@
 @import '../../../variables.scss';
 
+.mat-card {
+  padding-top: 24px;
+  padding-bottom: 36px;
+  margin-bottom: 30px;
+}
 @media (max-width: 767.98px) {
   .section-recommendations .container-with-elements > * > img {
     height: auto;
@@ -13,7 +18,7 @@
   .section-recommendations .container-with-elements > * > p {
     text-align: justify;
   }
-  .section-recommendations .container-with-elements > * {
+  .projects-section .container-with-elements > * {
     background: map-get($custom-palette, background);
   }
   .view-mobile {
@@ -21,6 +26,14 @@
   }
   .view-desktop {
     display: none;
+  }
+  .project-buttons-position {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: stretch;
   }
 }
 
@@ -36,6 +49,14 @@
   }
   .view-desktop {
     display: block;
+  }
+  .project-buttons-position {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
   }
 }
 

@@ -3,69 +3,276 @@
     <section>
         <div class="container-with-elements">
             <div class="container-text-img">
-                <h1>What are my skills</h1>
-                <p style="text-align: justify;">This score shows my experience in software conception,
-                    design, and development. The maximum score for each field is 10.</p>
+                <h1>Who am I</h1>
+                <p style="text-align: justify;">These are the skills that I acquired during my internships, studies, and
+                    personal projects. They are mainly in the are of software research, design, and development. Click
+                    on the experiences below to get more detailed information.
+                </p>
                 <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">
-                    Work with me
+                    Let's catch up
                 </button>
             </div>
-            <!-- TODO fix -->
-            <img src="../../../assets/" alt="Profile picture of Johannes Ströbele"
+            <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
                  height="300">
         </div>
         <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
-            Work with me
+            Let's catch up
         </button>
     </section>
 </div>
 
 <!-- Skills -->
-<section>
-    <div class="griditemtop first">
-        <img class="sectionicons" src="../images/front-end-dev.png" alt="My ability of front-end development"
-             height="384" width="512">
-        <h3 class="headingcenter"><b>BACK-END DEVELOPMENT</b></h3>
-        <p class="gridtextcenter">Programming the necessary functionality for the software (SQL, C, C++).</p>
-        <div class="divscore">6</div>
-    </div>
-    <div class="griditemtop second">
-        <img class="sectionicons" src="../images/back-end-dev.png" alt="My ability of front-end development"
-             height="384" width="512">
-        <h3 class="headingcenter"><b>FRONT-END DEVELOPMENT</b></h3>
-        <p class="gridtextcenter">Coding the user interface of the software (HTML, CSS, JavaScript).</p>
-        <div class="divscore">8</div>
-    </div>
+<section class="section-skills">
+    <h2 id="skills" style="text-align: center;">What my skills are</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">These are the skills that I acquired during my
+        internships, studies, and personal projects. Click on the links (e. g.<a
+                (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a> to receive
+        further information.</p>
+    <div class="container-with-elements mt-4" style="  flex-basis: 100%;">
+        <mat-card>
+            <h3>Frontend Development</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                    Mobile Web Applications - FoxSub (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                    Mobile Media - Study Portal (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li *ngIf="!showContentFrontend" (click)="showContentFrontend=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentFrontend">
+                    <ul>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li><a>Visualytics (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/Portfolio-Website">
+                            Web Design - Portfolio Website (HdM course)</a></li>
+                        <li (click)="showContentFrontend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>HTML, CSS, SCSS</li>
+                <li>Angular, Angular Material</li>
+                <li>JavaScript, TypeScript</li>
+            </ul>
+        </mat-card>
+        <mat-card>
+            <h3>Backend Development</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214489">Databases Fundamentals (HdM
+                    course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                    Mobile Web Applications - FoxSub (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li *ngIf="!showContentBackend" (click)="showContentBackend=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentBackend">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                                Mobile Media - Study Portal (HdM course)</a></li>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li><a>Visualytics (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/Portfolio-Website">
+                            Web Design - Portfolio Website (HdM course)</a></li>
+                        <li (click)="showContentBackend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Node.js, Express Framework</li>
+                <li>Python, Flask Framework</li>
+                <li>Java, Spring Framework</li>
+                <li>SQL, SQLite, PostgreSQL</li>
+                <li>Heroku, Netlify, Google Cloud</li>
+            </ul>
+        </mat-card>
+        <mat-card>
+            <h3>Data Science</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a>Visualytics (HdM course)</a></li>
+                <li><a href="https://github.com/Twilytics">
+                    Data Engineering Project - Twilytics (HdM course)</a></li>
+                <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                    Data Science Project - Fleetboard (HdM course)</a></li>
+                <li *ngIf="!showContentFrontend" (click)="showContentFrontend=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentFrontend">
+                    <ul>
+                        <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                            Mobile Media - Study Portal (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                            Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                        <li (click)="showContentFrontend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Pandas & Numpy</li>
+                <li>Chart.js (Ng2-Charts)</li>
+                <li>Grafana</li>
+            </ul>
+        </mat-card>
 
-    <div class="griditemtop first">
-        <img class="sectionicons" src="../images/ux-research.png" alt="My ability of UX research" height="384"
-             width="512">
-        <h3 class="headingcenter"><b>USER RESEARCH</b></h3>
-        <p class="gridtextcenter">Understanding the target group in order to create a better user experience (e.g.
-            usability tests, surveys, interviews)</p>
-        <div class="divscore">8</div>
     </div>
-    <div class="griditemtop second">
-        <img class="sectionicons" src="../images/ux-design.png" alt="My ability of UX design" height="384" width="512">
-        <h3 class="headingcenter"><b>UX DESIGN</b></h3>
-        <p class="gridtextcenter">Creating a concept based on research that satisfies the need of users (e.g. fun,
-            security, autonomy)</p>
-        <div class="divscore">8</div>
-    </div>
-
-    <div class="griditemtop first">
-        <img class="sectionicons" src="../images/interaction-design.png" alt="My ability of interaction design"
-             height="384" width="512">
-        <h3 class="headingcenter"><b>INTERACTION DESIGN</b></h3>
-        <p class="gridtextcenter">Improving the interaction between users and the software (e.g. simplification)</p>
-        <div class="divscore">6</div>
-    </div>
-    <div class="griditemtop second">
-        <img class="sectionicons" src="../images/visual-design.png" alt="My ability of visual design" height="384"
-             width="512">
-        <h3 class="headingcenter"><b>VISUAL DESIGN</b></h3>
-        <p class="gridtextcenter">Improving the aesthetics of the design perceived by users (e.g. typografy, space,
-            illustrations)</p>
-        <div class="divscore">6</div>
+    <div class="container-with-elements mt-4">
+        <mat-card>
+            <h3>UX Design</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('celonis-ux-design')">UX Design Intern (Celonis)</a></li>
+                <li><a (click)="onClick('celonis-ux-design')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                    Mobile Media - Study Portal (HdM course)</a></li>
+                <li *ngIf="!showContentUxDesign" (click)="showContentUxDesign=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentUxDesign">
+                    <ul>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                            Mobile Web Applications - FoxSub (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/Portfolio-Website">
+                            Web Design - Portfolio Website (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5212636">Application Design
+                            (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214628">Communication Design
+                            (HdM course)</a></li>
+                        <li>
+                            <a href="https://www.hdm-stuttgart.de/block?sgname=Informationsdesign+%28Bachelor%2C+7+Semester%29&blockname=User+Interface+Design+&sgblockID=2572792&sgang=550032">User
+                                Interface Design (HdM course)</a></li>
+                        <li (click)="showContentUxDesign=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Figma</li>
+                <li>Sketch</li>
+                <li>Adobe CC</li>
+                <li>InVision</li>
+                <li>Balsamiq</li>
+            </ul>
+        </mat-card>
+        <mat-card>
+            <h3>UX Research</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('celonis-ux-research')">UX Research Intern (Celonis)</a></li>
+                <li><a (click)="onClick('ixd-group')">UX Research Student Assistant (IXD Research Group)</a></li>
+                <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                    Data Science Project - Fleetboard (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                    Mobile Web Applications - FoxSub (HdM course)</a></li>
+                <li *ngIf="!showContentUxResearch" (click)="showContentUxResearch=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentUxResearch">
+                    <ul>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li>
+                            <a href="https://www.hdm-stuttgart.de/block?sgname=Wirtschaftsinformatik+und+digitale+Medien+%28Bachelor%2C+7+Semester%29+&sgblockID=2572637&sgang=550054&blockname=Wissenschaftliche+Grundlagen+">Scientific
+                                fundamentals 1 & 2 (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211700">
+                            Information Psychology (HdM course)</a></li>
+                        <li><a (click)="openFile('hdm-course-HCI-Methods-summative-usability-evaluation.pdf')">
+                            Human Computer Interaction Methods - Paper "Summative Usability Evaluation" (HdM course)</a>
+                        </li>
+                        <li>
+                            <a href="https://www.hdm-stuttgart.de/block?sgname=Informationsdesign+%28Bachelor%2C+7+Semester%29&blockname=Mensch+%26+Informationssysteme+&sgblockID=2572788&sgang=550032">Human
+                                Computer Interaction (HdM course)</a></li>
+                        <li (click)="showContentUxResearch=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Interviews</li>
+                <li>Survey</li>
+                <li>Prototyping</li>
+                <li>Journey mapping</li>
+                <li>Usability testing</li>
+            </ul>
+        </mat-card>
+        <mat-card>
+            <h3>Others</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                <li><a (click)="onClick('celonis-ux-design')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a (click)="onClick('celonis-ux-design')">UX Design Intern (Celonis)</a></li>
+                <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211593">Linux & Terminal Fundamentals
+                    (HdM course)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                    Mobile Web Applications - FoxSub (HdM course)</a></li>
+                <li *ngIf="!showContentOthers" (click)="showContentOthers=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentOthers">
+                    <ul>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li (click)="showContentOthers=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Git, GitHub, Bitbucket</li>
+                <li>Terminal, Linux Server, Shell Scripting</li>
+                <li>IntellJ, WebStorm</li>
+                <li>Agile Project Management, SCRUM</li>
+            </ul>
+        </mat-card>
     </div>
 </section>

@@ -19,12 +19,12 @@ import {NavComponent} from './components/nav/nav.component';
 import {FooterComponent} from './components/footer/footer.component';
 import {AboutComponent} from "./pages/about/about.component";
 import {ProjectsComponent} from "./pages/projects/projects.component";
-import {SkillsComponent} from "./pages/skills/skills.component";
 import {ContactComponent} from "./pages/contact/contact.component";
 import {DataProtectionDeclarationComponent} from "./pages/data-protection-declaration/data-protection-declaration.component";
 import {LegalDisclosureComponent} from "./pages/legal-disclosure/legal-disclosure.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
+import { SkillsComponent } from './pages/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -34,10 +34,10 @@ import {MatButtonModule} from "@angular/material/button";
     NavComponent,
     AboutComponent,
     ContactComponent,
-    SkillsComponent,
     DataProtectionDeclarationComponent,
     LegalDisclosureComponent,
-    FooterComponent
+    FooterComponent,
+    SkillsComponent
   ],
   imports: [
     HttpClientModule,
