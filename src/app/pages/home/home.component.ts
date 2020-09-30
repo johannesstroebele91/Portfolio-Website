@@ -11,21 +11,21 @@ export class HomeComponent {
 
 
     constructor(private route: ActivatedRoute, private title: Title, private meta: Meta) {
-        this.title.setTitle('Homepage of Johannes Ströbele');
+        this.title.setTitle('Homepage');
         this.meta.addTags([
+            {
+                name: 'author',
+                content: 'Johannes Ströbele'
+            },
             {
                 name: 'description',
                 content: 'Welcome! I am Johannes, a full stack cloud developer. On my homepage you can view my two most recent projects, ' +
                     'the companies I worked with, and what others say about me.  other pages of my portfolio'
             },
             {
-                name: 'author',
-                content: 'Johannes Ströbele'
-            },
-            {
                 name: 'keywords',
-                content: 'Johannes Ströbele, portfolio, homepage, full stack developer, software development, information design, ' +
-                    'front-end development, back-end development, enterprise application'
+                content: 'Johannes Ströbele, portfolio, homepage, full stack developer, software developer, information design, ' +
+                    'front end development, back end development, enterprise application'
             },
         ], true);
     }

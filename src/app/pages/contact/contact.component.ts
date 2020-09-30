@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {ActivatedRoute} from "@angular/router";
+import {Meta, Title} from "@angular/platform-browser";
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+    selector: 'app-contact',
+    templateUrl: './contact.component.html',
+    styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
 
-  constructor() { }
+    constructor(private route: ActivatedRoute, private title: Title, private meta: Meta) {
+        this.title.setTitle('Contact page');
+        this.meta.addTags([
+            {
+                name: 'author',
+                content: 'Johannes Ströbele'
+            },
 
-  ngOnInit(): void {
-  }
-
+            {
+                name: 'description',
+                content: 'Get in Touch if you need support developing an enterprise application or just want to connect.'
+            },
+            {
+                name: 'keywords',
+                content: 'Johannes Ströbele, portfolio, contact, get in touch, email me, full stack developer, software developer, information design, ' +
+                    'front end development, back end development, enterprise application'
+            },
+        ], true);
+    }
 }

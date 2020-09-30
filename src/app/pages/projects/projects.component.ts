@@ -4,6 +4,9 @@ import {User} from '../../../models/user';
 import {ChartType, ChartOptions} from 'chart.js';
 import {Label} from 'ng2-charts';
 import {Repo} from '../../../models/repo';
+import {ViewportScroller} from "@angular/common";
+import {ActivatedRoute} from "@angular/router";
+import {Meta, Title} from "@angular/platform-browser";
 
 /* STRUCTURE
   1. Variables
@@ -78,7 +81,25 @@ export class ProjectsComponent implements OnInit {
     ];
 
     // CONSTRUCTOR
-    constructor(private usersService: UsersService) {
+    constructor(private usersService: UsersService, private route: ActivatedRoute, private title: Title, private meta: Meta) {
+        this.title.setTitle('Projects page');
+        this.meta.addTags([
+            {
+                name: 'author',
+                content: 'Johannes Ströbele'
+            },
+
+            {
+                name: 'description',
+                content: 'I conceptualize, designed, and developed the following projects.' +
+                    'They are directly fetched from the GitHub API. So everything is up to date.'
+            },
+            {
+                name: 'keywords',
+                content: 'Johannes Ströbele, portfolio, projects, GitHub projects, coding, full stack developer, software developer, information design, ' +
+                    'front end development, back end development, enterprise application'
+            },
+        ], true);
     }
 
     // API REQUEST METHODS
@@ -142,10 +163,6 @@ export class ProjectsComponent implements OnInit {
     // LINKS METHODS
     linkToWebsite(userLink: string) {
         window.open(userLink, '_blank');
-    }
-
-    linkToEmail(emailLink: string) {
-        window.open('mailto: ' + emailLink, '_blank');
     }
 
     // GENERAL METHODS
