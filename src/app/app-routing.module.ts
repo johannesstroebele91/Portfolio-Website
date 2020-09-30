@@ -6,13 +6,11 @@ import {ProjectsComponent} from './pages/projects/projects.component';
 import {ContactComponent} from "./pages/contact/contact.component";
 import {LegalDisclosureComponent} from "./pages/legal-disclosure/legal-disclosure.component";
 import {DataProtectionDeclarationComponent} from "./pages/data-protection-declaration/data-protection-declaration.component";
-import {SkillsComponent} from "./pages/skills/skills.component";
 
 export const routes: Routes = [
     {path: '', component: HomeComponent, pathMatch: 'full'},
     {path: 'search', component: ProjectsComponent},
     {path: 'about', component: AboutComponent},
-    {path: 'skills', component: SkillsComponent},
     {path: 'projects', component: ProjectsComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'legal', component: LegalDisclosureComponent},

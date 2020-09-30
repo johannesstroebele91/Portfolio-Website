@@ -5,6 +5,43 @@
   padding-bottom: 36px;
   margin-bottom: 30px;
 }
+
+.projects-section h3 {
+  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
+  color: map-get($custom-palette, primary) !important;
+}
+
+.section-company .runningtext-maxwidth-centered {
+  text-align: center !important;
+}
+
+.section-recommendations .container-with-elements h3, h4 {
+  text-align: center;
+}
+
+.section-recommendations .container-with-elements div {
+  width: 82%;
+  padding-bottom: 36px;
+}
+
+.section-company > .container-with-elements {
+  margin: 30px 0;
+}
+.section-company > .container-with-elements > div {
+  background: map-get($custom-palette, background-dark);
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-align: center;
+}
+.section-company > .container-with-elements > div > a {
+  display: block;
+  font-size: 42px !important;
+  line-height: 1.2em !important;
+  margin-top: 1.2em !important;
+  margin-bottom: 0.3em !important;
+  font-weight: bolder !important;
+}
+
 @media (max-width: 767.98px) {
   .section-recommendations .container-with-elements > * > img {
     height: auto;
@@ -54,30 +91,14 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     align-content: stretch;
   }
-}
-
-.projects-section h3 {
-  font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
-  color: map-get($custom-palette, primary) !important;
-}
-
-.section-recommendations .container-with-elements {
-  align-items: flex-start !important;
-}
-
-.section-company .runningtext-maxwidth-centered {
-  text-align: center !important;
-}
-
-.section-recommendations .container-with-elements h3, h4 {
-  text-align: center;
-}
-
-.section-recommendations .container-with-elements div {
-  width: 82%;
-  padding-bottom: 36px;
+  .projects-section .container-with-elements {
+    text-align: center;
+  }
+  .section-company > .container-with-elements {
+    justify-content: space-around;
+  }
 }

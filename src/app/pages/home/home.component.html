@@ -3,28 +3,28 @@
     <section>
         <div class="container-with-elements">
             <div class="container-text-img">
-                <h1>Welcome!</h1>
+                <h1>Hi</h1>
                 <h2>I'm a full stack cloud developer</h2>
                 <p class="runningtext-maxwidth my-3" style="text-align: left;">My goal is to optimize the user
                     experience and business
                     value of enterprise cloud applications by leveraging Big Data</p>
                 <button routerLink="contact" class="button-hero-desktop my-3" mat-raised-button color="primary">
-                    Let's catch up
+                    Get In Touch
                 </button>
             </div>
             <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
                  height="300">
         </div>
         <button routerLink="contact" class="button-hero-mobile my-3" mat-raised-button color="primary">
-            Let's catch up
+            Get In Touch
         </button>
     </section>
 </div>
 
 <!-- Projects -->
 <section class="projects-section">
-    <h2 class="mt-5" style="text-align: center;">What I develop</h2>
-    <p class="runningtext-maxwidth-centered" style="text-align: center;">This are two of the projects I developed
+    <h2 class="mt-5" style="text-align: center;">Recent Projects</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">These are two of the projects I developed
         recently.
         You can see all of them in the <a routerLink="projects">projects section</a> or on my <a
                 href="https://github.com/johannesstroebele91/">GitHub profile</a>.</p>
@@ -37,9 +37,10 @@
         </div>
         <div>
             <h3 class="view-desktop">GitHub HR</h3>
-            <p class="mb-3">This dashboard supports human resources during the technical screening process of the GitHub
-                portfolio of software development job applicants. The reason for this is that more and more software development
-                job applicants use GitHub to show their coding projects. I used Angular, Node.js (Express), and Heroku among other technologies.</p>
+            <p class="mb-3">This dashboard supports human resources during the technical screening of software
+                development job applicants. Such applicants often use GitHub to show their coding projects. Therefore, I
+                visualized the data from this page using Angular, Node.js (Express), and Heroku, among other
+                technologies.</p>
             <div class="project-buttons-position">
                 <button mat-stroked-button color="primary"
                         (click)="openWebsite('https://github.com/johannesstroebele91/GitHub-HR');" class="mr-2">
@@ -79,35 +80,33 @@
 
 <!-- Company Experiences -->
 <section class="section-company">
-    <h2 style="text-align: center;">Which companies I worked for</h2>
+    <h2 style="text-align: center;">Previous Companies</h2>
     <p class="runningtext-maxwidth-centered" style="text-align: center;">During the last years, I gained hands-on
-        experience in developing enterprise
-        applications
-        at such innovative and international companies as
-        <a routerLink="https://www.celonis.com/">Celonis</a>, <a
-                routerLink="https://www.btelligent.com/">b.telligent</a>, and <a
-                routerLink="https://www.daimler-tss.com/en/">DaimlerTSS</a>.
-        Details about my work can be seen in my <a routerLink="about">about page</a>.
+        experience at the following innovative and international companies, among others.
+        Details can be seen on the <a routerLink="about">about page</a>.
     </p>
-    <div class="container-with-images companies-images mt-5">
-        <img routerLink="https://www.btelligent.com/"
-             src="../../../assets/logo-btelligent.png"
-             alt="Header design for the Sketch Meetup Stuttgart">
-        <img routerLink="https://www.celonis.com/"
-             src="../../../assets/logo-celonis.png"
-             alt="Header design for the Sketch Meetup Stuttgart">
-        <img routerLink="https://www.daimler-tss.com/en/"
-             src="../../../assets/logo-daimlertss.png"
-             alt="Header design for the Sketch Meetup Stuttgart">
+    <div class="container-with-elements">
+        <div>
+            <a href="https://www.celonis.com/">Celonis</a>
+            <p>Process Mining Application</p>
+        </div>
+        <div>
+            <a href="https://www.btelligent.com/">b.telligent</a>
+            <p>Time Tracking Application</p>
+        </div>
+        <div>
+            <a href="https://www.daimler-tss.com/en/">DaimlerTSS</a>
+            <p>Vehicle Offer Calculation Application</p>
+        </div>
     </div>
 </section>
 
 <!-- Recommendations -->
 <section class="section-recommendations">
-    <h2 style="text-align: center;">What others say about me</h2>
-    <p class="runningtext-maxwidth-centered" style="text-align: center;">The following recommendations were taken from
-        my <a
-                href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a></p>
+    <h2 style="text-align: center;">Recommendations</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">The quotes from my colleagues were taken from
+        my
+        <a href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a>.</p>
     <div class="container-with-elements mt-4">
         <mat-card>
             <h3>Raphael Fleckenstein</h3>
@@ -115,10 +114,10 @@
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
                  src="../../../assets/recommender-raphaelfleckenstein.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p class="runningtext-maxwidth">I had the pleasure of working with Johannes at START Munich,
+            <p class="runningtext-maxwidth">"I had the pleasure of working with Johannes at START Munich,
                 a startup student club at the TU Munich. He has optimized the web appearance,
                 build up the online marketing, and organized several successful events.
-                Johannes impressed me with his great motivation and project management skills
+                Johannes impressed me with his great motivation and project management skills."</p>
         </mat-card>
         <mat-card>
             <h3>Faruk Toy</h3>
@@ -126,9 +125,8 @@
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
                  src="../../../assets/recommender-faruktoy.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p class="runningtext-maxwidth">Johannes is very talented and skilled. He has great ideas and he is able to
-                make them work.
-                He is very dependable and it was a pleasure to work with him.
+            <p class="runningtext-maxwidth">"Johannes is very talented and skilled. He has great ideas and
+                he is able to make them work. He is very dependable and it was a pleasure to work with him.
                 Johannes has certainly great entrepreneurial spirit.</p>
         </mat-card>
         <mat-card>
@@ -137,10 +135,10 @@
             <img routerLink="https://www.celonis.com/" class="img-recommendation my-3"
                  src="../../../assets/recommender-timstefany.png"
                  alt="Header design for the Sketch Meetup Stuttgart">
-            <p class="runningtext-maxwidth">Having Johannes as a full stack developer in our
+            <p class="runningtext-maxwidth">"Having Johannes as a full stack developer in our
                 data science project was great! Whether it was the deployment of our dashboard via Google Cloud,
                 issues with the Python Flask backend, setting up the frontend, or our managing our PostgreSQL database,
-                Johannes was always up to the task.</p>
+                Johannes was always up to the task."</p>
         </mat-card>
     </div>
 </section>

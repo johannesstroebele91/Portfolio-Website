@@ -1,5 +1,5 @@
 <footer>
-    <div class="social-links-left my-4">
+    <div *ngIf="router.url!='/contact'" class="social-links my-4">
         <a href="mailto:stroebele.j@gmail.com">
             <img src="../../../assets/social-icon-email.png"
                  width="24" alt="Link to email"></a>
@@ -19,29 +19,13 @@
     </div>
     <mat-card *ngIf="router.url!='/contact'" class="pb-5 mb-5">
         <h2>Get In Touch</h2>
-        <p class="my-3">Interested in working together? Let's catch up.</p>
-        <div class="social-links-middle my-4">
-            <a href="mailto:stroebele.j@gmail.com">
-                <img src="../../../assets/social-icon-email.png"
-                     width="24" alt="Link to email"></a>
-            <a href="https://github.com/johannesstroebele91/" class="mt-2">
-                <img src="../../../assets/social-icon-github.png"
-                     width="24" alt="Link to my GitHub page"></a>
-            <a href="https://angel.co/u/johannes-stroebele" class="mt-2">
-                <img src="../../../assets/social-icon-angel.png"
-                     width="24" alt="Link to my Angel page"></a>
-            <a href="https://www.xing.com/profile/Johannes_Stroebele" class="mt-2">
-                <img src="../../../assets/social-icon-xing.png"
-                     width="24" alt="Link to my Xing page"></a>
-            <a href="https://www.linkedin.com/in/johannes-stroebele/" class="mt-2 mb-3">
-                <img src="../../../assets/social-icon-linkedin.png"
-                     width="24" alt="Link to my LinkedIn page"></a>
-        </div>
+        <p class="my-3" style="font-size: 1.2em;">Interested in working together? Let's catch up.</p>
+        <button routerLink="/contact" mat-raised-button color="primary" class="my-3">Let's do this</button>
     </mat-card>
-    <div class="arrow-upward">
+    <div *ngIf="router.url!='/contact'" class="arrow-upward">
         <a (click)="onClick('top')" class="mb-3">
             <img src="../../../assets/arrow-upward.png"
-                 width="24" alt="GO to top of the page"></a>
+                 width="24" alt="Go to top of the page"></a>
         <hr style="width: 1px; height: 90px; background: white; border: none;"/>
     </div>
     <div>
@@ -51,7 +35,18 @@
             <li><a tabindex="0" routerLink="/data" routerLinkActive="is-active-legal-data"
                    [routerLinkActiveOptions]="{exact: true}">Data protection declaration</a></li>
         </ul>
-        <ul style="text-align: center;">
+        <div *ngIf="router.url!='/contact'" class="social-links-middle">
+            <a href="https://github.com/johannesstroebele91/" class="mt-2">
+                <img src="../../../assets/social-icon-github.png"
+                     width="24" alt="Link to my GitHub page"></a>
+            <a href="https://www.xing.com/profile/Johannes_Stroebele" class="mt-2">
+                <img src="../../../assets/social-icon-xing.png"
+                     width="24" alt="Link to my Xing page"></a>
+            <a href="https://www.linkedin.com/in/johannes-stroebele/" class="mt-2 mb-3">
+                <img src="../../../assets/social-icon-linkedin.png"
+                     width="24" alt="Link to my LinkedIn page"></a>
+        </div>
+        <ul class="mt-4" style="text-align: center;">
             <li>© 2020 Johannes Ströbele, <span style="white-space: nowrap;">all rights reserved</span></li>
             <li>Made with love in <span style="white-space: nowrap;">Stuttgart, Germany</span></li>
             <li class="mt-4" (click)="onClick('top')">

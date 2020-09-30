@@ -3,31 +3,196 @@
     <section>
         <div class="container-with-elements">
             <div class="container-text-img">
-                <h1>Who am I</h1>
-                <p style="text-align: justify;">I am Johannes Ströbele and live in Stuttgart, Germany. I am a full stack
-                    cloud developer
-                    for enterprise applications. In my free time, I like to cook with friends,
-                    do fitness workouts, draw skecthes, and read detective novels.</p>
+                <h1>This is me</h1>
+                <p style="text-align: justify;">At present, I live in Stuttgart, Germany. My goal is to
+                    develop enterprise applications that optimize the user experience and business value.
+                    On this page, you can view my:</p>
                 <ol class="anchor-links my-3">
-                    <li><a tabindex="0" (click)="onClick('company')">Company experience</a></li>
-                    <li><a tabindex="0" (click)="onClick('academic')">Academic experience</a></li>
+                    <li><a tabindex="0" (click)="onClick('skills')">Overall Skills</a></li>
+                    <li><a tabindex="0" (click)="onClick('company')">Company Experiences</a></li>
+                    <li><a tabindex="0" (click)="onClick('academic')">Academic experiences</a></li>
                     <li><a tabindex="0" (click)="onClick('others')">Other qualification</a></li>
                 </ol>
                 <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-desktop my-3" mat-raised-button
                         color="primary">
-                    Open Curriculum Vitae
+                    Download CV
                 </button>
             </div>
             <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
                  height="300">
         </div>
-        <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-mobile my-3" mat-raised-button color="primary">
-            Open Curriculum Vitae
+        <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-mobile my-3" mat-raised-button
+                color="primary">
+            Download CV
         </button>
     </section>
 </div>
 
-<!-- 1. Company experiences -->
+<!-- 1. Skills -->
+<section class="section-skills">
+    <h2 id="skills" style="text-align: center;">What my skills are</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">
+        These are the skills that I acquired during my internships, studies, and personal projects.
+        Click on the experiences below (e. g.<a (click)="onClick('daimlertss')">Full Stack Development Intern</a>
+        to receive additional information.</p>
+    <div class="container-with-elements mt-4" style="  flex-basis: 100%;">
+        <!-- Frontend Development -->
+        <mat-card>
+            <h3>Frontend Development</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li *ngIf="!showContentFrontend" (click)="showContentFrontend=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentFrontend">
+                    <ul>
+                        <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                            Mobile Web Applications - FoxSub (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                            Mobile Media - Study Portal (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li (click)="showContentFrontend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>HTML, CSS, SCSS</li>
+                <li>JavaScript, TypeScript</li>
+                <li>Angular, Angular Material</li>
+                <li>Git, GitHub, Bitbucket</li>
+                <li>Agile Software Development (SCRUM)</li>
+            </ul>
+        </mat-card>
+        <!-- Backend Development -->
+        <mat-card>
+            <h3>Backend Development</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214489">Databases Fundamentals (HdM
+                    course)</a></li>
+                <li *ngIf="!showContentBackend" (click)="showContentBackend=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentBackend">
+                    <ul>
+                        <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211593">Linux & Terminal
+                            Fundamentals
+                            (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li (click)="showContentBackend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Node.js, Express Framework</li>
+                <li>Python, Flask Framework</li>
+                <li>Java, Spring Framework</li>
+                <li>SQL, SQLite, PostgreSQL</li>
+                <li>Heroku, Netlify, Google Cloud</li>
+                <li>Terminal, Linux Server, Shell Scripting</li>
+            </ul>
+        </mat-card>
+    </div>
+    <div class="container-with-elements mt-4">
+        <!-- Data Science & Research -->
+        <mat-card>
+            <h3>Data Science & Research</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('celonis-ux-research')">UX Research Intern (Celonis)</a></li>
+                <li><a (click)="onClick('ixd-group')">UX Research Student Assistant (IXD Research Group)</a></li>
+                <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                    Data Science Project - Fleetboard (HdM course)</a></li>
+                <li *ngIf="!showContentDSResearch" (click)="showContentDSResearch=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentDSResearch">
+                    <ul>
+                        <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                            Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/block?sgname=Wirtschaftsinformatik+und+digitale+Medien+%28Bachelor%2C+7+Semester%29+&sgblockID=2572637&sgang=550054&blockname=Wissenschaftliche+Grundlagen+">Scientific
+                                fundamentals 1 & 2 (HdM course)</a></li>
+                        <li (click)="showContentDSResearch=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Pandas & Numpy</li>
+                <li>Chart.js, Ng2-Charts</li>
+                <li>Grafana</li>
+                <li>Interviews & Survey</li>
+                <li>Usability testing</li>
+            </ul>
+        </mat-card>
+        <!-- UX Design -->
+        <mat-card>
+            <h3>UX Design</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('celonis-ux-design')">UX Design Intern (Celonis)</a></li>
+                <li><a (click)="onClick('celonis-ux-design')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li *ngIf="!showContentUxDesign" (click)="showContentUxDesign=true">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentUxDesign">
+                    <ul>
+                        <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                            Mobile Media - Study Portal (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/Portfolio-Website">
+                            Web Design - Portfolio Website (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5212636">Application Design
+                            (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211700">
+                            Information Psychology (HdM course)</a></li>
+                        <li><a (click)="openFile('hdm-course-HCI-Methods-summative-usability-evaluation.pdf')">
+                            Human Computer Interaction Methods - Paper "Summative Usability Evaluation" (HdM course)</a>
+                        </li>
+                        <li (click)="showContentUxDesign=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Figma</li>
+                <li>Sketch</li>
+                <li>Adobe CC</li>
+                <li>InVision</li>
+                <li>Balsamiq</li>
+            </ul>
+        </mat-card>
+    </div>
+</section>
+
+<!-- 2. Company experiences -->
 <section id="company">
     <h2>Company experiences</h2>
     <table>
@@ -48,55 +213,61 @@
                 </ul>
             </td>
         </tr>
-        <tr>
+        <tr id="btelligent">
             <td class="td-first">07/2010 – 09/2019</td>
             <td class="td-second"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
                                                                               href="https://www.btelligent.com/">b.telligent
                 GmbH</a>, Munich</b>
                 <ul class="ul-bullets">
-                    <li>Development of a web application for recalculating vehicle contracts in a SCRUM team using Jira
-                        from Atlassian
+                    <li>Specification of the technical requirements and the software architecture
                     </li>
-                    <li>Implementing Angular components with methods such as data binding, dependency injection,
-                        routing, services, and observables
+                    <li>Development of the admin area for a time tracking web application
                     </li>
-                    <li>Angular (Material UI), TypeScript, SCSS, HTML, Kotlin, Spring Framework</li>
+                    <li>Angular (Material UI), TypeScript, SCSS, HTML, Java, Spring Framework</li>
                 </ul>
             </td>
         </tr>
-        <tr>
+        <tr id="ixd-group">
             <td class="td-first">03/2018 – 09/2018</td>
             <td class="td-second"><b>UX Research assistant for the <a tabindex="0" target="_blank"
                                                                       href="https://www.hdm-stuttgart.de/hochschule/forschung/forschungsschwerpunkte/information_experience">IXD
                 Research Group</a>, Stuttgart</b>
                 <ul class="ul-bullets">
-                    <li>Support the creation of a guideline for 3D software</li>
-                    <li>Conducting usability tests to optimize a VR app</li>
+                    <li>Supporting the creation of guidelines for 3D software</li>
+                    <li>Conception and conduction of usability tests to optimize a VR application</li>
                 </ul>
             </td>
         </tr>
-        <tr>
-            <td id="celonis-ux-research" class="td-first">02/2018 – 3/2018</td>
+        <tr id="celonis-ux-research" >
+            <td class="td-first">02/2018 – 3/2018</td>
             <td class="td-second"><b>Internship in UX Research at <a tabindex="0" target="_blank"
                                                                      href="https://www.celonis.com/">Celonis</a>,
                 Munich</b>
                 <ul class="ul-bullets">
-                    <li>Development of a model to improve the UX</li>
-                    <li>Setting up a web analytics solution to track the experience via 25 user metrics and
-                        -dimensions
+                    <li>Development of a conceptual model to improve the user experience of the process mining software</li>
+                    <li>Setting up a web analytics solution to track the user experience with 25 quantitative metrics</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="celonis-ux-design">
+            <td class="td-first">08/2017 – 10/2017</td>
+            <td class="td-second"><b>Internship in UX Design at <a tabindex="0" target="_blank"
+                                                                   href="https://www.celonis.com/">Celonis</a>,
+                Munich</b>
+                <ul class="ul-bullets">
+                    <li>Creating responsive design components and layouts for the process mining software with Sketch</li>
+                    <li>Conducting online surveys, usability tests, and interviews to identify the needs of customers
                     </li>
                 </ul>
             </td>
         </tr>
         <tr>
-            <td id="celonis-ux-design" class="td-first">08/2017 – 10/2017</td>
-            <td class="td-second"><b>Internship in UX Design at <a tabindex="0" target="_blank"
-                                                                   href="https://www.celonis.com/">Celonis</a>,
-                Munich</b>
+            <td class="td-first">11/2016 – 11/2017</td>
+            <td class="td-second"><b>Product manager (voluntary) at <a tabindex="0" target="_blank"
+                                                                   href="http://www.startmunich.de/">START Munich</a></b>
                 <ul class="ul-bullets">
-                    <li>Development of a model to improve the UX</li>
-                    <li>Setting up a web analytics solution to track the experience via 25 user metrics and
-                        -dimensions
+                    <li>Redesign of the website with Sketch and WordPress</li>
+                    <li>Conception, planning and organization of a startup pitch event, brainstorming sessions, and a startup tour
                     </li>
                 </ul>
             </td>
@@ -104,7 +275,7 @@
     </table>
 </section>
 
-<!-- 2. Academic experience -->
+<!-- 3. Academic experience -->
 <section id="academic">
     <h2>Academic experiences</h2>
     <table>
@@ -147,7 +318,7 @@
     </table>
 </section>
 
-<!-- 3. Other qualifications -->
+<!-- 4. Other qualifications -->
 <section id="others">
     <h2>Other qualifications</h2>
     <table>

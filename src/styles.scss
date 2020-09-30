@@ -54,7 +54,7 @@ section {
 
 .runningtext-maxwidth, .runningtext-maxwidth-centered {
   line-height: 1.6em !important;
-  font-size: 1.1em !important;
+  font-size: 15px !important;
   max-width: 600px;
   text-align: justify;
   margin: 0 auto !important;
@@ -66,17 +66,16 @@ section {
 
 // Text
 h1 {
-  font-size: 48px !important;
+  font-size: 42px !important;
   line-height: 1.2em !important;
   margin-top: 1.2em !important;
   margin-bottom: 0.9em !important;
   font-weight: bolder !important;
   color: #e1e1e1 !important;
-
 }
 
 h2 {
-  font-size: 36px !important;
+  font-size: 30px !important;
   line-height: 1.46808511em !important;
   margin-top: 1.2em !important;
   margin-bottom: 0.75em !important;
@@ -103,23 +102,75 @@ h4, h5 {
 }
 
 p, pre, table, blockquote, label, span, input {
-  font-size: 14px !important;
+  font-size: 15px !important;
   line-height: 1.6em !important;
   margin-top: 0;
   margin-bottom: 0.9em;
   font-weight: 400;
 }
 
-a, li, ul, ol {
-  font-size: 14px !important;
+i, strong, em, small, code {
+  line-height: 1.6em !important;
+  font-size: 1em !important;
+}
+
+a {
+  color: map-get($custom-palette, primary);
+  font-size: 15px !important;
   line-height: 1.6em !important;
   margin-top: 0;
   font-weight: 400;
 }
 
+a:hover {
+  color: map-get($custom-palette, primary-light);
+}
+
+a:active {
+  color: white;
+}
+
+ul ul, ol ol, ul ol, ol ul {
+  line-height: 1.6em !important;
+  font-size: 1.1em !important;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
   list-style-type: none !important;
   padding: 0;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+b {
+  font-size: 1em !important;
+  line-height: 0;
+  font-weight: 500;
+}
+
+
+
+hr, .hr {
+  border: 1px solid;
+  margin: -1px 0;
+}
+
+sub, sup {
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
 }
 
 button {
@@ -150,59 +201,6 @@ section .mat-icon {
 
 .anchor-links li:hover {
   color: white;
-}
-
-b {
-  font-size: 1em !important;
-  line-height: 0;
-  font-weight: 500;
-}
-
-ul ul, ol ol, ul ol, ol ul {
-  line-height: 1.6em !important;
-  font-size: 1.1em !important;
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-li {
-  margin-bottom: 6px;
-}
-
-hr, .hr {
-  border: 1px solid;
-  margin: -1px 0;
-}
-
-a, i, strong, em, small, code {
-  line-height: 1.6em !important;
-  font-size: 1.1em !important;
-}
-
-a {
-  color: map-get($custom-palette, primary);
-}
-
-a:hover {
-  color: map-get($custom-palette, primary-light);
-}
-
-a:active {
-  color: white;
-}
-
-sub, sup {
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
 }
 
 .container-with-elements > * > h4 {
@@ -256,7 +254,7 @@ sub {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: stretch;
     align-content: stretch;
   }
   .container-with-elements > * {
@@ -264,17 +262,6 @@ sub {
   }
   .container-text-img {
     width: 50%;
-  }
-  .container-with-images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    align-items: center;
-    align-content: stretch;
-  }
-  .container-with-images > img {
-    width: 240px;
   }
   .button-hero-mobile {
     display: none !important;
@@ -296,11 +283,5 @@ sub {
   section {
     padding-right: 3%;
     padding-left: 3%;
-  }
-}
-
-@media (min-width: 960px) {
-  .container-with-images > img {
-    width: 300px;
   }
 }

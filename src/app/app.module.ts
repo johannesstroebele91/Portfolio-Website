@@ -24,7 +24,6 @@ import {DataProtectionDeclarationComponent} from "./pages/data-protection-declar
 import {LegalDisclosureComponent} from "./pages/legal-disclosure/legal-disclosure.component";
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
-import { SkillsComponent } from './pages/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,6 @@ import { SkillsComponent } from './pages/skills/skills.component';
     DataProtectionDeclarationComponent,
     LegalDisclosureComponent,
     FooterComponent,
-    SkillsComponent
   ],
   imports: [
     HttpClientModule,

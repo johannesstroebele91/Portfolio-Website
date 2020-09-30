@@ -21,6 +21,12 @@
   font-size: 0.9em !important;
 }
 
+.contact-options img {
+  position: relative;
+  top: -3px;
+  margin-right: 9px;
+}
+
 @media (min-width: 768px) {
   .contact-information .container-with-elements {
     justify-content: space-around !important;

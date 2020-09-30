@@ -95,33 +95,11 @@ export class ProjectsComponent implements OnInit {
         // Gets respective searched data about user's repos from service
         this.usersService.getUserReposData().subscribe(data => {
             this.repos = data;
+            console.log(this.repos);
 
             // For displaying number of repos
             this.reposAmount = Object.keys(this.repos).length;
 
-            for (let i = 0; i < this.reposAmount; i++) {
-
-                // Most stared repository
-                // TODO: stargazers_count needs to be set relative to the min and max stars of all repos
-                if (this.repos[i].stargazers_count !== null && this.repos[i].stargazers_count > 0) {
-                    this.starsNameOfRepos.push(this.repos[i].name);
-                    this.starsOfRepos.push(this.repos[i].stargazers_count);
-                }
-
-                // Largest repository
-                // TODO: size needs to be set relative to the min and max size of all repos
-                if (this.repos[i].size !== null && this.repos[i].size > 1000) {
-                    this.sizeNameOfRepos.push(this.repos[i].name);
-                    this.sizeOfRepos.push(this.repos[i].size);
-                }
-
-                // Most forked repository
-                // TODO: forks_count needs to be set relative to the min and max forks of all repos
-                if (this.repos[i].forks_count !== null && this.repos[i].forks_count > 0) {
-                    this.forkNameOfRepos.push(this.repos[i].name);
-                    this.forkOfRepos.push(this.repos[i].forks_count);
-                }
-            }
 
             // Array for all languages in repos of one user
             let amountOfLanguageInReposWithoutNull = 0;

@@ -3,32 +3,9 @@
     <section>
         <div class="container-with-elements">
             <div class="container-text-img">
-                <h1>What I developed</h1>
-                <p class="runningtext-maxwidth my-3">I concepted, designed and developed the these projects. They
-                    are fetched
-                    from the GitHub API, so everything is up to date.</p>
-                <div class="my-4">
-                    <div *ngIf="user.public_repos">
-                        <mat-icon aria-hidden="false" aria-label="Repos icon">dns</mat-icon>
-                        <span>Repos: {{user.public_repos}}</span>
-                    </div>
-                    <div *ngIf="user.followers">
-                        <mat-icon aria-hidden="false" aria-label="Followers icon">people</mat-icon>
-                        <span>Followers: {{user.followers}}</span>
-                    </div>
-                    <div *ngIf="user.following">
-                        <mat-icon aria-hidden="false" aria-label="Following icon">people</mat-icon>
-                        <span>Following: {{user.following}}</span>
-                    </div>
-                    <div *ngIf="user.created_at">
-                        <mat-icon aria-hidden="false" aria-label="Date joined icon">query_builder</mat-icon>
-                        <span>Joined GitHub: {{user.created_at |  date:'dd/MM/yyyy'}}</span>
-                    </div>
-                    <div *ngIf="user.updated_at">
-                        <mat-icon aria-hidden="false" aria-label="Date joined icon">autorenew</mat-icon>
-                        <span>Last profile update: {{user.updated_at |  date:'dd/MM/yyyy'}}</span>
-                    </div>
-                </div>
+                <h1>GitHub Projects</h1>
+                <p class="runningtext-maxwidth my-3">I conceptualize, designed, and developed the following projects.
+                    They are directly fetched from the GitHub API. So everything is up to date.</p>
                 <button mat-raised-button color="primary" (click)="linkToWebsite(user.html_url)"
                         class="button-hero-desktop my-3">
                     Visit GitHub Profile
@@ -46,15 +23,13 @@
 
 <!-- Results -->
 <section>
-    <h2>{{reposAmount}} Repositories</h2>
+    <div style="text-align: center;">
+        <h2>{{reposAmount}} Repositories</h2>
+        <p>I joined GitHub on the {{user.created_at |  date:'dd/MM/yyyy'}} and was last active at the {{user.updated_at |  date:'dd/MM/yyyy'}}.</p>
+    </div>
     <div style="max-width: 768px; margin: 0 auto;">
         <mat-card *ngFor="let repo of repos" class="my-5">
-            <div  fxLayout="row" fxLayoutAlign="space-between start" >
-                <h3>{{repo.name}}</h3>
-                <a class="repo-link mb-3" href="{{repo.html_url}}">
-                    <mat-icon aria-hidden="false" aria-label="Repos icon" color="primary">launch</mat-icon>
-                </a>
-            </div>
+            <h3>{{repo.name}}</h3>
             <p>{{repo.description}}</p>
             <div class="container-columns my-3">
                 <div>
@@ -65,10 +40,6 @@
                     <div *ngIf="repo.name">
                         <mat-icon aria-hidden="false" aria-label="Website icon">storage</mat-icon>
                         <p>Repository: <a href="{{repo.html_url}}">visit</a></p>
-                    </div>
-                    <div *ngIf="repo.homepage">
-                        <mat-icon aria-hidden="false" aria-label="Website icon">web</mat-icon>
-                        <p>Website: <a href="{{repo.homepage}}">visit</a></p>
                     </div>
                     <div *ngIf="repo.has_wiki">
                         <mat-icon aria-hidden="false" aria-label="Wiki icon">school</mat-icon>
@@ -105,6 +76,18 @@
                         <p><b>{{language.name}}:</b> {{language.frequency}} bytes</p>
                     </div>
                 </div>
+            </div>
+            <div fxLayout="row" fxLayoutAlign="space-around center">
+                <a *ngIf="repo.homepage" href="{{repo.homepage}}">
+                    <button routerLink="/contact" mat-raised-button color="primary" class="my-3">
+                        Visit Website
+                    </button>
+                </a>
+                <a href="{{repo.html_url}}">
+                    <button routerLink="/contact" mat-raised-button color="primary" class="my-3">
+                        Visit Repository
+                    </button>
+                </a>
             </div>
         </mat-card>
     </div>
