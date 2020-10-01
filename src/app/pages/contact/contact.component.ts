@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
-import {Meta, Title} from "@angular/platform-browser";
+import {ActivatedRoute} from '@angular/router';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
     selector: 'app-contact',

@@ -11,8 +11,6 @@ import {MDBBootstrapModule} from 'angular-bootstrap-md';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
-import {ChartsModule} from 'ng2-charts';
-
 // Components
 import {HomeComponent} from './pages/home/home.component';
 import {NavComponent} from './components/nav/nav.component';
@@ -26,36 +24,35 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatButtonModule} from "@angular/material/button";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ProjectsComponent,
-    HomeComponent,
-    NavComponent,
-    AboutComponent,
-    ContactComponent,
-    DataProtectionDeclarationComponent,
-    LegalDisclosureComponent,
-    FooterComponent,
-  ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    FlexLayoutModule,
-    ReactiveFormsModule,
-    FormsModule,
-    ChartsModule,
-    MatIconModule,
-    MatTabsModule,
-    MatCardModule,
-    MatToolbarModule,
-    MatButtonModule,
-    MDBBootstrapModule.forRoot()
-  ],
-  providers: [UsersService],
-  schemas: [NO_ERRORS_SCHEMA],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ProjectsComponent,
+        HomeComponent,
+        NavComponent,
+        AboutComponent,
+        ContactComponent,
+        DataProtectionDeclarationComponent,
+        LegalDisclosureComponent,
+        FooterComponent,
+    ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        FlexLayoutModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatIconModule,
+        MatTabsModule,
+        MatCardModule,
+        MatToolbarModule,
+        MatButtonModule,
+        MDBBootstrapModule.forRoot()
+    ],
+    providers: [UsersService],
+    schemas: [NO_ERRORS_SCHEMA],
+    bootstrap: [AppComponent]
 })
 export class AppModule {
 }

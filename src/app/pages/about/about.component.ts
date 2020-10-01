@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
-import {ViewportScroller} from "@angular/common";
-import {ActivatedRoute} from "@angular/router";
+import {ViewportScroller} from '@angular/common';
+import {ActivatedRoute} from '@angular/router';
 import {Meta, Title} from "@angular/platform-browser";
 
 @Component({

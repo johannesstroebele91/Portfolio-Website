@@ -1,5 +1,4 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {MediaMatcher} from '@angular/cdk/layout';
+import {Component} from '@angular/core';
 
 @Component({
     selector: 'app-nav',
@@ -12,9 +11,5 @@ export class NavComponent {
 
     showMenuMobile(): boolean {
         return this.showMobileMenu = !this.showMobileMenu;
-    }
-
-    openCV() {
-        window.open('../../assets/Stroebele_CV.pdf');
     }
 }

@@ -1,12 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {UsersService} from '../../../services/users.service';
 import {User} from '../../../models/user';
-import {ChartType, ChartOptions} from 'chart.js';
-import {Label} from 'ng2-charts';
 import {Repo} from '../../../models/repo';
-import {ViewportScroller} from "@angular/common";
-import {ActivatedRoute} from "@angular/router";
-import {Meta, Title} from "@angular/platform-browser";
+import {ActivatedRoute} from '@angular/router';
+import {Meta, Title} from '@angular/platform-browser';
 
 /* STRUCTURE
   1. Variables
@@ -34,51 +31,7 @@ export class ProjectsComponent implements OnInit {
     languageInRepos: string[] = [];
     languageInReposWithoutDuplicates: string[] = [];
     numberOfLanguageInReposWithoutDuplicates: number[] = [];
-    pieChartLabelsLanguagesOfRepos: Label[] = this.languageInReposWithoutDuplicates;
     pieChartDataNumberOfLanguages: number[] = this.numberOfLanguageInReposWithoutDuplicates;
-
-    // Most stared repositories
-    starsNameOfRepos: string[] = [];
-    starsOfRepos: number[] = [];
-    pieChartLabelsStarsNamesOfRepos: Label[] = this.starsNameOfRepos;
-    pieChartDataStarsOfRepos: number[] = this.starsOfRepos;
-
-    // Largest repositories
-    sizeNameOfRepos: string[] = [];
-    sizeOfRepos: number[] = [];
-    pieChartLabelsSizeNamesOfRepos: Label[] = this.sizeNameOfRepos;
-    pieChartDataSizeOfRepos: number[] = this.sizeOfRepos;
-
-    // Most forked repositories
-    forkNameOfRepos: string[] = [];
-    forkOfRepos: number[] = [];
-    pieChartLabelsForksNamesOfRepos: Label[] = this.forkNameOfRepos;
-    pieChartDataForksOfRepos: number[] = this.forkOfRepos;
-
-    // Options for all charts
-    pieChartOptions: ChartOptions = {
-        responsive: true,
-        maintainAspectRatio: false,
-        legend: {
-            position: 'top',
-            labels: {
-                fontColor: 'white', // legend color (can be hexadecimal too)
-            },
-        }
-    };
-    // 8 repositories
-
-    pieChartType: ChartType = 'doughnut';
-    pieChartLegend = true;
-    pieChartColors = [{
-        backgroundColor: ['#1abc9c', '#9b59b6', '#3498db', '#C4E538', '#eb4d4b',
-            '#686de0', '#7ed6df', '#f9ca24', '#a29bfe', '#00b894',
-            '#1abc9c', '#9b59b6', '#3498db', '#C4E538', '#eb4d4b',
-            '#686de0', '#7ed6df', '#f9ca24', '#a29bfe', '#00b894',
-            '#1abc9c', '#9b59b6', '#3498db', '#C4E538', '#eb4d4b',
-            '#686de0', '#7ed6df', '#f9ca24', '#a29bfe', '#00b894']
-    },
-    ];
 
     // CONSTRUCTOR
     constructor(private usersService: UsersService, private route: ActivatedRoute, private title: Title, private meta: Meta) {
