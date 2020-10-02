@@ -5,6 +5,8 @@
 }
 
 .nav {
+  position: relative;
+  top: -2px;
   max-width: 959.89px !important;
   margin: 0 auto;
   padding: 0 12px;
@@ -16,6 +18,7 @@
   position: -webkit-sticky; /* For macOS/iOS Safari */
   top: 0; /* Sets the sticky toolbar to be on top */
   z-index: 1; /* Ensure that your app's content doesn't overlap the toolbar */
+  background: map-get($custom-palette, background);
 }
 
 .nav-bg {

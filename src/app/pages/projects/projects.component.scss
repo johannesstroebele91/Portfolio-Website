@@ -24,6 +24,7 @@ h3 {
   color: map-get($custom-palette, primary) !important;
 }
 
+
 @media (max-width: 575.98px) {
   .container-columns {
     display: flex;
@@ -38,6 +39,9 @@ h3 {
   }
   .container-columns > div {
     margin-bottom: 12px;
+  }
+  .projects-buttons > * > button {
+    width: 100%;
   }
 }
 
@@ -69,6 +73,13 @@ h3 {
   .mat-card {
     padding: 60px 24px 42px 24px;
   }
+  .projects-buttons {
+    flex-direction: row;
+    box-sizing: border-box;
+    display: flex;
+    place-content: center space-around;
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {
@@ -79,5 +90,4 @@ h3 {
   .charts {
     height: 300px !important;
   }
-
 }

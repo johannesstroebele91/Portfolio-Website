@@ -12,4 +12,8 @@ export class NavComponent {
     showMenuMobile(): boolean {
         return this.showMobileMenu = !this.showMobileMenu;
     }
+
+    closeNav() {
+        this.showMobileMenu = false;
+    }
 }

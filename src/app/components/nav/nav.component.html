@@ -25,16 +25,16 @@
         </mat-toolbar-row>
     </mat-toolbar>
     <mat-toolbar *ngIf="showMobileMenu" class="view-mobile mat-card">
-        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive="is-active">
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive="is-active" (click) = "closeNav();">
             Home
         </mat-toolbar-row>
-        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/about" routerLinkActive="is-active">
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/about" routerLinkActive="is-active" (click) = "closeNav();">
             About
         </mat-toolbar-row>
-        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/projects" routerLinkActive="is-active">
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/projects" routerLinkActive="is-active" (click) = "closeNav();">
             Projects
         </mat-toolbar-row>
-        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/contact" routerLinkActive="is-active">
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/contact" routerLinkActive="is-active" (click) = "closeNav();">
             Contact
         </mat-toolbar-row>
     </mat-toolbar>
