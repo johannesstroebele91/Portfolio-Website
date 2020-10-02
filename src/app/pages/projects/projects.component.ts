@@ -25,13 +25,10 @@ export class ProjectsComponent implements OnInit {
     repos: Repo[];
     reposAmount = 0;
 
-    // CHARTS VARIABLES
-
     // Most used languages per repository
     languageInRepos: string[] = [];
     languageInReposWithoutDuplicates: string[] = [];
     numberOfLanguageInReposWithoutDuplicates: number[] = [];
-    pieChartDataNumberOfLanguages: number[] = this.numberOfLanguageInReposWithoutDuplicates;
 
     // CONSTRUCTOR
     constructor(private usersService: UsersService, private route: ActivatedRoute, private title: Title, private meta: Meta) {
@@ -49,7 +46,8 @@ export class ProjectsComponent implements OnInit {
             },
             {
                 name: 'keywords',
-                content: 'Johannes Ströbele, portfolio, projects, GitHub projects, coding, full stack developer, software developer, information design, ' +
+                content: 'Johannes Ströbele, portfolio, projects, GitHub projects, coding,' +
+                    'full stack developer, software developer, information design, ' +
                     'front end development, back end development, enterprise application'
             },
         ], true);
@@ -69,7 +67,6 @@ export class ProjectsComponent implements OnInit {
         // Gets respective searched data about user's repos from service
         this.usersService.getUserReposData().subscribe(data => {
             this.repos = data;
-            console.log(this.repos);
 
             // For displaying number of repos
             this.reposAmount = Object.keys(this.repos).length;
@@ -93,9 +90,6 @@ export class ProjectsComponent implements OnInit {
             let numberOfLanguageInReposWithoutDuplicatesObj: any;
             numberOfLanguageInReposWithoutDuplicatesObj = this.countRandomStringElementDuplicatesInArray();
             this.numberOfLanguageInReposWithoutDuplicates = Object.values(numberOfLanguageInReposWithoutDuplicatesObj);
-
-            // Needed for updating the pie chart
-            this.pieChartDataNumberOfLanguages = this.numberOfLanguageInReposWithoutDuplicates;
 
             // Getting the coding languages of each repository
             this.repos.forEach((repo) => {

@@ -4,25 +4,27 @@
         <div class="container-with-elements">
             <div class="container-text-img">
                 <h1>This is me</h1>
-                <p style="text-align: justify;">At present, I live in Stuttgart, Germany. My goal is to
-                    develop enterprise applications that optimize the user experience and business value.
-                    On this page, you can view my:</p>
+                <p style="text-align: justify;">I am a full stack cloud developer living in Stuttgart, Germany.
+                    At present, I am writing my thesis about the collaboration between humans and machine learning
+                    systems.
+                    In my free time, I like to read detective novels or try out new restaurants with friends. On this
+                    page, you can view my:</p>
                 <ol class="anchor-links my-3">
-                    <li><a tabindex="0" (click)="onClick('skills')">Overall Skills</a></li>
-                    <li><a tabindex="0" (click)="onClick('company')">Company Experiences</a></li>
-                    <li><a tabindex="0" (click)="onClick('academic')">Academic experiences</a></li>
-                    <li><a tabindex="0" (click)="onClick('others')">Other qualification</a></li>
+                    <li><a (click)="onClick('skills')" tabindex="0">Overall Skills</a></li>
+                    <li><a (click)="onClick('company')" tabindex="0">Company Experiences</a></li>
+                    <li><a (click)="onClick('academic')" tabindex="0">Academic experiences</a></li>
+                    <li><a (click)="onClick('others')" tabindex="0">Others</a></li>
                 </ol>
-                <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-desktop my-3" mat-raised-button
-                        color="primary">
+                <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-desktop my-3" color="primary"
+                        mat-raised-button>
                     Download CV
                 </button>
             </div>
-            <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
-                 height="300">
+            <img alt="Profile picture of Johannes Ströbele" height="300"
+                 src="assets/profile-picture.png">
         </div>
-        <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-mobile my-3" mat-raised-button
-                color="primary">
+        <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-mobile my-3" color="primary"
+                mat-raised-button>
             Download CV
         </button>
     </section>
@@ -45,15 +47,16 @@
                 <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
                 <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
                     Project Mobile Media - GitHub-HR (HdM course)</a></li>
-                <li *ngIf="!showContentFrontend" (click)="showContentFrontend=true">
+                <li (click)="showContentFrontend=true" *ngIf="!showContentFrontend">
                     <mat-icon>expand_more</mat-icon>
                 </li>
                 <li *ngIf="showContentFrontend">
                     <ul>
                         <li><a href="https://github.com/johannesstroebele91/FoxSub">
                             Mobile Web Applications - FoxSub (HdM course)</a></li>
-                        <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
-                            Mobile Media - Study Portal (HdM course)</a></li>
+                        <li>
+                            <a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                                Mobile Media - Study Portal (HdM course)</a></li>
                         <li><a href="https://github.com/Fleet-Analytics-Dashboard">
                             Data Science Project - Fleetboard (HdM course)</a></li>
                         <li (click)="showContentFrontend=false">
@@ -82,7 +85,7 @@
                     Project Mobile Media - GitHub-HR (HdM course)</a></li>
                 <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214489">Databases Fundamentals (HdM
                     course)</a></li>
-                <li *ngIf="!showContentBackend" (click)="showContentBackend=true">
+                <li (click)="showContentBackend=true" *ngIf="!showContentBackend">
                     <mat-icon>expand_more</mat-icon>
                 </li>
                 <li *ngIf="showContentBackend">
@@ -121,7 +124,7 @@
                 <li><a (click)="onClick('ixd-group')">UX Research Student Assistant (IXD Research Group)</a></li>
                 <li><a href="https://github.com/Fleet-Analytics-Dashboard">
                     Data Science Project - Fleetboard (HdM course)</a></li>
-                <li *ngIf="!showContentDSResearch" (click)="showContentDSResearch=true">
+                <li (click)="showContentDSResearch=true" *ngIf="!showContentDSResearch">
                     <mat-icon>expand_more</mat-icon>
                 </li>
                 <li *ngIf="showContentDSResearch">
@@ -130,7 +133,8 @@
                             Project Mobile Media - GitHub-HR (HdM course)</a></li>
                         <li><a href="https://github.com/Twilytics">
                             Data Engineering Project - Twilytics (HdM course)</a></li>
-                        <li><a href="https://www.hdm-stuttgart.de/block?sgname=Wirtschaftsinformatik+und+digitale+Medien+%28Bachelor%2C+7+Semester%29+&sgblockID=2572637&sgang=550054&blockname=Wissenschaftliche+Grundlagen+">Scientific
+                        <li>
+                            <a href="https://www.hdm-stuttgart.de/block?sgname=Wirtschaftsinformatik+und+digitale+Medien+%28Bachelor%2C+7+Semester%29+&sgblockID=2572637&sgang=550054&blockname=Wissenschaftliche+Grundlagen+">Scientific
                                 fundamentals 1 & 2 (HdM course)</a></li>
                         <li (click)="showContentDSResearch=false">
                             <mat-icon>expand_less</mat-icon>
@@ -157,13 +161,14 @@
                 <li><a (click)="onClick('celonis-ux-design')">Full Stack Development Intern (b.telligent)</a></li>
                 <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
                     Project Mobile Media - GitHub-HR (HdM course)</a></li>
-                <li *ngIf="!showContentUxDesign" (click)="showContentUxDesign=true">
+                <li (click)="showContentUxDesign=true" *ngIf="!showContentUxDesign">
                     <mat-icon>expand_more</mat-icon>
                 </li>
                 <li *ngIf="showContentUxDesign">
                     <ul>
-                        <li><a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
-                            Mobile Media - Study Portal (HdM course)</a></li>
+                        <li>
+                            <a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                                Mobile Media - Study Portal (HdM course)</a></li>
                         <li><a href="https://github.com/johannesstroebele91/Portfolio-Website">
                             Web Design - Portfolio Website (HdM course)</a></li>
                         <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5212636">Application Design
@@ -198,8 +203,9 @@
     <table>
         <tr id="daimlertss">
             <td class="td-first">07/2010 – 09/2019</td>
-            <td class="td-second"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
-                                                                              href="https://www.btelligent.com/">Daimler
+            <td class="td-second"><b>Full-stack development intern for the <a href="https://www.btelligent.com/"
+                                                                              tabindex="0"
+                                                                              target="_blank">Daimler
                 TSS
                 GmbH</a>, Munich</b>
                 <ul class="ul-bullets">
@@ -215,8 +221,9 @@
         </tr>
         <tr id="btelligent">
             <td class="td-first">07/2010 – 09/2019</td>
-            <td class="td-second"><b>Full-stack development intern for the <a tabindex="0" target="_blank"
-                                                                              href="https://www.btelligent.com/">b.telligent
+            <td class="td-second"><b>Full-stack development intern for the <a href="https://www.btelligent.com/"
+                                                                              tabindex="0"
+                                                                              target="_blank">b.telligent
                 GmbH</a>, Munich</b>
                 <ul class="ul-bullets">
                     <li>Specification of the technical requirements and the software architecture
@@ -229,8 +236,10 @@
         </tr>
         <tr id="ixd-group">
             <td class="td-first">03/2018 – 09/2018</td>
-            <td class="td-second"><b>UX Research assistant for the <a tabindex="0" target="_blank"
-                                                                      href="https://www.hdm-stuttgart.de/hochschule/forschung/forschungsschwerpunkte/information_experience">IXD
+            <td class="td-second"><b>UX Research assistant for the <a
+                    href="https://www.hdm-stuttgart.de/hochschule/forschung/forschungsschwerpunkte/information_experience"
+                    tabindex="0"
+                    target="_blank">IXD
                 Research Group</a>, Stuttgart</b>
                 <ul class="ul-bullets">
                     <li>Supporting the creation of guidelines for 3D software</li>
@@ -238,24 +247,28 @@
                 </ul>
             </td>
         </tr>
-        <tr id="celonis-ux-research" >
+        <tr id="celonis-ux-research">
             <td class="td-first">02/2018 – 3/2018</td>
-            <td class="td-second"><b>Internship in UX Research at <a tabindex="0" target="_blank"
-                                                                     href="https://www.celonis.com/">Celonis</a>,
+            <td class="td-second"><b>Internship in UX Research at <a href="https://www.celonis.com/" tabindex="0"
+                                                                     target="_blank">Celonis</a>,
                 Munich</b>
                 <ul class="ul-bullets">
-                    <li>Development of a conceptual model to improve the user experience of the process mining software</li>
-                    <li>Setting up a web analytics solution to track the user experience with 25 quantitative metrics</li>
+                    <li>Development of a conceptual model to improve the user experience of the process mining
+                        software
+                    </li>
+                    <li>Setting up a web analytics solution to track the user experience with 25 quantitative metrics
+                    </li>
                 </ul>
             </td>
         </tr>
         <tr id="celonis-ux-design">
             <td class="td-first">08/2017 – 10/2017</td>
-            <td class="td-second"><b>Internship in UX Design at <a tabindex="0" target="_blank"
-                                                                   href="https://www.celonis.com/">Celonis</a>,
+            <td class="td-second"><b>Internship in UX Design at <a href="https://www.celonis.com/" tabindex="0"
+                                                                   target="_blank">Celonis</a>,
                 Munich</b>
                 <ul class="ul-bullets">
-                    <li>Creating responsive design components and layouts for the process mining software with Sketch</li>
+                    <li>Creating responsive design components and layouts for the process mining software with Sketch
+                    </li>
                     <li>Conducting online surveys, usability tests, and interviews to identify the needs of customers
                     </li>
                 </ul>
@@ -263,11 +276,12 @@
         </tr>
         <tr>
             <td class="td-first">11/2016 – 11/2017</td>
-            <td class="td-second"><b>Product manager (voluntary) at <a tabindex="0" target="_blank"
-                                                                   href="http://www.startmunich.de/">START Munich</a></b>
+            <td class="td-second"><b>Product manager (voluntary) at <a href="http://www.startmunich.de/" tabindex="0"
+                                                                       target="_blank">START Munich</a></b>
                 <ul class="ul-bullets">
                     <li>Redesign of the website with Sketch and WordPress</li>
-                    <li>Conception, planning and organization of a startup pitch event, brainstorming sessions, and a startup tour
+                    <li>Conception, planning and organization of a startup pitch event, brainstorming sessions, and a
+                        startup tour
                     </li>
                 </ul>
             </td>
@@ -281,8 +295,8 @@
     <table>
         <tr>
             <td class="td-first">10/2017 – present</td>
-            <td class="td-second"><b><a tabindex="0" target="_blank"
-                                        href="https://informationsdesign.hdm-stuttgart.de/">Information Design</a>,
+            <td class="td-second"><b><a href="https://informationsdesign.hdm-stuttgart.de/" tabindex="0"
+                                        target="_blank">Information Design</a>,
                 Stuttgart Media University</b>
                 <ul class="ul-bullets">
                     <li>Desired degree: Bachelor of Arts</li>
@@ -292,14 +306,15 @@
         </tr>
         <tr>
             <td class="td-first">03/2019 – 06/2019</td>
-            <td class="td-second"><b><a tabindex="0" target="_blank" href="https://www.dongguk.edu/mbs/en/">Semester
+            <td class="td-second"><b><a href="https://www.dongguk.edu/mbs/en/" tabindex="0" target="_blank">Semester
                 abroad</a> during studies at the Stuttgart Media University, Dongguk University, Seoul</b>
             </td>
         </tr>
         <tr>
             <td class="td-first">08/2011 – 09/2016</td>
-            <td class="td-second"><b><a tabindex="0" target="_blank"
-                                        href="https://www.wiwi.uni-augsburg.de/de/studium/studiengaenge/bac_bwl/">Business
+            <td class="td-second"><b><a href="https://www.wiwi.uni-augsburg.de/de/studium/studiengaenge/bac_bwl/"
+                                        tabindex="0"
+                                        target="_blank">Business
                 Administration</a>, University of Augsburg</b>
                 <ul class="ul-bullets">
                     <li>Academic degree: Bachelor of Science</li>
@@ -310,8 +325,8 @@
         </tr>
         <tr>
             <td class="td-first">08/2015 – 12/2015</td>
-            <td class="td-second"><b><a tabindex="0" target="_blank"
-                                        href="http://bizeng.hufs.ac.kr/undergraduate_introduction">Semester
+            <td class="td-second"><b><a href="http://bizeng.hufs.ac.kr/undergraduate_introduction" tabindex="0"
+                                        target="_blank">Semester
                 abroad</a> during studies at the University of Augsburg, Hankuk University of Foreign Studies, Seoul</b>
             </td>
         </tr>
@@ -320,14 +335,14 @@
 
 <!-- 4. Other qualifications -->
 <section id="others">
-    <h2>Other qualifications</h2>
+    <h2>Others</h2>
     <table>
         <tr>
             <td class="td-first">Language Skills</td>
             <td class="td-second">
                 <ul class="ul-bullets">
                     <li>German - native speaker</li>
-                    <li>English - <a tabindex="0" target="_blank" href="https://www.ets.org/toefl/ibt/about">TOEFL
+                    <li>English - <a href="https://www.ets.org/toefl/ibt/about" tabindex="0" target="_blank">TOEFL
                         iBT score</a>: 102 / 120
                     </li>
                     <li>Japanese - basic communication skills</li>

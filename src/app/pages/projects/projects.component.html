@@ -4,20 +4,25 @@
         <div class="container-with-elements">
             <div class="container-text-img">
                 <h1>GitHub Projects</h1>
-                <p class="runningtext-maxwidth my-3">I conceptualize, designed, and developed the following projects.
+                <p class="runningtext-maxwidth my-3">For three years, I have conceptualized, designed, and developed the
+                    projects below.
                     They are directly fetched from the GitHub API. So everything is up to date.</p>
-                <button mat-raised-button color="primary" (click)="linkToWebsite(user.html_url)"
-                        class="button-hero-desktop my-3">
+                <a href="{{user.html_url}}">
+                    <button class="button-hero-desktop my-3" color="primary"
+                            mat-raised-button>
                     Visit GitHub Profile
-                </button>
+                    </button>
+                </a>
             </div>
-            <img src="../../../assets/profile-picture.png" alt="Profile picture of Johannes Ströbele"
-                 height="300">
+            <img alt="Profile picture of Johannes Ströbele" height="300"
+                 src="assets/profile-picture.png">
         </div>
-        <button mat-raised-button color="primary" (click)="linkToWebsite(user.html_url)"
-                class="button-hero-mobile my-3">
+        <a href="{{user.html_url}}">
+            <button (click)="linkToWebsite(user.html_url)" class="button-hero-mobile my-3" color="primary"
+                    mat-raised-button>
             Visit GitHub Profile
-        </button>
+            </button>
+        </a>
     </section>
 </div>
 
@@ -25,7 +30,8 @@
 <section>
     <div style="text-align: center;">
         <h2>{{reposAmount}} Repositories</h2>
-        <p>I joined GitHub on the {{user.created_at |  date:'dd/MM/yyyy'}} and was last active at the {{user.updated_at |  date:'dd/MM/yyyy'}}</p>
+        <p>I joined GitHub on the {{user.created_at |  date:'dd/MM/yyyy'}} and was last active at
+            the {{user.updated_at |  date:'dd/MM/yyyy'}}</p>
     </div>
     <div style="max-width: 768px; margin: 0 auto;">
         <mat-card *ngFor="let repo of repos" class="my-5">
@@ -72,19 +78,19 @@
                     </div>
                 </div>
                 <div>
-                    <div class="repo-languages" *ngFor="let language of repo.languages">
+                    <div *ngFor="let language of repo.languages" class="repo-languages">
                         <p><b>{{language.name}}:</b> {{language.frequency}} bytes</p>
                     </div>
                 </div>
             </div>
             <div fxLayout="row" fxLayoutAlign="space-around center">
                 <a *ngIf="repo.homepage" href="{{repo.homepage}}">
-                    <button routerLink="/contact" mat-raised-button color="primary" class="my-3">
+                    <button class="my-3" color="primary" mat-raised-button routerLink="/contact">
                         Visit Website
                     </button>
                 </a>
                 <a href="{{repo.html_url}}">
-                    <button routerLink="/contact" mat-raised-button color="primary" class="my-3">
+                    <button class="my-3" color="primary" mat-raised-button routerLink="/contact">
                         Visit Repository
                     </button>
                 </a>

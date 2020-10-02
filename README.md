@@ -28,15 +28,11 @@ and exams (hide and show certain elements)
   * stylesheets: styling of the application
   * main.ts: bootstraps the application (it loads everything and controls the startup of the application)
   * index.thml: starting point of the application
-(JavaScript code for inserting reusable components, login functionality,
-working links due to different routing with Express)
+(JavaScript code for inserting reusable components, login functionality, Express)
 * .gitignore: text file that tells Git which files or folders to ignore in a project
 * angular.json: provides workspace-wide and project-specific configuration defaults for build and development tools provided by the Angular CLI
 * package.json: provides metadata of the project as well as handles the
 dependency management with Node package manager
-* proxy.conf.json: used for setting up proxy for API requests
-* server.js: main configuration file for the Express application to handle actions
-such as the HTTP server, proxying API requests, routing, and serving of static files
 
 # 4. Design Mockup
 It was created with [Figma](https://www.figma.com/) based on the [Concept](https://github.com/johannesstroebele91/GitHub_User_Dashboard/wiki/Concept/). The link to the design can be found here: [Figma GitHub User Dashboard](https://www.figma.com/file/nWGswJQDBkAM0IAn1371YH/GitHub-User-Dashboard)
@@ -49,42 +45,8 @@ _This technology stack is based on the [ME?N Stack](https://en.wikipedia.org/wik
 * Frontend: [HTML](https://www.w3.org/TR/html52/), [SCSS](https://sass-lang.com/), [TypeScript](https://www.typescriptlang.org/)
 * Frontend framework: [Angular CLI version 9.0.5](https://github.com/angular/angular-cli)
 * UI component library: [Angular Material version 9.2.0](https://material.angular.io/)
-* Backend Framework: [Express](https://expressjs.com/)
 * JavaScript runtime environment: [Node.js](https://nodejs.org/en/) 
 * Version control system: [Git](https://git-scm.com/)
 * Git repository hosting: [Github](http://github.com/)
 * Data source: [GitHub REST API v4](https://developer.github.com/v4/)
 * Data visualization library: [ng2-charts](https://valor-software.com/ng2-charts/)
-
-# 6. Development and deployment instructions
-A more detailed explanation can be found on the [wiki page](https://github.com/johannesstroebele91/GitHubUserDashboard/wiki/Application-Explanation)
-* Development server: Run `ng serve` for a dev server. Navigate to `http://localhost:4040/`. The app will automatically reload if you change any of the source files.
-* Build: Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-* Production: after building the project, the Express application can be started via `node server.js`
-* Deployment: automatically via the Heroku continuous integration
-
-# 7. Endpoints
-A more detailed explanation can be found on the [wiki page](https://github.com/johannesstroebele91/GitHubUserDashboard/wiki/Application-Explanation)
-* "/githubapi/": getting user, repos, and coding languages data from the GitHub API
-* "/env": getting client id and client secret by injecting it from Heroku instead of exposing it to the application
-
-# 8. Lessons Learned
-A more detailed explanation can be found on the [wiki page](https://github.com/johannesstroebele91/GitHubUserDashboard/wiki/Lessons-Learned)
-* It was very insightful to conduct user interviews
-* Designing a high fidel design mockup took to long with [Figma](https://www.figma.com/) (better use Balsamiq and spent more time on the development)
-* Services for making HTTP requests to the GitHub API was most interesting to learn
-* Hiding API keys by injecting them directly via Heroku configuration variables
-* Setting up Express for Heroku deployment (several issues and partially lacking documentation)
-* Using a proxy for rewriting the path for GitHub API (GitHub request were not let through by the Express backend without the rewrite)
-
-# 9. Potential Improvements
-A more detailed explanation can be found on the [wiki page](https://github.com/johannesstroebele91/GitHubUserDashboard/wiki/Potential-enhancement)
-* Implement comparison of one GitHub user with others (e. g. with charts and tables)
-* Create more and better visualizations to give even deeper insights using ng2-charts
-* Implement search for specific coding language for all users (filters would be great)
-* Replace normal search form with FormBuilder (https://coryrylan.com/blog/angular-form-builder-and-validation-management)
-* Use RxJS for dealing with more than one event or asynchronous computation see RxJS library
-* Implement user registration and login (https://jasonwatmore.com/post/2019/06/10/angular-8-user-registration-and-login-example-tutorial)
-* Create reverse proxy for faster and smoother flow of traffic between clients and servers (e.g. https://unit.nginx.org/howto/express/)
-* Setup database for registered users and connect it to the application
-* Implement testing with e. g. Karma and Jasmine
