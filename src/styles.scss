@@ -16,40 +16,16 @@ $dark-theme: map_merge($dark-theme, (background: $background));
 
 @include angular-material-theme($dark-theme);
 
-/* STRUCTURE
-  1. General
-  2. Interactive Elements
-  3. Text
- */
-
-// Keeping footer at the bottom
+// General
 html, body, app-root {
-  font-family: Roboto, "Helvetica Neue", sans-serif;
-  margin: 0;
-  box-sizing: border-box;
-  background: map-get($custom-palette, background) !important;
   height: 100%;
   position: relative;
-}
-
-* {
+  margin: 0;
   box-sizing: border-box;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background: map-get($custom-palette, background) !important;
 }
 
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.main-container {
-  min-height: 100vh; /* will cover the 100% of viewport */
-  overflow: hidden;
-  display: block;
-  position: relative;
-  padding-bottom: 630px; /* height of your footer */
-}
-
-// Others
 section {
   max-width: 959.89px !important;
   margin: 0 auto !important;;
@@ -202,8 +178,21 @@ button {
   border: 1px solid map-get($custom-palette, primary) !important;
 }
 
+.mat-stroked-button:hover {
+  color: #2a0703;
+  background: map-get($custom-palette, primary) !important;
+}
+
+*:focus {
+  outline: none !important;
+}
+
 .mat-raised-button:hover {
-  background: #7cfcd7 !important;
+  color: white;
+  background: map-get($custom-palette, background-dark) !important;
+  -webkit-box-shadow: inset 0 0 0 2px map-get($custom-palette, primary) !important;
+  -moz-box-shadow: inset 0 0 0 2px map-get($custom-palette, primary) !important;
+  box-shadow: inset 0 0 0 2px map-get($custom-palette, primary) !important;
 }
 
 section .mat-icon {
@@ -278,6 +267,9 @@ section .mat-icon {
   }
   .container-with-elements > * {
     margin: 12px !important;
+  }
+  .hero-section .container-with-elements {
+    align-items: center;
   }
   .container-text-img {
     width: 50%;

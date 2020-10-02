@@ -17,9 +17,8 @@
                  src="assets/social-icon-linkedin.png" width="24"></a>
         <hr style="width: 1px; height: 120px; background: white; border: none;"/>
     </div>
-    <mat-card *ngIf="router.url!='/contact'" class="pb-5 mb-5">
-        <h2>Contact Me</h2>
-        <p class="my-3" style="font-size: 1.2em;">Interested in working together?</p>
+    <mat-card *ngIf="router.url!='/contact'">
+        <h2 class="my-3" style="font-size: 1.2em;">Interested in working together?</h2>
         <button class="my-3" color="primary" mat-raised-button routerLink="/contact">Get In Touch</button>
     </mat-card>
     <div *ngIf="router.url!='/contact'" class="arrow-upward">
