@@ -11,7 +11,7 @@ export class HomeComponent {
 
 
     constructor(private route: ActivatedRoute, private title: Title, private meta: Meta) {
-        this.title.setTitle('Homepage');
+        this.title.setTitle('Johannes Ströbele');
         this.meta.addTags([
             {
                 name: 'author',
@@ -24,8 +24,8 @@ export class HomeComponent {
             },
             {
                 name: 'keywords',
-                content: 'Johannes Ströbele, portfolio, homepage, full stack developer, software developer, information design, ' +
-                    'front end development, back end development, enterprise application'
+                content: 'Johannes Ströbele, Johannes Strobele, portfolio, homepage, full stack developer, software developer,' +
+                    'information design, front end development, back end development, enterprise application'
             },
         ], true);
     }

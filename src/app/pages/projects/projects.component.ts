@@ -48,7 +48,7 @@ export class ProjectsComponent implements OnInit {
                 name: 'keywords',
                 content: 'Johannes Ströbele, portfolio, projects, GitHub projects, coding,' +
                     'full stack developer, software developer, information design, ' +
-                    'front end development, back end development, enterprise application'
+                    'front end development, back end development, enterprise application, Johannes Strobele'
             },
         ], true);
     }
