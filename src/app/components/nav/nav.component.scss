@@ -1,9 +1,5 @@
 @import "../../../variables";
 
-.nav, .nav-bg {
-  height: 64px;
-}
-
 .nav {
   position: relative;
   top: -2px;
@@ -38,7 +34,6 @@
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: bolder;
   cursor: pointer;
-  padding-top: 3px;
 }
 
 .logo img {
@@ -62,7 +57,6 @@
 }
 
 .hamburger {
-  top: 6px;
   position: relative;
 }
 
@@ -75,6 +69,9 @@
 
 // MOBILE
 @media (max-width: 767.98px) {
+  .nav, .nav-bg {
+    height: 60px;
+  }
   .view-mobile {
     background: map-get($custom-palette, background) !important;
     display: block !important;
@@ -98,10 +95,19 @@
   .view-desktop {
     display: none !important;
   }
+  .logo {
+    padding-top: 12px;
+  }
+  .hamburger {
+    top: 9px;
+  }
 }
 
 // DESKTOP
 @media (min-width: 768px) {
+  .nav, .nav-bg {
+    height: 64px;
+  }
   .view-desktop {
     display: block !important;
     cursor: pointer;
@@ -113,5 +119,11 @@
   }
   .view-mobile {
     display: none !important;
+  }
+  .logo {
+    padding-top: 3px;
+  }
+  .hamburger {
+    top: 6px;
   }
 }
