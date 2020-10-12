@@ -29,8 +29,8 @@ export class AboutComponent {
             },
             {
                 name: 'keywords',
-                content: 'Johannes Ströbele, portfolio, about, full stack developer, software developer, information design, ' +
-                    'front end development, back end development, enterprise application, Johannes Strobele'
+                content: 'Johannes Ströbele, Johannes Stroebele, portfolio, about, full stack developer, software developer,' +
+                    'information design, front end development, back end development, enterprise application'
             },
         ], true);
     }

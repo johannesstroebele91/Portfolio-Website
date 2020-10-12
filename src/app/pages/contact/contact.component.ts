@@ -23,8 +23,8 @@ export class ContactComponent {
             },
             {
                 name: 'keywords',
-                content: 'Johannes Ströbele, portfolio, contact, get in touch, email me, full stack developer,' +
-                    'software developer, information design, Johannes Strobele' +
+                content: 'Johannes Ströbele, Johannes Stroebele, portfolio, contact, get in touch, email me, full stack developer,' +
+                    'software developer, information design' +
                     'front end development, back end development, enterprise application'
             },
         ], true);
