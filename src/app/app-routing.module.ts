@@ -15,6 +15,7 @@ export const routes: Routes = [
     {path: 'contact', component: ContactComponent},
     {path: 'legal', component: LegalDisclosureComponent},
     {path: 'data', component: DataProtectionDeclarationComponent},
+    {path: '**', component: HomeComponent},  // Wildcard route for a 404 page
 ];
 
 const routerOptions: ExtraOptions = {
