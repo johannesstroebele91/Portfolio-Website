@@ -31,5 +31,11 @@ The code for this web application was developed, versioned, and managed using Gi
 * angular.json: provides workspace-wide and project-specific configuration defaults for build and development tools provided by the Angular CLI
 * package.json: provides metadata of the project as well as handles the dependency management with Node package manager
 
-# 3. Contact
+# 3. Deployment
+The website can be deployed as follows:
+1. Add ghpages dependencies: ng add angular-cli-ghpages
+2. Install needed dependencies if an error appears
+3. Build & deploy the application: ng deploy --cname=johannesstroebele.com
+
+# 4. Contact
 Please contact me if you have any questions or recommendations for improvement: stroebele.j@gmail.com
