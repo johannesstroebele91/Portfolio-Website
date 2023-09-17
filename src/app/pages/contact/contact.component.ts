@@ -19,13 +19,13 @@ export class ContactComponent {
 
             {
                 name: 'description',
-                content: 'Get in Touch if you need support developing an enterprise application or just want to connect.'
+                content: 'Get in Touch if you need support developing an business application or just want to connect.'
             },
             {
                 name: 'keywords',
                 content: 'Johannes Ströbele, Johannes Stroebele, portfolio, contact, get in touch, email me, full stack developer,' +
                     'software developer, information design' +
-                    'front end development, back end development, enterprise application'
+                    'front end development, back end development, business application'
             },
         ], true);
     }

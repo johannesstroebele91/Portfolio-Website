@@ -20,12 +20,12 @@ export class HomeComponent {
             {
                 name: 'description',
                 content: 'Welcome! I am Johannes, a full stack cloud developer. On my homepage you can view my two most recent projects, ' +
-                    'the companies I worked with, and what others say about me.  other pages of my portfolio'
+                    'the companies I worked with, and what others say about me.'
             },
             {
                 name: 'keywords',
                 content: 'Johannes Ströbele, Johannes Stroebele, portfolio, homepage, full stack developer, software developer,' +
-                    'information design, front end development, back end development, enterprise application'
+                    'information design, front end development, back end development, business application'
             },
         ], true);
     }

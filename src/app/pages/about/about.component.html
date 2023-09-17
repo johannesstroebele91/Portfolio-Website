@@ -43,15 +43,16 @@
             <h3>Frontend Development</h3>
             <h4>Experiences</h4>
             <ul class="experiences">
+                <li><a (click)="onClick('sulzer')">Software Developer (Sulzer)</a></li>
                 <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
                 <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
-                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
-                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
                 <li (click)="showContentFrontend=true" *ngIf="!showContentFrontend">
                     <mat-icon>expand_more</mat-icon>
                 </li>
                 <li *ngIf="showContentFrontend">
                     <ul>
+                        <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                            Project Mobile Media - GitHub-HR (HdM course)</a></li>
                         <li><a href="https://github.com/johannesstroebele91/FoxSub">
                             Mobile Web Applications - FoxSub (HdM course)</a></li>
                         <li>
@@ -71,6 +72,7 @@
                 <li>HTML, CSS, SCSS</li>
                 <li>JavaScript, TypeScript</li>
                 <li>Angular, Angular Material</li>
+                <li>React, Antd Design, Apollo Client</li>
                 <li>Git, GitHub, Bitbucket</li>
                 <li>Agile Software Development (SCRUM)</li>
             </ul>
@@ -80,16 +82,19 @@
             <h3>Backend Development</h3>
             <h4>Experiences</h4>
             <ul class="experiences">
+                <li><a (click)="onClick('sulzer')">Software Developer (Sulzer)</a></li>
                 <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
                 <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
                     Project Mobile Media - GitHub-HR (HdM course)</a></li>
-                <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214489">Databases Fundamentals (HdM
-                    course)</a></li>
+
                 <li (click)="showContentBackend=true" *ngIf="!showContentBackend">
                     <mat-icon>expand_more</mat-icon>
                 </li>
                 <li *ngIf="showContentBackend">
                     <ul>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214489">Databases
+                            Fundamentals (HdM
+                            course)</a></li>
                         <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
                         <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211593">Linux & Terminal
                             Fundamentals
@@ -105,11 +110,11 @@
             <hr class="skills-hr">
             <h4>Tools</h4>
             <ul>
-                <li>Node.js, Express Framework</li>
-                <li>Python, Flask Framework</li>
-                <li>Java, Spring Framework</li>
-                <li>SQL, SQLite, PostgreSQL</li>
-                <li>Heroku, Netlify, Google Cloud</li>
+                <li>Node.js (Express, Next.js), Java (Spring Boot)</li>
+                <li>Unit-, Integration-, E2E-Test (Jest)</li>
+                <li>MongoDB, SQLite, PostgreSQL</li>
+                <li>GraphQL, REST, Apollo Server</li>
+                <li>Vercel, GitHub Pages, Google Cloud</li>
                 <li>Terminal, Linux Server, Shell Scripting</li>
             </ul>
         </mat-card>
@@ -201,13 +206,27 @@
 <section id="company">
     <h2>Company experiences</h2>
     <table class="mat-card">
+        <tr id="sulzer">
+            <td class="td-first">04/2021 – today</td>
+            <td class="td-second"><b>Full-stack cloud developer <a href="https://www.sulzer.de/"
+                                                                   tabindex="0"
+                                                                   target="_blank">Sulzer GmbH</a>, Stuttgart</b>
+                <ul class="ul-bullets">
+                    <li>Development of a cloud application with tests for detecting software defects in vehicle
+                        prototypes in a SCRUM team using Jira from Atlassian
+                    </li>
+                    <li>React, TypeScript, SCSS, AG Grid, Apollo, GraphQL, Express, MongoDB, Jest</li>
+                </ul>
+            </td>
+        </tr>
         <tr id="daimlertss">
             <td class="td-first">03/2020 – 05/2020</td>
-            <td class="td-second"><b>Full-stack development intern for the <a href="https://www.btelligent.com/"
-                                                                              tabindex="0"
-                                                                              target="_blank">Daimler
+            <td class="td-second"><b>Full-stack development intern for the <a
+                    href="https://www.mercedes-benz-techinnovation.com/de//"
+                    tabindex="0"
+                    target="_blank">Mercedes-Benz Tech Innovation (former Daimler
                 TSS
-                GmbH</a>, Munich</b>
+                GmbH)</a>, Munich</b>
                 <ul class="ul-bullets">
                     <li>Development of a web application for recalculating vehicle contracts in a SCRUM team using Jira
                         from Atlassian
@@ -294,12 +313,16 @@
     <h2>Academic experiences</h2>
     <table class="mat-card">
         <tr>
-            <td class="td-first">10/2017 – present</td>
+            <td class="td-first">10/2017 – 02/2021</td>
             <td class="td-second"><b><a href="https://informationsdesign.hdm-stuttgart.de/" tabindex="0"
                                         target="_blank">Information Design</a>,
                 Stuttgart Media University</b>
                 <ul class="ul-bullets">
-                    <li>Desired degree: Bachelor of Arts</li>
+                    <li>Academic degree: Bachelor of Arts</li>
+                    <li>Grade average: 1.4</li>
+                    <li>Thesis: optimizing the interaction between business users and artificial intelligence
+                        applications
+                    </li>
                     <li>Semester representative (voluntary)</li>
                 </ul>
             </td>
@@ -312,14 +335,15 @@
         </tr>
         <tr>
             <td class="td-first">08/2011 – 09/2016</td>
-            <td class="td-second"><b><a href="https://www.uni-augsburg.de/de/studium/studienangebot/uebersicht/betriebswirtschaftslehre-bsc/"
-                                        tabindex="0"
-                                        target="_blank">Business
+            <td class="td-second"><b><a
+                    href="https://www.uni-augsburg.de/de/studium/studienangebot/uebersicht/betriebswirtschaftslehre-bsc/"
+                    tabindex="0"
+                    target="_blank">Business
                 Administration</a>, University of Augsburg</b>
                 <ul class="ul-bullets">
                     <li>Academic degree: Bachelor of Science</li>
                     <li>Study focus: Marketing</li>
-                    <li>Bachelor thesis: determinants of consumer behaviour in mobile channels</li>
+                    <li>Thesis: determinants of consumer behaviour in mobile channels</li>
                 </ul>
             </td>
         </tr>

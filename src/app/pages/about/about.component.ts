@@ -24,13 +24,13 @@ export class AboutComponent {
             },
             {
                 name: 'description',
-                content: 'My goal is to develop enterprise applications that optimize the user experience and business value.' +
+                content: 'My goal is to develop business applications that optimize the user experience and business value.' +
                     'On this page, you can view my skills, working experience, and studies.'
             },
             {
                 name: 'keywords',
                 content: 'Johannes Ströbele, Johannes Stroebele, portfolio, about, full stack developer, software developer,' +
-                    'information design, front end development, back end development, enterprise application'
+                    'information design, front end development, back end development, business application'
             },
         ], true);
     }
