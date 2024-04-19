@@ -1,0 +1,140 @@
+<!-- Introduction -->
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div class="container-text-img">
+                <h1>Hi</h1>
+                <h2>I'm a full stack cloud developer</h2>
+                <p class="runningtext-maxwidth my-3" style="text-align: left;">My goal is to code business applications
+                    that optimize the user experience and business value</p>
+                <button class="button-hero-desktop my-3" color="primary" mat-raised-button routerLink="contact">
+                    Get In Touch
+                </button>
+            </div>
+            <img alt="Profile picture of Johannes Ströbele" height="300"
+                 src="assets/profile-picture.png">
+        </div>
+        <button class="button-hero-mobile my-3" color="primary" mat-raised-button routerLink="contact">
+            Get In Touch
+        </button>
+    </section>
+</div>
+
+<!-- Projects -->
+<section class="projects-section">
+    <h2 class="mt-5" style="text-align: center;">Recent Projects</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">These are two of the projects I developed
+        recently.
+        You can see all of them in the <a routerLink="projects">projects section</a> or on my <a
+                href="https://github.com/johannesstroebele91/">GitHub profile</a>.</p>
+
+    <h3 class="view-mobile mt-5" style="text-align: center;">GitHub HR</h3>
+    <div class="container-with-elements my-5">
+        <div class="img-projects">
+            <img alt="Link to GitHub page for GitHub-HR"
+                 (click)="openWebsite('https://github.com/johannesstroebele91/GitHub-HR')"
+                 src="assets/project-githubhr.png">
+
+        </div>
+        <div class="project-description">
+            <h3 class="view-desktop my-3">GitHub HR</h3>
+            <p class="mb-3">Helps human resources with the technical screening of software
+                developers. They can find out which coding projects and stacks the developers used. Tech stack:
+                Chart.js, Angular, Node.js (Express), and Heroku.</p>
+            <div class="project-buttons-position">
+                <button (click)="openWebsite('https://github.com/johannesstroebele91/GitHub-HR');" class="mr-2"
+                        color="primary" mat-stroked-button>
+                    Source Code
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <h3 class="view-mobile mt-5" style="text-align: center;">Study Administration Portal</h3>
+    <div class="container-with-elements my-5">
+        <div class="img-projects">
+            <img alt="Link to GitHub page for hdm study administration page"
+                 (click)="openWebsite('https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration')"
+                 src="assets/project-studyadministrationportal.png">
+        </div>
+        <div class="project-description">
+            <h3 class="view-desktop my-3">Study Administration Portal</h3>
+            <p class="mb-3">Supports students of the Stuttgart Media University to manage
+                their exams faster and easier. Tech stack: Vanilla JavaScript, Bootstrap, Node.js (Express), and
+                Heroku.</p>
+            <div class="project-buttons-position">
+                <button (click)="openWebsite('https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration');"
+                        class="mr-2"
+                        color="primary"
+                        mat-stroked-button>Source Code
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Experiences -->
+<section class="section-company">
+    <h2 style="text-align: center;">Previous Companies</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">During the last years, I gained hands-on
+        experience at the following innovative and international companies, among others.
+        Details can be seen on the <a routerLink="about">about page</a>.
+    </p>
+    <div class="container-with-elements">
+        <div>
+            <a href="https://www.sulzer.de/">Sulzer</a>
+            <p>Developed a vehicle analytics application for a leading player in the automotive industry</p>
+        </div>
+        <div>
+            <a href="https://www.celonis.com/">Celonis</a>
+            <p>Worked on the process mining application for analyzing, and optimizing highly complex business processes</p>
+        </div>
+        <div>
+            <a href="https://www.mercedes-benz-techinnovation.com/de/">MBTI</a>
+            <p>Mercedes-Benz Tech Innovation, former DaimlerTSS</p>
+            <p>Developed an offer calculation application for Mercedes-Benz vehicles</p>
+        </div>
+    </div>
+</section>
+
+<!-- Recommendations -->
+<section class="section-recommendations">
+    <h2 style="text-align: center;">Recommendations</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">The quotes from my colleagues were taken from
+        my
+        <a href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a>.</p>
+    <div class="container-with-elements mt-4">
+        <mat-card>
+            <h3>Raphael Fleckenstein</h3>
+            <h4>UI/UX Product Designer</h4>
+            <img alt="Header design for the Sketch Meetup Stuttgart" class="img-recommendation my-3"
+                 routerLink="https://www.celonis.com/"
+                 src="assets/recommender-raphaelfleckenstein.png">
+            <p class="runningtext-maxwidth">"I had the pleasure of working with Johannes at START Munich,
+                a startup student club at the TU Munich. He has optimized the web appearance,
+                build up the online marketing, and organized several successful events.
+                Johannes impressed me with his great motivation and project management skills."</p>
+        </mat-card>
+        <mat-card>
+            <h3>Faruk Toy</h3>
+            <h4>Data Science Working Student </h4>
+            <img alt="Header design for the Sketch Meetup Stuttgart" class="img-recommendation my-3"
+                 routerLink="https://www.celonis.com/"
+                 src="assets/recommender-faruktoy.png">
+            <p class="runningtext-maxwidth">"Johannes is very talented and skilled. He has great ideas and
+                he is able to make them work. He is very dependable and it was a pleasure to work with him.
+                Johannes has certainly great entrepreneurial spirit."</p>
+        </mat-card>
+        <mat-card>
+            <h3>Tim Stefany</h3>
+            <h4>Cloud Mobility Working Student</h4>
+            <img alt="Header design for the Sketch Meetup Stuttgart" class="img-recommendation my-3"
+                 routerLink="https://www.celonis.com/"
+                 src="assets/recommender-timstefany.png">
+            <p class="runningtext-maxwidth">"Having Johannes as a full stack developer in our
+                data science project was great! Whether it was the deployment of our dashboard via Google Cloud,
+                issues with the Python Flask backend, setting up the frontend, or our managing our PostgreSQL database,
+                Johannes was always up to the task."</p>
+        </mat-card>
+    </div>
+</section>
