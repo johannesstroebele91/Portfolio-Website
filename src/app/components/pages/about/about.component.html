@@ -1,0 +1,389 @@
+<!-- Introduction -->
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div class="container-text-img">
+                <h1>This is me</h1>
+                <p style="text-align: justify;">I am a full stack cloud developer living in Stuttgart, Germany.
+                    At present, I am writing my thesis about the collaboration between humans and machine learning
+                    systems.
+                    In my free time, I like to read detective novels or try out new restaurants with friends. On this
+                    page, you can view my:</p>
+                <ol class="anchor-links my-3">
+                    <li><a (click)="onClick('skills')" tabindex="0">Overall Skills</a></li>
+                    <li><a (click)="onClick('company')" tabindex="0">Company Experiences</a></li>
+                    <li><a (click)="onClick('academic')" tabindex="0">Academic experiences</a></li>
+                    <li><a (click)="onClick('others')" tabindex="0">Others</a></li>
+                </ol>
+                <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-desktop my-3" color="primary"
+                        mat-raised-button>
+                    Download CV
+                </button>
+            </div>
+            <img alt="Profile picture of Johannes Ströbele" height="300"
+                 src="assets/profile-picture.png">
+        </div>
+        <button (click)="openFile('stroebele_cv.pdf')" class="button-hero-mobile my-3" color="primary"
+                mat-raised-button>
+            Download CV
+        </button>
+    </section>
+</div>
+
+<!-- 1. Skills -->
+<section class="section-skills">
+    <h2 id="skills" style="text-align: center;">What my skills are</h2>
+    <p class="runningtext-maxwidth-centered" style="text-align: center;">
+        These are the skills that I acquired during my internships, studies, and personal projects.
+        Click on the experiences below (e. g.<a (click)="onClick('daimlertss')">Full Stack Development Intern</a>
+        to receive additional information.</p>
+    <div class="container-with-elements mt-4" style="  flex-basis: 100%;">
+        <!-- Frontend Development -->
+        <mat-card>
+            <h3>Frontend Development</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('sulzer')">Software Developer (Sulzer)</a></li>
+                <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li (click)="showContentFrontend=true" *ngIf="!showContentFrontend">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentFrontend">
+                    <ul>
+                        <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                            Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/FoxSub">
+                            Mobile Web Applications - FoxSub (HdM course)</a></li>
+                        <li>
+                            <a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                                Mobile Media - Study Portal (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li (click)="showContentFrontend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>HTML, CSS, SCSS</li>
+                <li>JavaScript, TypeScript</li>
+                <li>Angular, Angular Material</li>
+                <li>React, Antd Design, Apollo Client</li>
+                <li>Git, GitHub, Bitbucket</li>
+                <li>Agile Software Development (SCRUM)</li>
+            </ul>
+        </mat-card>
+        <!-- Backend Development -->
+        <mat-card>
+            <h3>Backend Development</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('sulzer')">Software Developer (Sulzer)</a></li>
+                <li><a (click)="onClick('btelligent')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+
+                <li (click)="showContentBackend=true" *ngIf="!showContentBackend">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentBackend">
+                    <ul>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5214489">Databases
+                            Fundamentals (HdM
+                            course)</a></li>
+                        <li><a (click)="onClick('daimlertss')">Full Stack Development Intern (DaimlerTSS)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211593">Linux & Terminal
+                            Fundamentals
+                            (HdM course)</a></li>
+                        <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                            Data Science Project - Fleetboard (HdM course)</a></li>
+                        <li (click)="showContentBackend=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Node.js (Express, Next.js), Java (Spring Boot)</li>
+                <li>Unit-, Integration-, E2E-Test (Jest)</li>
+                <li>MongoDB, SQLite, PostgreSQL</li>
+                <li>GraphQL, REST, Apollo Server</li>
+                <li>Vercel, GitHub Pages, Google Cloud</li>
+                <li>Terminal, Linux Server, Shell Scripting</li>
+            </ul>
+        </mat-card>
+    </div>
+    <div class="container-with-elements mt-4">
+        <!-- Data Science & Research -->
+        <mat-card>
+            <h3>Data Science & Research</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('celonis-ux-research')">UX Research Intern (Celonis)</a></li>
+                <li><a (click)="onClick('ixd-group')">UX Research Student Assistant (IXD Research Group)</a></li>
+                <li><a href="https://github.com/Fleet-Analytics-Dashboard">
+                    Data Science Project - Fleetboard (HdM course)</a></li>
+                <li (click)="showContentDSResearch=true" *ngIf="!showContentDSResearch">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentDSResearch">
+                    <ul>
+                        <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                            Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                        <li><a href="https://github.com/Twilytics">
+                            Data Engineering Project - Twilytics (HdM course)</a></li>
+                        <li>
+                            <a href="https://www.hdm-stuttgart.de/block?sgname=Wirtschaftsinformatik+und+digitale+Medien+%28Bachelor%2C+7+Semester%29+&sgblockID=2572637&sgang=550054&blockname=Wissenschaftliche+Grundlagen+">Scientific
+                                fundamentals 1 & 2 (HdM course)</a></li>
+                        <li (click)="showContentDSResearch=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Pandas & Numpy</li>
+                <li>Chart.js, Ng2-Charts</li>
+                <li>Grafana</li>
+                <li>Interviews & Survey</li>
+                <li>Usability testing</li>
+            </ul>
+        </mat-card>
+        <!-- UX Design -->
+        <mat-card>
+            <h3>UX Design</h3>
+            <h4>Experiences</h4>
+            <ul class="experiences">
+                <li><a (click)="onClick('celonis-ux-design')">UX Design Intern (Celonis)</a></li>
+                <li><a (click)="onClick('celonis-ux-design')">Full Stack Development Intern (b.telligent)</a></li>
+                <li><a href="https://github.com/johannesstroebele91/GitHub-HR">
+                    Project Mobile Media - GitHub-HR (HdM course)</a></li>
+                <li (click)="showContentUxDesign=true" *ngIf="!showContentUxDesign">
+                    <mat-icon>expand_more</mat-icon>
+                </li>
+                <li *ngIf="showContentUxDesign">
+                    <ul>
+                        <li>
+                            <a href="https://github.com/johannesstroebele91/Stuttgart-Media-University-Study-Administration">
+                                Mobile Media - Study Portal (HdM course)</a></li>
+                        <li><a href="https://github.com/johannesstroebele91/Portfolio-Website">
+                            Web Design - Portfolio Website (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5212636">Application Design
+                            (HdM course)</a></li>
+                        <li><a href="https://www.hdm-stuttgart.de/vorlesung_detail?vorlid=5211700">
+                            Information Psychology (HdM course)</a></li>
+                        <li><a (click)="openFile('hdm-course-HCI-Methods-summative-usability-evaluation.pdf')">
+                            Human Computer Interaction Methods - Paper "Summative Usability Evaluation" (HdM course)</a>
+                        </li>
+                        <li (click)="showContentUxDesign=false">
+                            <mat-icon>expand_less</mat-icon>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <hr class="skills-hr">
+            <h4>Tools</h4>
+            <ul>
+                <li>Figma</li>
+                <li>Sketch</li>
+                <li>Adobe CC</li>
+                <li>InVision</li>
+                <li>Balsamiq</li>
+            </ul>
+        </mat-card>
+    </div>
+</section>
+
+<!-- 2. Company experiences -->
+<section id="company">
+    <h2>Company experiences</h2>
+    <table class="mat-card">
+        <tr id="sulzer">
+            <td class="td-first">04/2021 – today</td>
+            <td class="td-second"><b>Full-stack cloud developer <a href="https://www.sulzer.de/"
+                                                                   tabindex="0"
+                                                                   target="_blank">Sulzer GmbH</a>, Stuttgart</b>
+                <ul class="ul-bullets">
+                    <li>Development of a cloud application with tests for detecting software defects in vehicle
+                        prototypes in a SCRUM team using Jira from Atlassian
+                    </li>
+                    <li>React, TypeScript, SCSS, AG Grid, Apollo, GraphQL, Express, MongoDB, Jest</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="daimlertss">
+            <td class="td-first">03/2020 – 05/2020</td>
+            <td class="td-second"><b>Full-stack development intern for the <a
+                    href="https://www.mercedes-benz-techinnovation.com/de//"
+                    tabindex="0"
+                    target="_blank">Mercedes-Benz Tech Innovation (former Daimler
+                TSS
+                GmbH)</a>, Munich</b>
+                <ul class="ul-bullets">
+                    <li>Development of a web application for recalculating vehicle contracts in a SCRUM team using Jira
+                        from Atlassian
+                    </li>
+                    <li>Implementing Angular components with methods such as data binding, dependency injection,
+                        routing, services, and observables
+                    </li>
+                    <li>Angular (Material UI), TypeScript, SCSS, HTML, Kotlin, Spring Framework</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="btelligent">
+            <td class="td-first">07/2019 – 09/2019</td>
+            <td class="td-second"><b>Full-stack development intern for the <a href="https://www.btelligent.com/"
+                                                                              tabindex="0"
+                                                                              target="_blank">b.telligent
+                GmbH</a>, Munich</b>
+                <ul class="ul-bullets">
+                    <li>Specification of the technical requirements and the software architecture
+                    </li>
+                    <li>Development of the admin area for a time tracking web application
+                    </li>
+                    <li>Angular (Material UI), TypeScript, SCSS, HTML, Java, Spring Framework</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="ixd-group">
+            <td class="td-first">03/2018 – 09/2018</td>
+            <td class="td-second"><b>UX Research assistant for the <a
+                    href="https://www.hdm-stuttgart.de/hochschule/forschung/forschungsschwerpunkte/information_experience"
+                    tabindex="0"
+                    target="_blank">IXD
+                Research Group</a>, Stuttgart</b>
+                <ul class="ul-bullets">
+                    <li>Supporting the creation of guidelines for 3D software</li>
+                    <li>Conception and conduction of usability tests to optimize a VR application</li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="celonis-ux-research">
+            <td class="td-first">02/2018 – 3/2018</td>
+            <td class="td-second"><b>Internship in UX Research at <a href="https://www.celonis.com/" tabindex="0"
+                                                                     target="_blank">Celonis</a>,
+                Munich</b>
+                <ul class="ul-bullets">
+                    <li>Development of a conceptual model to improve the user experience of the process mining
+                        software
+                    </li>
+                    <li>Setting up a web analytics solution to track the user experience with 25 quantitative metrics
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr id="celonis-ux-design">
+            <td class="td-first">08/2017 – 10/2017</td>
+            <td class="td-second"><b>Internship in UX Design at <a href="https://www.celonis.com/" tabindex="0"
+                                                                   target="_blank">Celonis</a>,
+                Munich</b>
+                <ul class="ul-bullets">
+                    <li>Creating responsive design components and layouts for the process mining software with Sketch
+                    </li>
+                    <li>Conducting online surveys, usability tests, and interviews to identify the needs of customers
+                    </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="td-first">11/2016 – 11/2017</td>
+            <td class="td-second"><b>Product manager (voluntary) at <a href="http://www.startmunich.de/" tabindex="0"
+                                                                       target="_blank">START Munich</a></b>
+                <ul class="ul-bullets">
+                    <li>Redesign of the website with Sketch and WordPress</li>
+                    <li>Conception, planning and organization of a startup pitch event, brainstorming sessions, and a
+                        startup tour
+                    </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!-- 3. Academic experience -->
+<section id="academic">
+    <h2>Academic experiences</h2>
+    <table class="mat-card">
+        <tr>
+            <td class="td-first">10/2017 – 02/2021</td>
+            <td class="td-second"><b><a href="https://informationsdesign.hdm-stuttgart.de/" tabindex="0"
+                                        target="_blank">Information Design</a>,
+                Stuttgart Media University</b>
+                <ul class="ul-bullets">
+                    <li>Academic degree: Bachelor of Arts</li>
+                    <li>Grade average: 1.4</li>
+                    <li>Thesis: optimizing the interaction between business users and artificial intelligence
+                        applications
+                    </li>
+                    <li>Semester representative (voluntary)</li>
+                </ul>
+            </td>
+        </tr>
+        <tr class="single">
+            <td class="td-first">03/2019 – 06/2019</td>
+            <td class="td-second"><b><a href="https://www.dongguk.edu/mbs/en/" tabindex="0" target="_blank">Semester
+                abroad</a> during studies at the Stuttgart Media University, Dongguk University, Seoul</b>
+            </td>
+        </tr>
+        <tr>
+            <td class="td-first">08/2011 – 09/2016</td>
+            <td class="td-second"><b><a
+                    href="https://www.uni-augsburg.de/de/studium/studienangebot/uebersicht/betriebswirtschaftslehre-bsc/"
+                    tabindex="0"
+                    target="_blank">Business
+                Administration</a>, University of Augsburg</b>
+                <ul class="ul-bullets">
+                    <li>Academic degree: Bachelor of Science</li>
+                    <li>Study focus: Marketing</li>
+                    <li>Thesis: determinants of consumer behaviour in mobile channels</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="td-first">08/2015 – 12/2015</td>
+            <td class="td-second"><b><a href="http://bizeng.hufs.ac.kr/" tabindex="0"
+                                        target="_blank">Semester
+                abroad</a> during studies at the University of Augsburg, Hankuk University of Foreign Studies, Seoul</b>
+            </td>
+        </tr>
+    </table>
+</section>
+
+<!-- 4. Other qualifications -->
+<section id="others">
+    <h2>Others</h2>
+    <table class="mat-card">
+        <tr>
+            <td class="td-first">Language Skills</td>
+            <td class="td-second">
+                <ul class="ul-bullets">
+                    <li>German - native speaker</li>
+                    <li>English - <a href="https://www.ets.org/toefl/ibt/about" tabindex="0" target="_blank">TOEFL
+                        iBT score</a>: 102 / 120
+                    </li>
+                    <li>Japanese - basic communication skills</li>
+                    <li>Korean - basic communication skills</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td class="td-first">Hobbies</td>
+            <td class="td-second">
+                <ul class="ul-bullets">
+                    <li>Cooking</li>
+                    <li>Fitness training</li>
+                    <li>Drawing</li>
+                    <li>Detective novels</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+</section>
