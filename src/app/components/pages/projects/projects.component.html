@@ -1,0 +1,101 @@
+<!-- Introduction -->
+<div class="hero-section">
+    <section>
+        <div class="container-with-elements">
+            <div class="container-text-img">
+                <h1>GitHub Projects</h1>
+                <p class="runningtext-maxwidth my-3">These are the personal project I have conceptualized, designed, and
+                    developed.
+                    They are directly fetched from the GitHub API with some additional information. So everything is up
+                    to date.</p>
+                <a href="{{user.html_url}}">
+                    <button class="button-hero-desktop my-3" color="primary"
+                            mat-raised-button>
+                        Visit GitHub Profile
+                    </button>
+                </a>
+            </div>
+            <img alt="Profile picture of Johannes Ströbele" height="300"
+                 src="assets/profile-picture.png">
+        </div>
+        <a href="{{user.html_url}}">
+            <button (click)="linkToWebsite(user.html_url)" class="button-hero-mobile my-3" color="primary"
+                    mat-raised-button>
+                Visit GitHub Profile
+            </button>
+        </a>
+    </section>
+</div>
+
+<!-- Results -->
+<section>
+    <div style="text-align: center;">
+        <h2>{{reposAmount}} Repositories</h2>
+        <p>I joined GitHub on the {{user.created_at |  date:'dd/MM/yyyy'}} and was last active at
+            the {{user.updated_at |  date:'dd/MM/yyyy'}}</p>
+    </div>
+    <div style="max-width: 768px; margin: 0 auto;">
+        <mat-card *ngFor="let repo of repos" class="my-5">
+            <h3>{{repo.name}}</h3>
+            <p>{{repo.description}}</p>
+            <div class="container-columns my-3">
+                <div>
+                    <div *ngIf="repo.language">
+                        <mat-icon aria-hidden="false" aria-label="Language icon">language</mat-icon>
+                        <p>Main language: {{repo.language}}</p>
+                    </div>
+                    <div *ngIf="repo.name">
+                        <mat-icon aria-hidden="false" aria-label="Website icon">storage</mat-icon>
+                        <p>Repository: <a href="{{repo.html_url}}">visit</a></p>
+                    </div>
+                    <div *ngIf="repo.has_wiki">
+                        <mat-icon aria-hidden="false" aria-label="Wiki icon">school</mat-icon>
+                        <p>Wiki: <a href="{{repo.html_url}}/wiki">visit</a></p>
+                    </div>
+                    <div *ngIf="repo.open_issues_count > 0">
+                        <mat-icon aria-hidden="false" aria-label="Issues icon">assignment</mat-icon>
+                        <p *ngIf="repo.open_issues">{{repo.open_issues}} issues:<a
+                                href="{{repo.html_url}}/issues">
+                            visit</a>
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <div *ngIf="repo.watchers">
+                        <mat-icon aria-hidden="false" aria-label="Fork icon">call_split</mat-icon>
+                        <p>Forks: {{repo.forks_count}}</p>
+                    </div>
+                    <div *ngIf="repo.size">
+                        <mat-icon aria-hidden="false" aria-label="Size icon">zoom_out_map</mat-icon>
+                        <p>Repo size: {{repo.size}} Kb</p>
+                    </div>
+                    <div *ngIf="repo.watchers">
+                        <mat-icon aria-hidden="false" aria-label="Watchers icon">visibility</mat-icon>
+                        <p>Watchers: {{repo.watchers}}</p>
+                    </div>
+                    <div *ngIf="repo.stargazers_count">
+                        <mat-icon aria-hidden="false" aria-label="Stars icon">star</mat-icon>
+                        <p>Stars: {{repo.stargazers_count}}</p>
+                    </div>
+                </div>
+                <div>
+                    <div *ngFor="let language of repo.languages" class="repo-languages">
+                        <p><b>{{language.name}}:</b> {{language.frequency}} bytes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-buttons">
+                <a *ngIf="repo.homepage" href="{{repo.homepage}}">
+                    <button class="my-3" color="primary" mat-raised-button routerLink="/contact">
+                        Visit Website
+                    </button>
+                </a>
+                <a href="{{repo.html_url}}">
+                    <button class="my-3" color="primary" mat-raised-button>
+                        Visit Repository
+                    </button>
+                </a>
+            </div>
+        </mat-card>
+    </div>
+</section>
