@@ -1,0 +1,41 @@
+<div class="nav-sticky">
+    <div class="nav-bg mat-card"></div>
+    <mat-toolbar class="nav">
+        <mat-toolbar-row fxLayout="row" fxLayoutAlign="space-between center">
+
+            <a class="logo" routerLink="/">
+                <img alt="Logo" height="42"
+                     onmouseout="this.src='assets/logo.png'"
+                     onmouseover="this.src='assets/logo-hovered.png'" src="assets/logo.png">
+                <span [routerLinkActiveOptions]="{exact: true}" routerLinkActive="is-active">Johannes Ströbele</span>
+            </a>
+
+            <div class="view-desktop" fxLayout="row" fxLayoutAlign="space-between center">
+                <span [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive="is-active">Home</span>
+                <span [routerLinkActiveOptions]="{exact: true}" routerLink="/about"
+                      routerLinkActive="is-active">About</span>
+                <span [routerLinkActiveOptions]="{exact: true}" routerLink="/projects" routerLinkActive="is-active">Projects</span>
+                <span [routerLinkActiveOptions]="{exact: true}" routerLink="/contact" routerLinkActive="is-active">Contact</span>
+            </div>
+            <div class="view-mobile">
+                <button (click)="showMenuMobile()" aria-label="Hamburger menu" color="primary" mat-icon-button>
+                    <mat-icon class="hamburger">menu</mat-icon>
+                </button>
+            </div>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-toolbar *ngIf="showMobileMenu" class="view-mobile mat-card">
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive="is-active" (click) = "closeNav();">
+            Home
+        </mat-toolbar-row>
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/about" routerLinkActive="is-active" (click) = "closeNav();">
+            About
+        </mat-toolbar-row>
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/projects" routerLinkActive="is-active" (click) = "closeNav();">
+            Projects
+        </mat-toolbar-row>
+        <mat-toolbar-row [routerLinkActiveOptions]="{exact: true}" routerLink="/contact" routerLinkActive="is-active" (click) = "closeNav();">
+            Contact
+        </mat-toolbar-row>
+    </mat-toolbar>
+</div>
