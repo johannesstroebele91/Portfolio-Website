@@ -1,5 +1,6 @@
-@use '@angular/material' as mat;
 @import './variables';
+
+/* TODO @use '@angular/material' as mat;
 
 @include mat.core();
 
@@ -19,7 +20,9 @@ $custom-theme: mat.define-light-theme((
 
 @include mat.all-component-themes($custom-theme);
 
-// TODO add dark theme
+*/
+
+/* TODO add dark theme
 // Define a dark theme
 $dark-theme: mat.define-dark-theme((
   color: (
@@ -42,6 +45,7 @@ $light-theme: mat.define-light-theme((
 // Apply the dark theme by default
 @include mat.core-theme($dark-theme);
 
+*/
 
 /* TODO
 @import '~@angular/material/theming.scss';
