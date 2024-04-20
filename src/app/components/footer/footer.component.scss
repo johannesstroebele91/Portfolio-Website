@@ -3,9 +3,12 @@
 footer {
   width: 100%;
   margin-top: 72px;
+  padding-bottom: 10px;
+  color: #e1e1e1 !important;
+  background: map-get($custom-palette, background) !important;
 }
 
-.mat-card {
+.card {
   text-align: center;
   position: relative;
   border-radius: 6px;
@@ -15,10 +18,26 @@ footer {
   background: map-get($custom-palette, background-dark) !important;
 }
 
+.footer-highlight {
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px 0 50px 0;
+  background: map-get($custom-palette, background-dark);
+}
+
 .links-legal-data {
-  margin: 24px auto !important;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 0 auto !important;
+  padding: 30px 0 10px 0;
   max-width: 600px;
 }
+
+.links-legal-data > li > a {
+  text-decoration-line: none !important;
+}
+
 
 .links-legal-data li {
   white-space: nowrap;
