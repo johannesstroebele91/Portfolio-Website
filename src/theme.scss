@@ -1,0 +1,19 @@
+@use '@angular/material' as mat;
+
+@import 'variables';
+
+@include mat.core();
+
+$primary: mat.define-palette($custom-palette, primary);
+$accent: mat.define-palette($custom-palette, accent);
+$background: map-get($custom-palette, background);
+
+$custom-dark-theme: mat.define-dark-theme((
+  color: (
+    primary: $primary,
+    accent: $accent,
+  ),
+  background: $background
+));
+
+@include mat.all-component-themes($custom-dark-theme);
