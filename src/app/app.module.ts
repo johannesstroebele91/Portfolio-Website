@@ -8,7 +8,6 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatIconModule} from '@angular/material/icon';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatCardModule} from '@angular/material/card';
-// Components
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatButtonModule} from '@angular/material/button';
 import {ProjectsComponent} from './components/pages/projects/projects.component';
@@ -46,12 +45,8 @@ import {NavComponent} from './components/nav/nav.component';
     MatToolbarModule,
     MatButtonModule,
     BrowserModule,
-    RouterModule.forRoot(routes) // Import RouterModule with your defined routes
-    /* TODO fix later
-    AppRoutingModule,
-    ChartsModule */
+    RouterModule.forRoot(routes)
   ],
-  // TODO schemas: [NO_ERRORS_SCHEMA],
   providers: [UsersService],
   bootstrap: [AppComponent],
   exports: [RouterModule]
