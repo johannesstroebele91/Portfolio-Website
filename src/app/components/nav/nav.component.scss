@@ -31,6 +31,8 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-weight: bolder;
   cursor: pointer;
@@ -38,15 +40,14 @@
 
 .logo img {
   display: inline-block;
-  position: relative;
-  top: 14px;
 }
 
 .logo > span {
   display: inline-block;
   font-size: 18px !important;
   color: white;
-  padding: 0 12px;
+  margin-top: 5px;
+  padding-left: 9px;
 }
 
 .logo > span:hover, .view-desktop > span:hover {

@@ -88,10 +88,7 @@ h4, h5 {
 p, pre, table, blockquote, label, span, input {
   font-size: 15px !important;
   line-height: 1.6em !important;
-  margin-top: 0;
-  margin-bottom: 0.9em;
   font-weight: 400;
-
 }
 
 i, strong, em, small, code {
@@ -138,7 +135,6 @@ b {
   font-weight: 500;
 }
 
-
 hr, .hr {
   border: 1px solid;
   margin: -1px 0;
@@ -160,6 +156,7 @@ sub {
 
 button {
   font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
+  margin: 10px;
 }
 
 .mat-stroked-button {
