@@ -21,6 +21,10 @@ section {
   background: map-get($custom-palette, background-dark);
 }
 
+.mdc-card {
+  background: map-get($custom-palette, background-light) !important;
+}
+
 .hero-section {
   color: #e1e1e1 !important;
   background: map-get($custom-palette, background-light);
