@@ -97,6 +97,7 @@ i, strong, em, small, code {
 
 a {
   color: map-get($custom-palette, primary);
+  text-decoration: none;
   font-size: 15px !important;
   line-height: 1.6em !important;
   margin-top: 0;

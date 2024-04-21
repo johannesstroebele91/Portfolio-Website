@@ -7,21 +7,23 @@
 $primary: mat.define-palette($custom-palette, primary);
 $accent: mat.define-palette($custom-palette, accent);
 $background-color: mat.define-palette($custom-palette, background);
+$foreground-color: mat.define-palette($custom-palette, foreground);
 
 $custom-dark-theme: mat.define-dark-theme((
   color: (
     primary: $primary,
     accent: $accent,
-    foreground: $primary,
-    background: $accent,
   ),
 ));
 
 $palette-color: map-get($custom-dark-theme, color);
-$background: map-get($palette-color, background);
+$background-color: map-get($palette-color, background);
+$foreground-color: map-get($palette-color, foreground);
 
-$background: map_merge($background, (background: red));
-$palette-color: map_merge($palette-color, (background: $background));
+$background: map_merge($background-color, (background: background-color));
+// TODO fix foreground
+$foreground: map_merge($foreground-color, (background: foreground-color));
+$palette-color: map_merge($palette-color, (background: $background, foreground: $foreground));
 $custom-dark-theme: map_merge($custom-palette, (color: $palette-color));
 
 @include mat.all-component-themes($custom-dark-theme);
