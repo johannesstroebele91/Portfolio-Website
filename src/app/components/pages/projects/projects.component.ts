@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 import {Meta, Title} from '@angular/platform-browser';
 import {Repo} from '../../../../models/repo';
 import {UsersService} from '../../../../services/users.service';
@@ -19,7 +18,6 @@ import {User} from '../../../../models/user';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-
   // GENERAL VARIABLES
   user!: User;
   repos!: Repo[];
@@ -31,7 +29,7 @@ export class ProjectsComponent implements OnInit {
   numberOfLanguageInReposWithoutDuplicates: number[] = [];
 
   // CONSTRUCTOR
-  constructor(private usersService: UsersService, private route: ActivatedRoute, private title: Title, private meta: Meta) {
+  constructor(private usersService: UsersService, private title: Title, private meta: Meta) {
     this.title.setTitle('Projects page');
     this.meta.addTags([
       {
