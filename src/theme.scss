@@ -7,21 +7,20 @@
 $primary: mat.define-palette($custom-palette, primary);
 $accent: mat.define-palette($custom-palette, accent);
 $background-color: mat.define-palette($custom-palette, background);
-$foreground-color: mat.define-palette($custom-palette, foreground);
 
-$custom-dark-theme: mat.define-dark-theme((
+$custom-light-theme: mat.define-light-theme((
   color: (
     primary: $primary,
     accent: $accent,
   )
 ));
 
-$palette-color: map-get($custom-dark-theme, color);
+$palette-color: map-get($custom-light-theme, color);
 
 $background-color: map-get($palette-color, background);
 $background: map_merge($background-color, (background: background-color));
 
 $palette-color: map_merge($palette-color, (background: $background));
-$custom-dark-theme: map_merge($custom-palette, (color: $palette-color));
+$custom-light-theme: map_merge($custom-palette, (color: $palette-color));
 
-@include mat.all-component-themes($custom-dark-theme);
+@include mat.all-component-themes($custom-light-theme);
