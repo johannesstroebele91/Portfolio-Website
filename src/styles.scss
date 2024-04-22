@@ -12,8 +12,7 @@ html, body, app-root {
 section {
   max-width: 959.89px !important;
   margin: 0 auto !important;;
-  padding-top: 42px;
-  padding-bottom: 66px;
+  padding-bottom: 40px;
 }
 
 .card {
@@ -22,12 +21,15 @@ section {
 }
 
 .mdc-card {
-  background: map-get($custom-palette, background-light) !important;
+  background: map-get($custom-palette, background-dark) !important;
+  padding: 30px 20px;
+  margin-bottom: 20px;
 }
 
 .hero-section {
   color: #e1e1e1 !important;
   background: map-get($custom-palette, background-light);
+  margin-bottom: 60px;
 }
 
 .img-project {
@@ -37,15 +39,14 @@ section {
 }
 
 .runningtext-maxwidth, .runningtext-maxwidth-centered {
-  line-height: 1.6em !important;
+  line-height: 1.8em !important;
   font-size: 15px !important;
   max-width: 600px;
-  text-align: justify;
-  margin: 0 auto !important;
+  padding: 15px 0;
 }
 
 .runningtext-maxwidth-centered {
-  margin: 0 auto !important;
+  margin: 0 auto 30px auto !important;
 }
 
 // Text
@@ -127,6 +128,7 @@ ul {
 }
 
 li {
+  color: white;
   margin-bottom: 6px;
 }
 
@@ -182,7 +184,8 @@ section .mat-icon {
 
 .anchor-links li {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .anchor-links li:hover {
@@ -256,6 +259,7 @@ section .mat-icon {
     display: none !important;
   }
   .button-hero-desktop {
+    margin-top: 20px;
     display: block !important;
   }
   .img-projects > img {

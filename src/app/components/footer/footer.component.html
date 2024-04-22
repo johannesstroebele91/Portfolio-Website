@@ -1,5 +1,5 @@
 <footer>
-  <div *ngIf="router.url!='/contact'" class="social-links my-4">
+  <div *ngIf="router.url!='/contact'" class="social-links">
     <a href="mailto:stroebele.j@gmail.com">
       <img alt="Link to email"
            src="assets/social-icon-email.png" width="24"></a>
@@ -21,7 +21,7 @@
     </button>
   </div>
   <div *ngIf="router.url!='/contact'" class="arrow-upward">
-    <a (click)="onClick('top')" class="mb-3">
+    <a (click)="onClick('top')">
       <img alt="Go to top of the page"
            src="assets/arrow-upward.png" width="24"></a>
     <hr style="width: 1px; height: 90px; background: white; border: none;"/>
