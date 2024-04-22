@@ -1,5 +1,9 @@
 @import '../../../../variables';
 
+.mat-mdc-text-field-wrapper .mat-primary {
+  color: yellow !important;
+}
+
 .social-profiles > li > a {
   display: flex;
   flex-direction: row;

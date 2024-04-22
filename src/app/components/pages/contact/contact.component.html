@@ -6,17 +6,40 @@
         <h1>Say hi!</h1>
         <p class="runningtext-maxwidth">Do you need support developing an business application or just
           want to get in touch?
-          Then contact me via one of these options:</p>
+          Then write me an email:</p>
+        <form (ngSubmit)="onSubmit()" [formGroup]="emailForm">
+
+          <mat-form-field appearance="fill" style="display: inline-block; width: 100%; margin: 40px 0 20px 0">
+            <mat-label style="color: #171f3e">Topic</mat-label>
+            <input formControlName="subject" matInput required type="text">
+            <mat-error *ngIf="emailForm.get('subject')?.hasError('required')">
+              Topic is required
+            </mat-error>
+          </mat-form-field>
+
+          <mat-form-field appearance="fill" style="display: inline-block; width: 100%; margin-bottom: 10px">
+            <mat-label style="color: #171f3e">Text</mat-label>
+            <textarea cdkAutosizeMinRows="3" cdkTextareaAutosize formControlName="body" matInput required></textarea>
+            <mat-error *ngIf="emailForm.get('body')?.hasError('required')">
+              Text is required
+            </mat-error>
+          </mat-form-field>
+
+          <button color="primary" mat-raised-button type="submit">Send Email</button>
+
+          <div *ngIf="isSubmitted">
+            <mat-spinner *ngIf="isSubmitting" color="primary"></mat-spinner>
+            <span *ngIf="isSuccess">Email sent successfully!</span>
+            <span *ngIf="isError">Error sending email: {{ errorMessage }}</span>
+          </div>
+        </form>
+
+
+        <p style="margin-top: 30px">Or contact me via one of these options:</p>
         <ul class="contact-options">
           <li><a href="mailto:stroebele.j@gmail.com">
             <img alt="Link to email"
                  height="30" src="assets/social-icon-email.png" width="30"> stroebele.j&#64;gmail.com</a></li>
-          <li><a href="https://github.com/johannesstroebele91/">
-            <img alt="Link to my GitHub page"
-                 height="30" src="assets/social-icon-github.png" width="30"> GitHub</a></li>
-          <li><a href="https://angel.co/u/johannes-stroebele">
-            <img alt="Link to my Angel page"
-                 height="30" src="assets/social-icon-angel.png" width="30"> Angel</a></li>
           <li><a href="https://www.xing.com/profile/Johannes_Stroebele">
             <img alt="Link to my Xing page"
                  height="30" src="assets/social-icon-xing.png" width="30"> Xing</a></li>

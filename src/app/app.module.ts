@@ -20,6 +20,10 @@ import {RouterModule} from '@angular/router';
 import {routes} from './app.routes';
 import {FooterComponent} from './components/footer/footer.component';
 import {NavComponent} from './components/nav/nav.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {CdkTextareaAutosize} from '@angular/cdk/text-field';
+import {MatProgressSpinner} from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -45,7 +49,9 @@ import {NavComponent} from './components/nav/nav.component';
     MatToolbarModule,
     MatButtonModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    MatFormFieldModule, MatInputModule,
+    CdkTextareaAutosize, MatProgressSpinner
   ],
   providers: [UsersService],
   bootstrap: [AppComponent],
