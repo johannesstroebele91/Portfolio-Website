@@ -63,6 +63,7 @@ footer {
 
 @media (min-width: 1140px) {
   .social-links, .arrow-upward {
+    cursor: pointer;
     z-index: 1;
     position: fixed;
     bottom: 0;

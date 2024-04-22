@@ -13,7 +13,7 @@
 .nav-sticky {
   position: sticky;
   top: 0; /* Sets the sticky toolbar to be on top */
-  z-index: 1; /* Ensure that your app's content doesn't overlap the toolbar */
+  z-index: 100; /* Ensure that your app's content doesn't overlap the toolbar */
   background: map-get($custom-palette, background);
 }
 
