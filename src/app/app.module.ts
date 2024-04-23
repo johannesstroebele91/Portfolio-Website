@@ -24,6 +24,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {CdkTextareaAutosize} from '@angular/cdk/text-field';
 import {MatProgressSpinner} from '@angular/material/progress-spinner';
+import {SkillsComponent} from './components/pages/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import {MatProgressSpinner} from '@angular/material/progress-spinner';
     ProjectsComponent,
     NavComponent,
     HomeComponent,
+    SkillsComponent,
     AboutComponent,
     ContactComponent,
     DataProtectionDeclarationComponent,
