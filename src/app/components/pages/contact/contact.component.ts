@@ -60,5 +60,12 @@ export class ContactComponent {
       }, 1000);
     }
     this.emailForm.reset();
+    this.emailForm.markAsUntouched();
+    Object.keys(this.emailForm.controls).forEach(key => {
+      this.emailForm.get(key)?.setErrors(null);
+      this.emailForm.get(key)?.markAsPristine();
+      this.emailForm.get(key)?.markAsUntouched();
+    });
+
   }
 }

@@ -4,21 +4,21 @@
     <div class="container-with-elements">
       <div class="container-text-img">
         <h1>Say hi!</h1>
-        <p class="runningtext-maxwidth">Do you need support developing an business application or just
-          want to get in touch?
-          Then write me an email:</p>
+        <p class="runningtext-maxwidth">Do you need support developing your application or just
+          want to get in touch? Send me an email (clicking 'send email' will prompt your default email program to open,
+          pre-filled with your specified email subject and body):</p>
         <form (ngSubmit)="onSubmit()" [formGroup]="emailForm">
 
-          <mat-form-field appearance="fill" style="display: inline-block; width: 100%; margin: 40px 0 20px 0">
-            <mat-label style="color: #171f3e">Topic</mat-label>
+          <mat-form-field appearance="fill" style="display: inline-block; width: 100%;">
+            <mat-label style="color: #171f3e">Subject</mat-label>
             <input formControlName="subject" matInput required type="text">
             <mat-error *ngIf="emailForm.get('subject')?.hasError('required')">
               Topic is required
             </mat-error>
           </mat-form-field>
 
-          <mat-form-field appearance="fill" style="display: inline-block; width: 100%; margin-bottom: 10px">
-            <mat-label style="color: #171f3e">Text</mat-label>
+          <mat-form-field appearance="fill" style="display: inline-block; width: 100%; ">
+            <mat-label style="color: #171f3e">Body</mat-label>
             <textarea cdkAutosizeMinRows="3" cdkTextareaAutosize formControlName="body" matInput required></textarea>
             <mat-error *ngIf="emailForm.get('body')?.hasError('required')">
               Text is required
@@ -35,7 +35,7 @@
         </form>
 
 
-        <p style="margin-top: 30px">Or contact me via one of these options:</p>
+        <p style="font-weight: 500; margin-top: 30px">Or contact me via one of these options:</p>
         <ul class="contact-options">
           <li><a href="mailto:stroebele.j@gmail.com">
             <img alt="Link to email"
