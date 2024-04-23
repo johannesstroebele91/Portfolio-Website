@@ -52,30 +52,15 @@
             <mat-icon aria-hidden="false" aria-label="Wiki icon">school</mat-icon>
             <p>Wiki: <a href="{{repo.html_url}}/wiki">visit</a></p>
           </div>
-          <div *ngIf="repo.open_issues_count > 0">
-            <mat-icon aria-hidden="false" aria-label="Issues icon">assignment</mat-icon>
-            <p *ngIf="repo.open_issues">{{ repo.open_issues }} issues:<a
-              href="{{repo.html_url}}/issues">
-              visit</a>
-            </p>
-          </div>
         </div>
         <div>
-          <div *ngIf="repo.watchers">
-            <mat-icon aria-hidden="false" aria-label="Fork icon">call_split</mat-icon>
-            <p>Forks: {{ repo.forks_count }}</p>
+          <div>
+            <mat-icon aria-hidden="false" aria-label="Fork icon">today</mat-icon>
+            <p>Created at: {{ repo.created_at |date }}</p>
           </div>
           <div *ngIf="repo.size">
             <mat-icon aria-hidden="false" aria-label="Size icon">zoom_out_map</mat-icon>
             <p>Repo size: {{ repo.size }} Kb</p>
-          </div>
-          <div *ngIf="repo.watchers">
-            <mat-icon aria-hidden="false" aria-label="Watchers icon">visibility</mat-icon>
-            <p>Watchers: {{ repo.watchers }}</p>
-          </div>
-          <div *ngIf="repo.stargazers_count">
-            <mat-icon aria-hidden="false" aria-label="Stars icon">star</mat-icon>
-            <p>Stars: {{ repo.stargazers_count }}</p>
           </div>
         </div>
         <div>
