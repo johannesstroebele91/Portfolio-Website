@@ -36,7 +36,7 @@
   </div>
   <div style="max-width: 768px; margin: 0 auto;">
     <mat-card *ngFor="let repo of repos">
-      <h3>{{ repo.name }}</h3>
+      <h3>{{ repo.name }} {{ repo.archived ? '(Archived)' : '' }}</h3>
       <p>{{ repo.description }}</p>
       <div class="container-columns">
         <div>

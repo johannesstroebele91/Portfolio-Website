@@ -65,8 +65,6 @@ export class ProjectsComponent implements OnInit {
     // Gets respective searched data about user's repos from service
     this.usersService.getUserReposData().subscribe((data: Repo[]) => {
       this.repos = data;
-      console.log('this.repos');
-      console.log(this.repos);
 
       this.repos.sort((a, b) => {
         // Parse the dates within the sorting function
