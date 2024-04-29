@@ -12,6 +12,7 @@
           <li><a (click)="onClick('company')" tabindex="0">Company Experiences</a></li>
           <li><a (click)="onClick('academic')" tabindex="0">Academic Experiences</a></li>
           <li><a (click)="onClick('others')" tabindex="0">Other Experiences</a></li>
+          <li><a (click)="onClick('recommendations')" tabindex="0">Recommendations</a></li>
         </ol>
       </div>
       <img alt="Profile picture of Johannes Ströbele" height="300"
@@ -200,4 +201,46 @@
       </td>
     </tr>
   </table>
+</section>
+
+<!-- 4. Recommendations -->
+<section class="section-recommendations" id="recommendations">
+  <h2>Recommendations</h2>
+  <p>The quotes from my colleagues were taken from
+    my
+    <a href="https://www.linkedin.com/in/johannes-stroebele/">LinkedIn page</a>.</p>
+  <div class="container-with-elements">
+    <mat-card>
+      <h3>Tim Stefany</h3>
+      <h4>Machine Learning Engineer at Adam Riese</h4>
+      <img alt="Header design for the Sketch Meetup Stuttgart" class="img-recommendation"
+           routerLink="https://www.celonis.com/"
+           src="assets/recommender-timstefany.png">
+      <p class="runningtext-maxwidth">"Having Johannes as a full stack developer in our
+        data science project was great! Whether it was the deployment of our dashboard via Google Cloud,
+        issues with the Python Flask backend, setting up the frontend, or our managing our PostgreSQL database,
+        Johannes was always up to the task."</p>
+    </mat-card>
+    <mat-card>
+      <h3>Faruk Toy</h3>
+      <h4>Data Science Working Student </h4>
+      <img alt="Header design for the Sketch Meetup Stuttgart" class="img-recommendation"
+           routerLink="https://www.celonis.com/"
+           src="assets/recommender-faruktoy.png">
+      <p class="runningtext-maxwidth">"Johannes is very talented and skilled. He has great ideas and
+        he is able to make them work. He is very dependable and it was a pleasure to work with him.
+        Johannes has certainly great entrepreneurial spirit."</p>
+    </mat-card>
+    <mat-card>
+      <h3>Raphael Fleckenstein</h3>
+      <h4>CEO at Productlane</h4>
+      <img alt="Header design for the Sketch Meetup Stuttgart" class="img-recommendation"
+           routerLink="https://www.celonis.com/"
+           src="assets/recommender-raphaelfleckenstein.png">
+      <p class="runningtext-maxwidth">"I had the pleasure of working with Johannes at START Munich,
+        a startup student club at the TU Munich. He has optimized the web appearance,
+        build up the online marketing, and organized several successful events.
+        Johannes impressed me with his great motivation and project management skills."</p>
+    </mat-card>
+  </div>
 </section>
