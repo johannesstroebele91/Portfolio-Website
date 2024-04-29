@@ -14,8 +14,6 @@
         <span [routerLinkActiveOptions]="{exact: true}" routerLink="/" routerLinkActive="is-active">Home</span>
         <span [routerLinkActiveOptions]="{exact: true}" routerLink="/about"
               routerLinkActive="is-active">About</span>
-        <span [routerLinkActiveOptions]="{exact: true}" routerLink="/skills"
-              routerLinkActive="is-active">Skills</span>
         <span [routerLinkActiveOptions]="{exact: true}" routerLink="/projects"
               routerLinkActive="is-active">Projects</span>
         <span [routerLinkActiveOptions]="{exact: true}" routerLink="/contact"
@@ -36,10 +34,6 @@
     <mat-toolbar-row (click)="closeNav();" [routerLinkActiveOptions]="{exact: true}" routerLink="/about"
                      routerLinkActive="is-active">
       About
-    </mat-toolbar-row>
-    <mat-toolbar-row (click)="closeNav();" [routerLinkActiveOptions]="{exact: true}" routerLink="/skills"
-                     routerLinkActive="is-active">
-      Skills
     </mat-toolbar-row>
     <mat-toolbar-row (click)="closeNav();" [routerLinkActiveOptions]="{exact: true}" routerLink="/projects"
                      routerLinkActive="is-active">

@@ -20,7 +20,7 @@ export class AboutComponent {
       {
         name: 'description',
         content: 'My goal is to develop business applications that optimize the user experience and business value.' +
-          'On this page, you can view my skills, working experience, and studies.'
+          'On this page, you can view working experience, studies, and recommendations.'
       },
       {
         name: 'keywords',
