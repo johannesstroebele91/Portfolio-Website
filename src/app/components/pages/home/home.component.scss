@@ -6,6 +6,10 @@
   margin-bottom: 30px;
 }
 
+.projects-section img {
+  cursor: pointer;
+}
+
 .projects-section h3 {
   font-family: "Roboto Mono", monospace, Roboto, "Helvetica Neue", sans-serif !important;
   color: map-get($custom-palette, primary) !important;
