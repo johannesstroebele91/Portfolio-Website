@@ -19,7 +19,7 @@ export class AboutComponent {
       },
       {
         name: 'description',
-        content: 'My goal is to develop business applications that optimize the user experience and business value.' +
+        content: 'My goal is to develop business applications that the maximize customer and the business Value.' +
           'On this page, you can view working experience, studies, and recommendations.'
       },
       {
@@ -30,7 +30,11 @@ export class AboutComponent {
     ], true);
   }
 
-  public onClick(elementId: string): void {
+  onClick(elementId: string): void {
     this.viewportScroller.scrollToAnchor(elementId);
+  }
+
+  openFile(filename: string) {
+    window.open('../../assets/' + filename);
   }
 }
