@@ -6,14 +6,13 @@
         <h1>Welcome!</h1>
         <h2>I'm a full stack developer</h2>
         <p>"Turning code into customer value – digital experiences that inspire."</p>
-        <p class="runningtext-maxwidth" style="text-align: left;">While I work on both frontend, design and backend, my focus is
-          on the frontend. On this website, you find my personal projects,
-          my recommendations, as well as my study and work experiences.</p>
+        <p class="runningtext-maxwidth" style="text-align: left;">I work across frontend, design, and backend development. My focus lies in frontend.
+          On this site, you’ll find my personal projects, curated recommendations, and insights from my study and work experiences.</p>
         <button class="button-hero-desktop" color="primary" mat-raised-button routerLink="contact">
           Get In Touch
         </button>
       </div>
-      <img alt="Profile picture of Johannes Ströbele" height="300"
+      <img alt="Profile picture of Johannes Ströbele" [height]="300"
            src="assets/profile-picture.png">
     </div>
     <button class="button-hero-mobile" color="primary" mat-raised-button routerLink="contact">
@@ -113,22 +112,23 @@
 <!-- Company Experiences -->
 <section class="section-company">
   <h2 style="text-align: center;">Previous Companies</h2>
-  <p class="runningtext-maxwidth-centered" style="text-align: center;">During the last years, I gained hands-on
-    experience at the following innovative and international companies, among others.
-    Details can be seen on the <a (click)="navToAboutPageCompanySection()">about page</a>.
+  <p class="runningtext-maxwidth-centered" style="text-align: center;">I gained hands-on
+    experience at the following companies, among others.
+    Details can be seen on the <a (click)="navToAboutPageCompanySection()" style="cursor: pointer">about page</a>.
   </p>
   <div class="container-with-elements">
     <div>
-      <a href="https://www.celonis.com/">Celonis</a>
-      <p>Worked on the process mining application for analyzing, and optimizing highly complex business processes</p>
+      <a href="https://www.bridging-it.de//">BridgingIT</a>
+      <p>Development and design of a cloud application to manage courses and student in the educational sector.</p>
+      <p></p>
     </div>
     <div>
       <a href="https://www.mercedes-benz-techinnovation.com/de/">Mercedes-Benz Tech Innovation</a>
-      <p>Developed an offer calculation application to rent vehicles (former known as DaimlerTSS)</p>
+      <p>Implementation an offer calculation application to rent vehicles (former known as DaimlerTSS).</p>
     </div>
     <div>
       <a href="https://www.sulzer.de/">Sulzer</a>
-      <p>Developed a vehicle analytics application for a leading player in the automotive industry</p>
+      <p>Development a vehicle analytics application for a leading player in the automotive industry.</p>
     </div>
   </div>
 </section>
