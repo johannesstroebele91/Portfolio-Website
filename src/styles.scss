@@ -249,8 +249,9 @@ section .mat-icon {
   .container-with-elements > * {
     margin: 12px !important;
   }
-  .hero-section .container-with-elements {
-    align-items: center;
+  .hero-section > section > .container-with-elements > img {
+    position: relative;
+    top: 50px;
   }
   .container-text-img {
     width: 50%;

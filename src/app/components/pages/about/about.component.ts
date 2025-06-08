@@ -19,13 +19,13 @@ export class AboutComponent {
       },
       {
         name: 'description',
-        content: 'My goal is to develop business applications that the maximize customer and the business Value.' +
-          'On this page, you can view working experience, studies, and recommendations.'
+        content: 'Turning code into customer value – digital experiences that inspire..' +
+          'On this page, you can view working experiences, studies, and recommendations.'
       },
       {
         name: 'keywords',
         content: 'Johannes Ströbele, Johannes Stroebele, portfolio, about, full stack developer, software developer,' +
-          'information design, front end development, back end development, business application'
+          'frontend development, backend development, business application'
       },
     ], true);
   }
@@ -34,7 +34,8 @@ export class AboutComponent {
     this.viewportScroller.scrollToAnchor(elementId);
   }
 
+  /* TODO uncomment if want to open files in a new tab
   openFile(filename: string) {
-    window.open('../../assets/' + filename);
-  }
+     window.open('../../assets/' + filename);
+   }*/
 }
